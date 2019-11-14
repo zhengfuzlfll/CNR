@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let menu = document.querySelector(".menu");
+        // console.log(menu);
+        let cate_menu_box = menu.querySelectorAll(".cate-menu-box");
+        cate_menu_box[0].children[0].innerHTML;
+
+        let arr = [];
+        for (let i = 0, len = cate_menu_box.length; i < len; i++) {
+            let obj = {};
+            for (let j = 0, len = cate_menu_box[i].children; j < len; j++) {
+                obj.title = cate_menu_box[i].children[k];
+            }
+            arr.push(obj);
+        }
+        let str = JSON.stringify(arr);
+    </script>
+</body>
+
+</html>
