@@ -12,7 +12,6 @@ li {
 #footerpage {
   width: 1210px;
   height: 485px;
-  background: yellow;
   margin: auto;
 }
 
@@ -31,7 +30,6 @@ li {
 #footerpage #fmiddle {
   width: 1210px;
   height: 184px;
-  background: blue;
   overflow: hidden;
 }
 
@@ -93,16 +91,63 @@ li {
 #footerpage #fbottom {
   width: 1210px;
   height: 214px;
-  background: red;
-  text-align: center;
+  background: black;
+  color: white;
 }
 
-#footerpage #fbottom ul {
+#footerpage #fbottom .list1 {
+  width: 400px;
   margin: auto;
   text-align: center;
+  padding-top: 15px;
+  font-size: 12px;
 }
 
-#footerpage #fbottom ul li {
+#footerpage #fbottom .list1 li {
   float: left;
-  border-right: 1px solid #ccc;
+  margin: 0px 5px;
+}
+
+#footerpage #fbottom .list1 li span:nth-child(1):hover {
+  border-bottom: 1px solid #ccc;
+}
+
+#footerpage #fbottom .list1 li span:nth-child(2) {
+  padding-left: 5px;
+}
+
+#footerpage #fbottom .p1 {
+  font-size: 12px;
+  text-align: center;
+}
+
+#footerpage #fbottom .p1 span:nth-child(1):hover,
+#footerpage #fbottom .p1 span:nth-child(5):hover {
+  border-bottom: 1px solid #ccc;
+}
+
+#footerpage #fbottom .p2,
+#footerpage #fbottom .p3 {
+  text-align: center;
+  font-size: 12px;
+}
+
+#footerpage #fbottom p {
+  margin-top: 15px;
+}
+
+#footerpage #fbottom .list2 {
+  width: 512px;
+  padding: 20px 0px;
+  margin: auto;
+}
+
+#footerpage #fbottom .list2 li {
+  float: left;
+  margin-right: 20px;
+}
+
+#footerpage #fbottom .list2 li img {
+  width: 108px;
+  height: 40px;
 }

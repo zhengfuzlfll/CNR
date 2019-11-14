@@ -23,7 +23,7 @@ li {
 #footerpage {
     width: 1210px;
     height: 485px;
-    background: yellow;
+    // background: yellow;
     margin: auto;
 
     #ftop {
@@ -51,8 +51,9 @@ li {
     #fmiddle {
         width: 1210px;
         height: 184px;
-        background: blue;
+        // background: blue;
         overflow: hidden;
+        // font-size: 12px;
 
         .notice {
             float: left;
@@ -118,19 +119,75 @@ li {
     #fbottom {
         width: 1210px;
         height: 214px;
-        background: red;
-        text-align: center;
+        background: black;
+        color: white;
+        // text-align: center;
 
-        ul {
-            // width: 1210px;
+        .list1 {
+            width: 400px;
             margin: auto;
             text-align: center;
-
+            padding-top: 15px;
+            font-size: 12px;
 
             li {
 
                 float: left;
-                border-right: 1px solid #ccc;
+                // border-right: 1px solid #ccc;
+                // margin-left: 5px;
+                // margin-right: 5px;
+                margin: 0px 5px;
+
+
+
+                span:nth-child(1):hover {
+                    border-bottom: 1px solid #ccc;
+                }
+
+                span:nth-child(2) {
+                    padding-left: 5px;
+                }
+
+            }
+
+            // span {
+            //     padding-left: 5px;
+            // }
+        }
+
+        .p1 {
+            font-size: 12px;
+            text-align: center;
+
+            span:nth-child(1):hover,
+            span:nth-child(5):hover {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+
+        .p2,
+        .p3 {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+
+        .list2 {
+            width: 512px;
+            padding: 20px 0px;
+            margin: auto;
+
+            li {
+                float: left;
+                margin-right: 20px;
+
+                img {
+                    width: 108px;
+                    height: 40px;
+                }
             }
         }
     }

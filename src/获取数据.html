@@ -10,20 +10,82 @@
 
 <body>
     <script>
-        let menu = document.querySelector(".menu");
+        // let menu = document.querySelector(".menu");
         // console.log(menu);
-        let cate_menu_box = menu.querySelectorAll(".cate-menu-box");
-        cate_menu_box[0].children[0].innerHTML;
+        // let cate_menu_box = menu.querySelectorAll(".cate-menu-box");
+        // cate_menu_box[0].children[0].innerHTML;
 
-        let arr = [];
-        for (let i = 0, len = cate_menu_box.length; i < len; i++) {
-            let obj = {};
-            for (let j = 0, len = cate_menu_box[i].children; j < len; j++) {
-                obj.title = cate_menu_box[i].children[k];
+        // let arr = [];
+        // for (let i = 0, len = cate_menu_box.length; i < len; i++) {
+        //     let obj = {};
+        //     for (let j = 0, len = cate_menu_box[i].children; j < len; j++) {
+        //         obj.title = cate_menu_box[i].children[k];
+        //     }
+        //     arr.push(obj);
+        // }
+        // let str = JSON.stringify(arr);
+
+        let menu1 = document.querySelector(".menu"); //ul
+        let cate_menu_item = menu1.querySelectorAll(".cate-menu-item"); //13
+
+        let arr1 = [];
+        for (let i = 0; i < cate_menu_item.length; i++) {
+            let obj1 = {};
+            // let ul1 = cate_menu_item[i].length;
+            for (let j = 0; j < cate_menu_item[i].length; j++) {
+                // let text = cate_menu_item[i].querySelectorAll("a")
+                for (var k = 0; k < cate_menu_item[j].querySelectorAll("a").length; k++) {
+                    obj1.text = cate_menu_item[k].querySelectorAll("a")[k].innerText;
+                }
             }
-            arr.push(obj);
+            arr1.push(obj1);
+
         }
-        let str = JSON.stringify(arr);
+        let str1 = JSON.stringify(arr1);
+
+
+        /*
+       [{
+    "title": ["休闲食品", "/", "即时罐头"],
+    "list": [{
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }, {
+        "h2": "休闲零食",
+        "lis2": ["大米", "大米", "大米", "大米"]
+    }, {
+        "h2": "休闲零食",
+        "lis2": ["其他休闲食品", "其他休闲食品", "其他休闲食品", "其他休闲食品"]
+    }],
+    "img": ["img1", "img2"]
+}, {
+    "title": ["休闲食品", "/", "即时罐头"],
+    "list": [{
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }, {
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }, {
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }],
+    "img": ["img1", "img2"]
+}, {
+    "title": ["休闲食品", "/", "即时罐头"],
+    "list": [{
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }, {
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }, {
+        "h2": "休闲零食",
+        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+    }],
+    "img": ["img1", "img2"]
+}] 
+        */
     </script>
 </body>
 
