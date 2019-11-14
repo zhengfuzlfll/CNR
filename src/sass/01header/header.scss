@@ -49,10 +49,58 @@ body {
             text-align: center;
             line-height: 35px;
             font-size: 12px;
+            position: relative;
 
             &:hover {
                 color: #F30213;
+                background: #fff;
+
             }
+
+            &:hover .box {
+                display: block;
+            }
+
+            .box {
+                // width: 400px;
+                width: 280px;
+                height: 270px;
+                padding: 0px 5px 5px 5px;
+                background: #fff;
+                // border: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+                position: absolute;
+                left: 0px;
+                display: none;
+                box-sizing: border-box;
+                overflow: hidden;
+
+                dl {
+                    // width: 100px;
+                    float: left;
+                }
+
+                dd {
+
+                    color: black;
+                    font-size: 12px;
+                    width: 56px;
+                    height: 20px;
+                    padding: 0px 5px;
+                    margin-top: 10px;
+                    text-align: left;
+                    text-overflow: clip;
+                    overflow: hidden;
+                    line-height: 20px;
+
+                    &:hover {
+                        color: #F30213;
+                    }
+                }
+            }
+
         }
 
         .list {
@@ -87,7 +135,9 @@ body {
             }
 
             .list2_1 {
+
                 position: relative;
+                // box-sizing: border-box;
 
                 // transition: all 0.5s;
                 .list2 {
@@ -110,7 +160,10 @@ body {
                     left: 0px;
 
                     display: none;
-                    background: #aaa;
+                    background: #fff;
+                    border-right: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
                 }
 
                 &:hover .list2 {
@@ -119,7 +172,10 @@ body {
                 }
 
                 &:hover {
-                    background: #aaa;
+                    background: #fff;
+                    // border-top: 1px solid #ccc;
+                    // border-left: 1px solid #ccc;
+
                 }
             }
 
@@ -130,11 +186,14 @@ body {
                     width: 160px;
                     height: 108px;
                     padding: 10px;
-                    border: 1px solid #666;
+                    // border: 1px solid #666;
                     position: absolute;
                     left: 0px;
                     display: none;
                     z-index: 2;
+                    border-right: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
 
                     li {
                         color: black;
@@ -149,12 +208,12 @@ body {
 
                 &:hover ul {
                     display: block;
-                    background: #aaa;
+                    background: #fff;
 
                 }
 
                 &:hover {
-                    background: #aaa;
+                    background: #fff;
                 }
             }
 
@@ -165,6 +224,9 @@ body {
                     position: absolute;
                     left: 0px;
                     display: none;
+                    border-right: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
 
                     li {
                         color: black;
@@ -177,11 +239,11 @@ body {
 
                 &:hover ul {
                     display: block;
-                    background: #aaa;
+                    background: #fff;
                 }
 
                 &:hover {
-                    background: #aaa;
+                    background: #fff;
                 }
             }
 
@@ -198,6 +260,10 @@ body {
                     display: none;
 
                     // div {
+                    border-right: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+
 
                     img {
                         // position: absolute;
@@ -223,11 +289,11 @@ body {
 
                 &:hover .tp {
                     display: block;
-                    background: #aaa;
+                    background: #fff;
                 }
 
                 &:hover {
-                    background: #aaa;
+                    background: #fff;
                 }
 
                 // img {

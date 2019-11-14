@@ -46,9 +46,51 @@ body {
   text-align: center;
   line-height: 35px;
   font-size: 12px;
+  position: relative;
 }
 
 #header #top #dingwei:hover {
+  color: #F30213;
+  background: #fff;
+}
+
+#header #top #dingwei:hover .box {
+  display: block;
+}
+
+#header #top #dingwei .box {
+  width: 280px;
+  height: 270px;
+  padding: 0px 5px 5px 5px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  position: absolute;
+  left: 0px;
+  display: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#header #top #dingwei .box dl {
+  float: left;
+}
+
+#header #top #dingwei .box dd {
+  color: black;
+  font-size: 12px;
+  width: 56px;
+  height: 20px;
+  padding: 0px 5px;
+  margin-top: 10px;
+  text-align: left;
+  text-overflow: clip;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+#header #top #dingwei .box dd:hover {
   color: #F30213;
 }
 
@@ -93,7 +135,10 @@ body {
   position: absolute;
   left: 0px;
   display: none;
-  background: #aaa;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 #header #top .list .list2_1:hover .list2 {
@@ -101,7 +146,7 @@ body {
 }
 
 #header #top .list .list2_1:hover {
-  background: #aaa;
+  background: #fff;
 }
 
 #header #top .list .list3_1 {
@@ -112,11 +157,13 @@ body {
   width: 160px;
   height: 108px;
   padding: 10px;
-  border: 1px solid #666;
   position: absolute;
   left: 0px;
   display: none;
   z-index: 2;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 #header #top .list .list3_1 ul li {
@@ -129,11 +176,11 @@ body {
 
 #header #top .list .list3_1:hover ul {
   display: block;
-  background: #aaa;
+  background: #fff;
 }
 
 #header #top .list .list3_1:hover {
-  background: #aaa;
+  background: #fff;
 }
 
 #header #top .list .list4_1 {
@@ -144,6 +191,9 @@ body {
   position: absolute;
   left: 0px;
   display: none;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 #header #top .list .list4_1 ul li {
@@ -156,11 +206,11 @@ body {
 
 #header #top .list .list4_1:hover ul {
   display: block;
-  background: #aaa;
+  background: #fff;
 }
 
 #header #top .list .list4_1:hover {
-  background: #aaa;
+  background: #fff;
 }
 
 #header #top .list .list5_1 {
@@ -173,6 +223,9 @@ body {
   width: 140px;
   text-align: center;
   display: none;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 #header #top .list .list5_1 .tp img {
@@ -190,11 +243,11 @@ body {
 
 #header #top .list .list5_1:hover .tp {
   display: block;
-  background: #aaa;
+  background: #fff;
 }
 
 #header #top .list .list5_1:hover {
-  background: #aaa;
+  background: #fff;
 }
 
 #header #middle {
