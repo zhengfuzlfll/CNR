@@ -25,67 +25,193 @@
         // }
         // let str = JSON.stringify(arr);
 
-        let menu1 = document.querySelector(".menu"); //ul
-        let cate_menu_item = menu1.querySelectorAll(".cate-menu-item"); //13
+        let menu = document.querySelector(".menu"); //ul
+        let cate_menu_item = menu.querySelectorAll(".cate-menu-item"); //13-----1
+        let a = cate_menu_item[0].children[0].querySelectorAll("a"); /* ------ 2*/
+        let text = a[0].innerText; //----3
 
-        let arr1 = [];
-        for (let i = 0; i < cate_menu_item.length; i++) {
-            let obj1 = {};
-            // let ul1 = cate_menu_item[i].length;
-            for (let j = 0; j < cate_menu_item[i].length; j++) {
-                // let text = cate_menu_item[i].querySelectorAll("a")
-                for (var k = 0; k < cate_menu_item[j].querySelectorAll("a").length; k++) {
-                    obj1.text = cate_menu_item[k].querySelectorAll("a")[k].innerText;
-                }
-            }
-            arr1.push(obj1);
-
+        let arr = [];
+        for (let i = 0; i < a.length; i++) {
+            let o = {};
+            o.text = a[i].innerText;
+            arr.push(o);
         }
-        let str1 = JSON.stringify(arr1);
+        let str = JSON.stringify(arr);
 
 
-        /*
-       [{
-    "title": ["休闲食品", "/", "即时罐头"],
-    "list": [{
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }, {
-        "h2": "休闲零食",
-        "lis2": ["大米", "大米", "大米", "大米"]
-    }, {
-        "h2": "休闲零食",
-        "lis2": ["其他休闲食品", "其他休闲食品", "其他休闲食品", "其他休闲食品"]
-    }],
-    "img": ["img1", "img2"]
-}, {
-    "title": ["休闲食品", "/", "即时罐头"],
-    "list": [{
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }, {
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }, {
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }],
-    "img": ["img1", "img2"]
-}, {
-    "title": ["休闲食品", "/", "即时罐头"],
-    "list": [{
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }, {
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }, {
-        "h2": "休闲零食",
-        "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
-    }],
-    "img": ["img1", "img2"]
-}] 
-        */
+
+
+
+
+
+        // let arr = [];
+        // for (let i = 0; i < cate_menu_item.length; i++) {
+        //     let o = {};
+        //     let str1 = cate_menu_item[i];
+        //     for (let j = 0; j < str1.length; j++) {
+        //         let str2 = cate_menu_item[i].children[0].querySelectorAll("a");
+        //         for (let k = 0; k < str2.length; k++) {
+        //             o.text = str2[k].innerText;
+        //         }
+
+        //     }
+        //     arr.push(o);
+        // }
+        // let str = JSON.stringify(arr);
+        // let menu = document.querySelector(".menu"); //ul
+        // let cate_menu_item = menu.querySelectorAll(".cate-menu-item"); //13-----1
+        // let a = cate_menu_item[0].children[0].querySelectorAll("a"); /* ------ 2*/
+        // let text = a[0].innerText; //----3
+
+
+
+        // let arr = [];
+        // for (let i = 0; i < cate_menu_item.length; i++) {
+        //     let obj = {};
+        //     // let ul1 = cate_menu_item[i].length;
+        //     for (let j = 0; j < cate_menu_item[i].length; j++) {
+        //         // let text = cate_menu_item[i].querySelectorAll("a")
+        //         for (var k = 0; k < cate_menu_item[j].querySelectorAll("a").length; k++) {
+        //             obj.text = cate_menu_item[i].querySelectorAll("a")[k].innerText;
+        //         }
+        //     }
+        //     arr.push(obj);
+
+        // }
+        // let str = JSON.stringify(arr);
+        // console.log(str);
+
+
+
+
+        [{
+            "title": ["休闲食品", "/", "即时罐头"],
+            "list": [{
+                    "h2": "休闲零食",
+                    "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+                },
+                {
+                    "h2": "休闲零食",
+                    "lis2": ["大米", "大米", "大米", "大米"]
+                },
+                {
+                    "h2": "休闲零食",
+                    "lis2": ["其他休闲食品", "其他休闲食品", "其他休闲食品", "其他休闲食品"]
+                }
+            ],
+            "img": ["img1", "img2"]
+        }, {
+            "title": ["休闲食品", "/", "即时罐头"],
+            "list": [{
+                "h2": "休闲零食",
+                "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+            }, {
+                "h2": "休闲零食",
+                "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+            }, {
+                "h2": "休闲零食",
+                "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+            }],
+            "img": ["img1", "img2"]
+        }, {
+            "title": ["休闲食品", "/", "即时罐头"],
+            "list": [{
+                "h2": "休闲零食",
+                "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+            }, {
+                "h2": "休闲零食",
+                "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+            }, {
+                "h2": "休闲零食",
+                "lis2": ["膨化糕饼", "膨化糕饼", "膨化糕饼", "膨化糕饼"]
+            }],
+            "img": ["img1", "img2"]
+        }]
+
+
+        let homeSeckill = document.querySelector('#homeSeckill').children;
+
+
+
+        // 获取轮播图数据-------成功获取数据
+        let homeSeckill = document.querySelector('#homeSeckill').children; //24
+        let img = homeSeckill[0].querySelector("img").src
+        let title = homeSeckill[0].querySelector("p").innerText
+
+        //
+        let price = homeSeckill[1].querySelector(".sk-price").children[0].children[1].innerText;
+        let priceA = homeSeckill[1].querySelector(".sk-price").children[1].children[1].innerText;
+        // for(let i=0;i<)
+        let arr = [];
+        for (let i = 0; i < homeSeckill.length; i++) {
+            let o = {};
+            o.img = homeSeckill[i].querySelector("img").src;
+            o.title = homeSeckill[i].querySelector("p").innerText;
+            // for(for)
+            o.price = homeSeckill[i].querySelector(".sk-price").children[0].children[1].innerText;
+            o.priceA = homeSeckill[i].querySelector(".sk-price").children[1].children[1].innerText;
+            arr.push(o);
+        }
+        let str = JSON.stringify(arr);
+        console.log(str);
+
+
+        [{
+            "img": "img1",
+            "title": "6666666",
+            "price": "258",
+            "priceA": "299"
+
+        }, {
+            "img": "img1",
+            "title": "6666666",
+            "price": "258",
+            "priceA": "299"
+        }, {
+            "img": "img1",
+            "title": "6666666",
+            "price": "258",
+            "priceA": "299"
+        }]
+
+        // 下拉列表
+        let arr = [];
+        let menu = document.querySelector(".menu").children; //13
+        let titleA = menu[0].children[0].querySelectorAll("a"); //2
+        let text = titleA[0].innerText;
+
+        for (let i = 0; i < menu.length; i++) {
+            let o = {};
+            // var oA = menu[i].getElementsByClassName("cate-menu-lk");
+            // // console.log(oA);
+            // o.title = []
+            // for (let j = 0; j < oA.length; j++) {
+            //     // console.log()
+            //     // o.text=
+            //     o.title.push(oA[j].innerText)
+
+            // }
+
+
+            o.titles = [];
+            let oB = menu[i].getElementsByTagName("dt"); //所有a标签
+            for (let j = 0; j < oB.length; j++) {
+                // let o2 = {}
+                o.titles.push(oB[j].innerText)
+                // let oC=
+                // for (let k = 0; k < oB[j].length; k++) {
+
+                // }
+
+            }
+            console.log(o.titles);
+
+            // console.log(oB);
+
+            // arr.push(o);
+        }
+        let str = JSON.stringify(arr);
+        console.log(str);
     </script>
 </body>
 

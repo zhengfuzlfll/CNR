@@ -71,6 +71,7 @@ body {
   display: none;
   box-sizing: border-box;
   overflow: hidden;
+  z-index: 5;
 }
 
 #header #top #dingwei .box dl {
@@ -315,31 +316,46 @@ body {
 #header #bottom {
   width: 1210px;
   height: 40px;
+  border-bottom: 2px solid red;
 }
 
-#header #bottom p {
+#header #bottom div {
   float: left;
   width: 180px;
   height: 40px;
   background: #F30213;
   text-align: center;
   line-height: 40px;
+  position: relative;
 }
 
-#header #bottom ul {
+#header #bottom div ul {
+  width: 180px;
+  height: 480px;
+  background: #6E6568;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+}
+
+#header #bottom div ul li {
+  width: 180px;
+}
+
+#header #bottom .home_list {
   float: left;
   height: 40px;
 }
 
-#header #bottom ul li {
+#header #bottom .home_list li {
   float: left;
   padding: 9px 24px 9px 24px;
 }
 
-#header #bottom ul li:hover {
+#header #bottom .home_list li:hover {
   color: #F30213;
 }
 
-#header #bottom ul li:nth-child(1) {
+#header #bottom .home_list li:nth-child(1) {
   color: #F30213;
 }

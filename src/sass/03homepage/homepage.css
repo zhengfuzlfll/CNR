@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+#main .home-focus-layout {
+  width: 100%;
+}
+
+#main .home-focus-layout .top-live {
+  width: 866px;
+  height: 80px;
+  margin: auto;
+  position: relative;
+}
+
+#main .home-focus-layout .top-live img,
+#main .home-focus-layout .top-live div {
+  float: left;
+}
+
+#main .home-focus-layout .top-live .live {
+  width: 408px;
+  height: 60px;
+  padding: 5px 1px;
+  border: 1px solid #ccc;
+  margin: 5px 6px 0px 15px;
+  font-size: 12px;
+}
+
+#main .home-focus-layout .top-live .live img {
+  width: 100px;
+  height: 60px;
+  margin: 0px 10px;
+}
+
+#main .home-focus-layout .top-live .live .p1 {
+  padding-top: 10px;
+}
+
+#main .home-focus-layout .top-live .live .p1 p {
+  margin: 5px 0px;
+}
+
+#main .home-focus-layout .top-live .live .p1 p .price {
+  font-size: 20px;
+  color: red;
+}
+
+#main .home-focus-layout .top-live .live .p1 p .streaming {
+  display: inline-block;
+  width: 84px;
+  height: 20px;
+  border: 1px solid red;
+  color: red;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 3px;
+}
+
+#main .home-focus-layout .top-live .pic {
+  position: absolute;
+  right: -173px;
+  top: 2px;
+}
+
+#main .home-focus-layout .top-live .pic img {
+  width: 164px;
+  height: 78px;
+}
+
+#main .home-focus-layout .top-rest {
+  width: 100%;
+  height: 400px;
+  background: #c5000c;
+}
+
+#main .home-focus-layout .top-rest .content {
+  width: 1210px;
+  margin: auto;
+}
+
+#main .home-focus-layout .top-rest .content .middle {
+  margin-left: 180px;
+  float: left;
+}
+
+#main .home-focus-layout .top-rest .content .middle img {
+  display: block;
+  width: 790px;
+  height: 400px;
+}
+
+#main .home-focus-layout .top-rest .content .right {
+  float: left;
+  width: 185px;
+  height: 400px;
+  background: pink;
+  font-size: 12px;
+}
+
+#main .home-focus-layout .top-rest .content .right h2 {
+  width: 185px;
+  height: 30px;
+  padding: 12px 0px;
+  text-align: center;
+  line-height: 30px;
+}
+
+#main .home-focus-layout .top-rest .content .right img {
+  width: 185px;
+}
+
+#main .home-focus-layout .top-rest .content .right p {
+  width: 165px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#main .home-seckill-layout {
+  width: 100%;
+  height: 100%;
+}
+
+#main .home-seckill-layout .seckill-box {
+  width: 1210px;
+  height: 305px;
+  margin: auto;
+  background: yellow;
+}
+
+#main .home-seckill-layout .seckill-box .seckill-title {
+  width: 1160px;
+  height: 55px;
+  padding: 0px 20px 0px 30px;
+  background: orange;
+}

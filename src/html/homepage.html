@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css"><!-- 字体图标库 -->
+    <link rel="stylesheet" href="../sass/01header/header.css">
+    <link rel="stylesheet" href="../sass/03homepage/homepage.css">
+</head>
+
+<body>
+    <div id="home_page"></div>
+    <div id="main">
+        <!-- 头部直播 -->
+        <div class="home-focus-layout">
+            <div class="top-live">
+                <div class="live">
+                    <img src="../img/03homepage/pic01.jpg" alt="">
+                    <img src="../img/03homepage/pic02.jpg" alt="">
+                    <div class="p1">
+                        <p>滋得洛夫饿罗斯白桦萱精片套组</p>
+                        <p>￥<span class="price">958.00</span><span class="streaming">看直播</span></p>
+                    </div>
+                </div>
+                <div class="live">
+                    <img src="../img/03homepage/pic03.jpg" alt="">
+                    <img src="../img/03homepage/pic04.jpg" alt="">
+                    <div class="p1">
+                        <p>健本之源划激酶胶装</p>
+                        <p>￥<span class="price">1299.00</span></p>
+                    </div>
+                </div>
+                <div class="pic"><img src="../img/03homepage/top_live.gif" alt=""></div>
+            </div>
+            <!-- 中间大图 -->
+            <div class="top-rest">
+                <div class="content">
+                    <!-- <div class="left">
+
+                    </div> -->
+                    <div class="middle">
+                        <img src="../img/03homepage/banner.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>今日最大牌</h2>
+                        <img src="../img/03homepage/baner_right.jpg" alt="">
+                        <div class="bar-bottom">
+                            <p>用善心，供商品，保持初心，脚踏实地做健康本源产品</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 秒杀+轮播图 -->
+        <div class="home-seckill-layout">
+            <div class="seckill-box">
+                <!-- 秒杀 -->
+                <div class="seckill-title">
+                    <div class="title">
+                        
+                    </div>
+                </div>
+
+                <!-- 轮播图 -->
+                <div class="seckill-content"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script>
+    (function () {
+        $("#home_page").load("head_page.html");
+    })();
+
+    // console.log($("#home_page"));
+</script>
+
+</html>

@@ -5,11 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>首页</title>
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css"><!-- 字体图标库 -->
+    <link rel="stylesheet" href="sass/01header/header.css">
+    <link rel="stylesheet" href="sass/03homepage/homepage.css">
 </head>
 
 <body>
+    <div id="home_page"></div>
+    <div id="main">
+        <!-- 头部直播 -->
+        <div class="home-focus-layout">
+            <div class="top-live">
+                <div class="live-left">
+                    <img src="img/03homepage/pic.jpg" alt="">
+                </div>
+                <div class="live-middle"></div>
+                <div class="live-right"></div>
+            </div>
+            <div class="top-rest">
+                <div class="content">
+                    <!-- <div class="left">
 
+                    </div> -->
+                    <div class="middle">
+                        <img src="img/03homepage/banner.jpg" alt="">
+                    </div>
+                    <div class="right">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 其他区域 -->
+
+    </div>
 </body>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+    (function () {
+        $("#home_page").load("html/head_page.html");
+    })();
+
+    // console.log($("#home_page"));
+</script>
 
 </html>

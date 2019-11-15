@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+
+    .home-focus-layout {
+        width: 100%;
+
+
+        .top-live {
+            width: 866px;
+            height: 80px;
+            // background: red;
+            // position: absolute;
+            // left: 200px;
+            // margin-bottom: 80px;
+            margin: auto;
+            position: relative;
+
+            img,
+            div {
+                float: left;
+            }
+
+            .live {
+                width: 408px;
+                height: 60px;
+                padding: 5px 1px;
+                border: 1px solid #ccc;
+                margin: 5px 6px 0px 15px;
+                font-size: 12px;
+
+                img {
+                    width: 100px;
+                    height: 60px;
+                    // margin-right: 10px;
+                    margin: 0px 10px;
+                }
+
+                .p1 {
+                    padding-top: 10px;
+
+                    p {
+                        margin: 5px 0px;
+
+                        .price {
+                            font-size: 20px;
+                            color: red;
+
+
+                        }
+
+                        .streaming {
+                            display: inline-block;
+                            width: 84px;
+                            height: 20px;
+                            border: 1px solid red;
+                            color: red;
+                            text-align: center;
+                            line-height: 20px;
+                            margin-left: 3px;
+                        }
+                    }
+
+
+                }
+            }
+
+            // div {
+            //     float: left;
+            // }
+
+            // .live-left{
+
+            // }
+            .pic {
+                position: absolute;
+                right: -173px;
+                top: 2px;
+
+                img {
+                    width: 164px;
+                    height: 78px;
+                }
+            }
+
+        }
+
+        .top-rest {
+            // margin-top: 80px;
+            width: 100%;
+            height: 400px;
+            background: #c5000c;
+            // position: relative;
+
+            .content {
+                width: 1210px;
+                // background: blue;
+                margin: auto;
+
+                // .left {
+                //     width: 180px;
+                //     height: 480px;
+                //     background: yellow;
+                //     position: absolute;
+                //     left: 0px;
+                //     top: 0px;
+                // }
+
+                .middle {
+                    margin-left: 180px;
+                    float: left;
+
+                    img {
+                        display: block;
+                        width: 790px;
+                        height: 400px;
+
+                    }
+                }
+
+                .right {
+                    float: left;
+                    width: 185px;
+                    height: 400px;
+                    background: pink;
+                    font-size: 12px;
+
+                    h2 {
+                        width: 185px;
+                        height: 30px;
+                        padding: 12px 0px;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+
+                    img {
+                        width: 185px;
+                    }
+
+                    p {
+                        width: 165px;
+                        height: 40px;
+                        padding: 10px;
+                        margin-top: 5px;
+                        text-align: center;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .home-seckill-layout {
+        width: 100%;
+        height: 100%;
+
+        .seckill-box {
+            width: 1210px;
+            height: 305px;
+            margin: auto;
+            background: yellow;
+
+            .seckill-title {
+                width: 1160px;
+                height: 55px;
+                padding: 0px 20px 0px 30px;
+                background: orange;
+            }
+        }
+    }
+}

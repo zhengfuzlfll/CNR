@@ -76,6 +76,7 @@ body {
                 display: none;
                 box-sizing: border-box;
                 overflow: hidden;
+                z-index: 5;
 
                 dl {
                     // width: 100px;
@@ -312,6 +313,7 @@ body {
         width: 1210px;
         height: 110px;
         // background: blue;
+        // margin-left: 180px;
 
         .left {
             float: left;
@@ -384,19 +386,35 @@ body {
         width: 1210px;
         height: 40px;
         // background: aqua;
-
-        p {
+        border-bottom: 2px solid red;
+        div {
             float: left;
             width: 180px;
             height: 40px;
             background: #F30213;
             text-align: center;
             line-height: 40px;
+            position: relative;
+
+            ul {
+                width: 180px;
+                height: 480px;
+                background: #6E6568;
+                position: absolute;
+                left: 0px;
+                top: 40px;
+
+
+                li {
+                    width: 180px;
+                }
+            }
         }
 
-        ul {
+        .home_list {
             float: left;
             height: 40px;
+           
 
             // line-height: 40px;
             // 
