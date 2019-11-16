@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -317,9 +318,18 @@ body {
   width: 1210px;
   height: 40px;
   border-bottom: 2px solid red;
+  position: relative;
+  /* -----------下拉列表--------------- */
 }
 
-#header #bottom div {
+#header #bottom .bottom_1 {
+  width: 180px;
+  height: 40px;
+  position: relative;
+  float: left;
+}
+
+#header #bottom .bottom_1 .sort {
   float: left;
   width: 180px;
   height: 40px;
@@ -329,17 +339,11 @@ body {
   position: relative;
 }
 
-#header #bottom div ul {
-  width: 180px;
-  height: 480px;
-  background: #6E6568;
+#header #bottom .bottom_1 .icon-arrow_downward {
   position: absolute;
-  left: 0px;
-  top: 40px;
-}
-
-#header #bottom div ul li {
-  width: 180px;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #header #bottom .home_list {
@@ -358,4 +362,84 @@ body {
 
 #header #bottom .home_list li:nth-child(1) {
   color: #F30213;
+}
+
+#header #bottom .list-all {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  width: 180px;
+  height: 442px;
+  /* padding: 19px 0px; */
+  background: #aaa;
+}
+
+#header #bottom .cate-menu-item .cate-menu-box {
+  width: 168px;
+  height: 34px;
+  padding-left: 12px;
+  background: #999;
+  /* float: left; */
+  line-height: 34px;
+}
+
+#header #bottom .cate-menu-item .cate-part {
+  float: left;
+  width: 998px;
+  height: 442px;
+  display: none;
+  position: absolute;
+  /* margin-left: 168px; */
+  left: 180px;
+  top: 0px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#header #bottom li:hover .cate-part {
+  display: block;
+  background: #ccc;
+}
+
+#header #bottom li:hover {
+  background: rgba(204, 204, 204, 0.5);
+}
+
+#header #bottom .cate-menu-item .cate-detail-tit {
+  float: left;
+  width: 70px;
+  height: 34px;
+  /* float: left; */
+}
+
+#header #bottom .cate-menu-item .cate-detail-con {
+  float: left;
+  /* width: 660px; */
+  width: 660px;
+  height: 24px;
+  padding: 6px 0px;
+  float: left;
+  margin: 0px;
+}
+
+#header #bottom .cate-menu-item .cate-part-col1 {
+  width: 740px;
+  height: 147px;
+  padding: 20px 0px 10px 0px;
+  float: left;
+}
+
+#header #bottom .cate-menu-item img {
+  width: 240px;
+  height: 146px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+#header #bottom .cate-menu-item .sub-class-right {
+  width: 240px;
+  height: 439px;
+  border-left: 1px solid red;
+  float: left;
 }

@@ -71,7 +71,7 @@
         //     // let ul1 = cate_menu_item[i].length;
         //     for (let j = 0; j < cate_menu_item[i].length; j++) {
         //         // let text = cate_menu_item[i].querySelectorAll("a")
-        //         for (var k = 0; k < cate_menu_item[j].querySelectorAll("a").length; k++) {
+        //         for (let k = 0; k < cate_menu_item[j].querySelectorAll("a").length; k++) {
         //             obj.text = cate_menu_item[i].querySelectorAll("a")[k].innerText;
         //         }
         //     }
@@ -182,7 +182,7 @@
 
         for (let i = 0; i < menu.length; i++) {
             let o = {};
-            // var oA = menu[i].getElementsByClassName("cate-menu-lk");
+            // let oA = menu[i].getElementsByClassName("cate-menu-lk");
             // // console.log(oA);
             // o.title = []
             // for (let j = 0; j < oA.length; j++) {
@@ -203,12 +203,83 @@
 
                 // }
 
+                o.list2 = [];
+                let oC = menu[i].getElementsByTagName("dd");
+                for (let k = 0; k < oC.length; k++) {
+                    console.log(oC);
+
+                }
+
             }
-            console.log(o.titles);
+
+            // console.log(o.titles);
 
             // console.log(oB);
 
             // arr.push(o);
+        }
+        let str = JSON.stringify(arr);
+        console.log(str);
+
+
+
+
+        let menu = document.querySelector(".menu").children; //13
+        let titleA = menu[0].children[0].querySelectorAll("a"); //2
+        let text = titleA[0].innerText;
+
+        let arr = [];
+        for (let i = 0; i < menu.length; i++) {
+            let o = {};
+            let oA = menu[i].getElementsByClassName("cate-menu-lk"); //左边数据
+            let oB = menu[i].getElementsByClassName("sub-class-right"); //图片
+            let oX = menu[i].getElementsByTagName("dl"); //4  dl
+            let oC = menu[i].getElementsByTagName("dt"); //4  dt /*存放详细列表 dt  */
+            let oD = menu[i].getElementsByTagName("dd"); //4  dd
+            let dl = menu[i].querySelectorAll(".cate-detail-item") //dl
+            // let dt = menu[i].querySelectorAll(".cate-detail-item").children[0]
+            // let catedetailtit = menu[i].querySelectorAll(".cate-detail-tit");
+
+
+            o.title = []; /* 存放左边数据 */
+            o.list = []; /* 存放详细列表 */
+            o.img = []; /* 存放图片 */
+
+            /* 左边的数据 */
+            for (let k = 0; k < oA.length; k++) {
+                o.title.push(oA[k].innerText);
+            }
+
+            // let obj = {};
+            // for (let i = 0; i < catedetailtit[i].length; i++) {
+
+            // }
+
+
+            /* 详细列表 */
+            let obj = {};
+            for (let l = 0; l < oX.length; l++) { //dl 4
+                obj.title = oC[l].innerText.trim(); //dt 
+                obj.list2 = []
+                //     let oD = menu[i].getElementsByTagName("dd"); //4  dd
+
+                o.list.push(obj)
+            }
+
+            // for (let l = 0; l < oX[i].length; l++) {
+            //     console.log(666);
+
+            // }
+
+
+
+            /* 图片 */
+            let oU = oB[0].querySelectorAll("img");
+            for (let j = 0; j < oU.length; j++) {
+                o.img.push(oU[j].src);
+            }
+
+            arr.push(o);
         }
         let str = JSON.stringify(arr);
         console.log(str);

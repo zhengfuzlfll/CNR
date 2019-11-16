@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ul {
+            position: relative;
+        }
+
+        .cate-menu-item .cate-menu-box {
+            width: 168px;
+            height: 34px;
+            padding-left: 12px;
+            background: #999;
+            /* float: left; */
+
+        }
+
+        .cate-menu-item .cate-part {
+            float: left;
+            display: none;
+            position: absolute;
+            /* margin-left: 168px; */
+            left: 220px;
+            top: 0px;
+            width: 998px;
+            height: 439px;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li {
+            width: 168px;
+            height: 34px;
+            padding-left: 12px;
+        }
+
+        li:hover .cate-part {
+            display: block;
+            background: #ccc;
+        }
+
+        .cate-menu-item .cate-detail-tit {
+            float: left;
+            width: 70px;
+            height: 34px;
+            /* float: left; */
+        }
+
+        .cate-menu-item .cate-detail-con {
+            float: left;
+            /* width: 660px; */
+            width: 660px;
+            height: 24px;
+            padding: 6px 0px;
+            float: left;
+            margin: 0px
+        }
+
+        .cate-menu-item .cate-part-col1 {
+            width: 740px;
+            height: 147px;
+            padding: 20px 0px 10px 0px;
+            float: left;
+        }
+
+        .cate-menu-item img {
+            width: 240px;
+            height: 146px;
+            display: block;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .cate-menu-item .sub-class-right {
+            width: 240px;
+            height: 439px;
+            border-left: 1px solid red;
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="list-all">
+        <li cat_menu_id="2" class="cate-menu-item">
+            <div class="cate-menu-box">
+                <a target="_blank" class="cate-menu-lk" href="/search?cat=19">休闲食品</a><span
+                    class="cate-menu-line">/</span>
+                <a target="_blank" class="cate-menu-lk" href="/search?cat=22">即食罐头</a><span
+                    class="cate-menu-line">/</span>
+            </div>
+            <div class="cate-part" cat_menu_id="2">
+                <div class="cate-part-col1">
+
+                    <div class="cate-detail">
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=20">休闲小食></a>
+                            </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=26">膨化糕饼</a>
+                                <a target="_blank" href="/search?cat=27">坚果炒货</a>
+                                <a target="_blank" href="/search?cat=28">蜜饯糖果</a>
+                                <a target="_blank" href="/search?cat=29">熟食肉干</a>
+                                <a target="_blank" href="/search?cat=30">其它休闲食品</a>
+                            </dd>
+                        </dl>
+
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=21">粮油副食></a>
+                            </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=31">大米</a>
+                                <a target="_blank" href="/search?cat=32">面粉</a>
+                                <a target="_blank" href="/search?cat=33">食用油</a>
+                                <a target="_blank" href="/search?cat=34">杂粮</a>
+                                <a target="_blank" href="/search?cat=35">粮油制品</a>
+                                <a target="_blank" href="/search?cat=36">副食调料</a>
+                                <a target="_blank" href="/search?cat=37">其它粮油副食</a>
+                            </dd>
+                        </dl>
+
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=22">即食罐头></a> </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=38">水果罐头</a>
+                                <a target="_blank" href="/search?cat=39">鱼类罐头</a>
+                                <a target="_blank" href="/search?cat=40">肉类罐头</a>
+                                <a target="_blank" href="/search?cat=41">蔬菜类罐头</a>
+                                <a target="_blank" href="/search?cat=42">滋补类罐头</a>
+                                <a target="_blank" href="/search?cat=43">其他罐头</a>
+                            </dd>
+                        </dl>
+
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=23">方便食品></a>
+                            </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=44">方便面/粉/粥</a>
+                                <a target="_blank" href="/search?cat=45">自热盒饭</a>
+                                <a target="_blank" href="/search?cat=46">烘培速食</a>
+                                <a target="_blank" href="/search?cat=47">即食调味菜</a>
+                                <a target="_blank" href="/search?cat=48">其他方便食品</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- 图片 -->
+                <div class="sub-class-right">
+                    <div class="adv-promotions">
+                        <img src="https://pic.cnrmall.com/image/43/8a/438a8473467e0ac9c94fa7384ae14699.jpg">
+                        <img src="https://pic.cnrmall.com/image/36/92/36927707e72a6a6c04f77e860506613c.jpg">
+                        <img src="https://pic.cnrmall.com/image/c9/81/c98198574adcd242b9ba2a72f44d87e0.jpg">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li cat_menu_id="3" class="cate-menu-item">
+            <div class="cate-menu-box">
+                <a target="_blank" class="cate-menu-lk" href="/search?cat=109">水果 </a>
+                <span class="cate-menu-line">/</span>
+                <a target="_blank" class="cate-menu-lk" href="/search?cat=103">水产</a>
+                <span class="cate-menu-line">/</span>
+                <a target="_blank" class="cate-menu-lk" href="/search?cat=118">精选肉类</a>
+                <span class="cate-menu-line">/</span>
+            </div>
+            <div class="cate-part" cat_menu_id="3">
+                <div class="cate-part-col1">
+                    <div class="cate-detail">
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=109">水果></a>
+                            </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=110">国产水果</a>
+                                <a target="_blank" href="/search?cat=113">进口水果</a>
+                                <a target="_blank" href="/search?cat=115">其他水果</a>
+                            </dd>
+                        </dl>
+
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=103">水产></a>
+                            </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=104">海参</a>
+                                <a target="_blank" href="/search?cat=105">鱼虾</a>
+                                <a target="_blank" href="/search?cat=106">鲍/贝</a>
+                                <a target="_blank" href="/search?cat=108">其他水产</a>
+                            </dd>
+                        </dl>
+
+                        <dl class="cate-detail-item">
+                            <dt class="cate-detail-tit">
+                                <a target="_blank" href="/search?cat=118">禽蛋肉></a>
+                            </dt>
+                            <dd class="cate-detail-con">
+                                <a target="_blank" href="/search?cat=120">鲜蛋</a>
+                                <a target="_blank" href="/search?cat=122">猪肉</a>
+                                <a target="_blank" href="/search?cat=124">牛肉</a>
+                                <a target="_blank" href="/search?cat=126">羊肉</a>
+                                <a target="_blank" href="/search?cat=128">鸡肉</a>
+                                <a target="_blank" href="/search?cat=130">鸭肉</a>
+                                <a target="_blank" href="/search?cat=133">其他禽蛋肉</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sub-class-right">
+                    <div class="adv-promotions">
+                        <img src="https://pic.cnrmall.com/image/04/26/0426ab1880a842ef59b09cd45d0ccac3.jpg">
+                        <img src="https://pic.cnrmall.com/image/ad/1c/ad1c0a1c83110f234e4236f9eaf42d10.jpg">
+                        <img src="https://pic.cnrmall.com/image/a8/83/a883eee835e8e195158323817018e694.jpg">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

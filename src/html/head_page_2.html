@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>头部</title>
+    <script src="../js/jquery-1.10.1.min.js"></script>
     <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
     <link rel="stylesheet" href="../sass/01header/header.css">
+    <link rel="stylesheet" href="../css/header.css">
+
 </head>
 
 <body>
@@ -138,30 +141,94 @@
             </div>
         </div>
         <div id="bottom">
-            <div>所有分类<span class="iconfont icon-arrow_downward"></span>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
+            <div>
+                <div class="bottom_1">
+                    <div class="sort">所有分类</div>
+                    <span class="iconfont icon-arrow_downward"></span>
+                </div>
+                <!-- 首页、直播、跨境频道 -->
+                <ul class="home_list">
+                    <li>首页</li>
+                    <li>TV直播</li>
+                    <li>跨境频道</li>
+                </ul>
+
+                <ul class="list-all">
+
                 </ul>
             </div>
 
-
-
-            <ul class="home_list">
-                <li>首页</li>
-                <li>TV直播</li>
-                <li>跨境频道</li>
-            </ul>
         </div>
     </div>
+
+    <script>
+        // console.log($(".list-all"));
+        $.getJSON("../api/list.json", function (res) {
+            console.log(res);
+
+            let html = res.map((item, index) => {
+                let str = '';
+                for (let i = 0; i < item.title.length; i++) {
+                    str += `<a target="_blank" class="cate-menu-lk" href="/search?cat=19">${item.title[i]}</a>
+                            <span class="cate-menu-line">/</span>`
+                }
+                // console.log(str);
+
+                // let str2 = '';
+
+                let str2 = item.list.map((ele, index) => {
+                    // let str4 = ele.list2.map((e) => {
+                    //     return `<a>${ele}</a>`
+                    // })
+                    return `<a target="_blank" href="/search?cat=26">${ele.list2}</a>`
+
+                })
+                // console.log(str2);
+
+                // console.log(str2);
+
+                // str2 += `<a target="_blank" href="/search?cat=26">${item.list.list2[j]}</a>`
+
+                //完成
+                let str3 = '';
+                for (let k = 0; k < item.img.length; k++) {
+                    str3 += `<img src="${item.img[k]}">`
+                }
+                // console.log(str3);
+
+                return `
+                <li class="cate-menu-item">
+                    <div class="cate-menu-box">
+                       ${str}
+                    </div>
+                    <div class="cate-part">
+                        <div class="cate-part-col1">
+                            <div class="cate-detail">
+
+                                <dl class="cate-detail-item">
+                                    <dt class="cate-detail-tit">
+                                        <a target="_blank" href="/search?cat=20">${item.list.title}</a>
+                                    </dt>
+                                    <dd class="cate-detail-con">
+                                       ${str2}
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- 图片 -->
+                        <div class="sub-class-right">
+                            <div class="adv-promotions">
+                               ${str3}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                `
+            }).join("");
+
+            $(".list-all").html(html)
+        });
+    </script>
 </body>
 
 </html>
