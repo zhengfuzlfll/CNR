@@ -138,20 +138,105 @@
         </div>
     </div>
     <div id="bottom">
-        <div>所有分类<span class="iconfont icon-arrow_downward"></span>
-            <ul>
-               
-            </ul>
+        <div class="bottom_1">
+            <div class="sort">所有分类</div>
+            <span class="iconfont icon-arrow_downward"></span>
         </div>
-
-
-
         <ul class="home_list">
             <li>首页</li>
             <li>TV直播</li>
             <li>跨境频道</li>
         </ul>
+        <ul class="list-all">
+
+        </ul>
+
+
     </div>
+    <script>
+        // console.log($(".list-all"));
+        $.getJSON("../api/list.json", function (res) {
+            // console.log(res);
+
+            let html = res.map((item, index) => {
+                /* 左边 */
+                let str = '';
+                for (let i = 0; i < item.title.length; i++) {
+                    str += `<a target="_blank" class="cate-menu-lk" href="/search?cat=19">${item.title[i]}</a>
+                            <span class="cate-menu-line">/</span>`
+                }
+
+                /* 中间 */
+                let str2 = item.list.map((ele, index) => {
+                    // console.log(ele,"#33");/* 对象 */
+                    // console.log(ele.title);
+
+                    let str4 = '';
+                    ele.list2.map(e => {
+                        str4 += `<a target="_blank" href="/search?cat=26">${e}</a>`
+                    }).join("");
+                    return str4;
+                    // let str5 = `<a target="_blank">${ele.title}</a>`
+                    // console.log(str5 + str4);
+                    // return str5 + str4;
+                    // let str5 = '';
+                    // ele.title.map(el => {
+                    //     str5 += `<a target="_blank">${el}</a>`
+                    // }).join('')
+                    // console.log(str5 + str4);
+                    // return `
+
+
+                    // `
+
+
+                }).join("")
+                // console.log(str2);
+
+                /* 图片 */
+                let str3 = '';
+                for (let k = 0; k < item.img.length; k++) {
+                    str3 += `<img src="${item.img[k]}">`
+                }
+
+
+                return `
+                <li class="cate-menu-item">
+        
+                    <div class="cate-menu-box">
+                       ${str}
+                    </div>
+
+             
+                    <div class="cate-part">
+                        <div class="cate-part-col1">
+                            <div class="cate-detail">
+
+                                <dl class="cate-detail-item">
+                                    <dt class="cate-detail-tit">
+                                      
+                                    </dt>
+                                    <dd class="cate-detail-con">
+                                      
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <!-- 图片 -->
+                        <div class="sub-class-right">
+                            <div class="adv-promotions">
+                               ${str3}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                `
+            }).join("");
+
+            $(".list-all").html(html)
+        });
+    </script>
 </div>
 <!-- </body>
 

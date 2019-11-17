@@ -12,7 +12,10 @@
 </head>
 
 <body>
+    <!--头部区域 -->
     <div id="home_page"></div>
+
+    <!-- 内容区域 -->
     <div id="main">
         <!-- 头部直播 -->
         <div class="home-focus-layout">
@@ -62,24 +65,386 @@
                 <!-- 秒杀 -->
                 <div class="seckill-title">
                     <div class="title">
-                        
+                        <span class="iconfont icon-icon-xianmain"></span>
+                        <h3 class="seckill">秒杀专区</h3>
+                        <span class="Spike-zone">Spike zone</span>
+                        <span class="iconfont icon-jiantou"></span>
+                        <!-- <a href="/seckill">Spike zone
+                            <i class="iconfont icon-jiantou"></i>
+                        </a> -->
+                    </div>
+                    <!-- 倒计时 -->
+                    <div class="countdown">
+                        <span class="tip">本场秒杀</span>
+                        <span class="timer" id="seckillTimeDown">
+                            <span class="m" data-cd-type="allHours">09</span>
+                            <em>:</em><span class="h" data-cd-type="minutes">31</span>
+                            <em>:</em><span class="s" data-cd-type="seconds">08</span>
+                        </span>
+                        <span class="tip">后结束</span>
                     </div>
                 </div>
 
                 <!-- 轮播图 -->
-                <div class="seckill-content"></div>
+                <div class="seckill-content">
+                    <div class="bx-wrapper">
+                        <div class="bx-viewport">
+                            <ul class="sk-ul" id="homeSeckill">
+
+                            </ul>
+                        </div>
+
+                        <div class="bx-controls bx-has-controls-direction">
+                            <div class="bx-controls-direction">
+                                <a class="bx-prev">&lt;</a>
+                                <a class="bx-next">&gt;</a></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
+        <!-- 食品酒水 -->
+        <div id="Food-and-beverage">
+            <div class="food-title">
+                <h3>食品酒水</h3>
+            </div>
+            <!-- 内容区域 -->
+            <div class="food-rest">
+                <!-- 左边 -->
+                <div class="food-l">
+                    <div class="l-top">
+                        <div class="l-left">
+                            <img src="https://pic.cnrmall.com/image/bd/5a/bd5a6cf84f4eba9ee29276cc978e99da.jpg" alt="">
+                        </div>
+                        <div class="l-right">
+                            <ul class="l-ul">
+                                <li>
+                                    <div>
+                                        <p>精选蜂蜜</p>
+                                        <p>纯纯蜜香 其味浓浓</p>
+                                    </div>
+
+                                    <img src="https://pic.cnrmall.com/image/89/25/89252c0122369ab10ab204f61301f5b5.jpg"
+                                        alt="">
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>冲调粉茶</p>
+                                        <p>浓缩精华</p>
+                                    </div>
+
+                                    <img src="https://pic.cnrmall.com/image/cd/0e/cd0e2e92839cd2e0b5ac5651a73ffe4a.jpg"
+                                        alt="">
+                                </li>
+                                <li style="border-bottom:0px;">
+                                    <div>
+                                        <p>粮油副食</p>
+                                        <p>精品杂粮 营养丰富</p>
+                                    </div>
+
+                                    <img src="https://pic.cnrmall.com/image/d7/78/d77804c72ff4739ff29342bc4eef338d.jpg"
+                                        alt="">
+                                </li>
+                                <li style="border-bottom:0px;">
+                                    <div>
+                                        <p>即食罐头</p>
+                                        <p>美味即享</p>
+                                    </div>
+
+                                    <img src="https://pic.cnrmall.com/image/aa/40/aa4027cfc852b2e258afd67433fb1feb.jpg"
+                                        alt="">
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="l-bottom">
+                        <ul class="food-ul">
+                            <li>
+                                <img src="https://pic.cnrmall.com/image/0a/9a/0a9aefbe9c4c48c7575c1e21fcb5e31f.jpg"
+                                    alt="">
+                            </li>
+                            <li>
+                                <img src="https://pic.cnrmall.com/image/0c/6a/0c6a25bc3e00d9e28db90273b47835fd.jpg"
+                                    alt="">
+                            </li>
+                            <li>
+                                <img src="https://pic.cnrmall.com/image/29/e9/29e9f019431455aa9c951a5137ec1f69.jpg"
+                                    alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- 右边 -->
+                <!-- <div class="food-r"> -->
+                <div class="food-r">
+
+                    <div class="r-top">
+                        <div class="r-left">
+                            <img src="https://pic.cnrmall.com/image/42/1d/421d8db99b0e65faff97b3739a97abb9.jpg" alt="">
+                        </div>
+
+                        <div class="r-right">
+
+                            <img class="img1"
+                                src="https://pic.cnrmall.com/image/70/94/7094d59e5f9cd7133ede8aeda9620989.jpg" alt="">
+
+                            <div class="food_1">
+                                <div class="food_2" style="border-bottom:1px solid #ccc;">
+                                    <div>
+                                        <p>休闲小食</p>
+                                        <p>老少皆宜</p>
+                                    </div>
+                                    <img src="https://pic.cnrmall.com/image/8e/a1/8ea1ebcae314b255d6dd7f4f10a54829.jpg"
+                                        alt="">
+                                </div>
+
+                                <div class="food_2">
+                                    <div>
+                                        <p>肉禽蛋品</p>
+                                        <p>味美鲜香</p>
+                                    </div>
+                                    <img src="https://pic.cnrmall.com/image/57/0f/570f0b4c21d8a892c3a5a03dac72d3aa.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="r-bottom">
+                        <ul class="food-ul-r">
+                            <li>
+                                <img src="https://pic.cnrmall.com/image/48/58/485899e74bb69bfc6f89b742936ada71.jpg"
+                                    alt="">
+                            </li>
+                            <li>
+                                <img src="https://pic.cnrmall.com/image/3e/ca/3ecaa2be4ed5cbdcae96d99646f56421.jpg"
+                                    alt="">
+                            </li>
+                            <li>
+                                <img src="https://pic.cnrmall.com/image/b6/41/b6410b6009b87ecfbabaa35311695775.jpg"
+                                    alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 三栏 -->
+        <div id="floor_2">
+            <div class="three-coloum">
+                <div class="col col1">
+                    <div class="bz-hd">
+                        <h3>美妆护肤</h3>
+                    </div>
+                    <div class="bz-bd-wrapper">
+                        <div class="bz-bd-col">
+                            <div class="bz-cover">
+                                <div class="top-bz-left">
+                                    <img src="https://pic.cnrmall.com/image/d0/97/d09747b3348a7d53ba303d6663a61ec3.jpg"
+                                        alt="">
+                                </div>
+                                <div class="top-bz-right">
+                                    <ul>
+                                        <li style="border-bottom:1px solid #ccc;">
+                                            <div>
+                                                <p class="pp">补水面膜</p>
+                                                <p>润泽肌肤</p>
+                                            </div>
+                                            <img src="https://pic.cnrmall.com/image/4e/75/4e7539f967aca800b066f44a3a2d9457.jpg"
+                                                alt="">
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <p class="pp">秀发护理</p>
+                                                <p>润滑发丝</p>
+                                            </div>
+                                            <img src="https://pic.cnrmall.com/image/4e/75/4e7539f967aca800b066f44a3a2d9457.jpg"
+                                                alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bz-more">
+                                <ul>
+                                    <li style="margin-right: 10px;"><img
+                                            src="https://pic.cnrmall.com/image/a6/c9/a6c9b3f5b242231e6083b21daa88b65f.jpg"
+                                            alt=""></li>
+                                    <li><img src="https://pic.cnrmall.com/image/a6/c9/a6c9b3f5b242231e6083b21daa88b65f.jpg"
+                                            alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col2">
+                    <div class="bz-hd">
+                        <h3>服装珠宝</h3>
+                    </div>
+                    <div class="bz-bd-wrapper">
+                        <div class="bz-bd-col">
+                            <div class="bz-cover">
+                                <div class="top-bz-left">
+                                    <img src="https://pic.cnrmall.com/image/cf/29/cf298b12cb1ef1a52c5b8a16a8b7bfb3.jpg"
+                                        alt="">
+                                </div>
+                                <div class="top-bz-right">
+                                    <ul>
+                                        <li style="border-bottom:1px solid #ccc;">
+                                            <div>
+                                                <p class="pp">女神范儿</p>
+                                                <p>尽显魅力</p>
+                                            </div>
+                                            <img src="https://pic.cnrmall.com/image/61/87/6187222d781e45c94de02604cf26454c.jpg"
+                                                alt="">
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <p class="pp">文玩收藏</p>
+                                                <p>典藏一生</p>
+                                            </div>
+                                            <img src="https://pic.cnrmall.com/image/7e/dd/7edda951a7a3784579183d84a86a246a.jpg"
+                                                alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bz-more">
+                                <ul>
+                                    <li style="margin-right: 10px;"><img
+                                            src="https://pic.cnrmall.com/image/8b/f2/8bf24f3e02aa8851bd1c3ba41004293f.jpg"
+                                            alt=""></li>
+                                    <li><img src="https://pic.cnrmall.com/image/a8/bd/a8bd2e4376d12b4af9fd97fa521b2538.jpg"
+                                            alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col3" style="margin-right: 0px;">
+                    <div class="bz-hd">
+                        <h3>家居家电</h3>
+                    </div>
+                    <div class="bz-bd-wrapper">
+                        <div class="bz-bd-col">
+                            <div class="bz-cover">
+                                <div class="top-bz-left">
+                                    <img src="https://pic.cnrmall.com/image/76/92/76923f420fbf0a4a292ea8011a0b455c.jpg"
+                                        alt="">
+                                </div>
+                                <div class="top-bz-right">
+                                    <ul>
+                                        <li style="border-bottom:1px solid #ccc;">
+                                            <div>
+                                                <p class="pp">品质生活</p>
+                                                <p>舒适便捷</p>
+                                            </div>
+                                            <img src="https://pic.cnrmall.com/image/5f/35/5f353beda3b2ea0b24637085018ce0a8.jpg"
+                                                alt="">
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <p class="pp">创意家居</p>
+                                                <p>精致生活</p>
+                                            </div>
+                                            <img src="https://pic.cnrmall.com/image/3b/69/3b697e155c1bbaef58b4128c8ed5ec2f.jpg"
+                                                alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bz-more">
+                                <ul>
+                                    <li style="margin-right: 10px;"><img
+                                            src="https://pic.cnrmall.com/image/60/88/6088cfcc06275c19c14b83c564fa4a68.jpg"
+                                            alt=""></li>
+                                    <li><img src="https://pic.cnrmall.com/image/12/ae/12ae6caabfea92fe34766351b06d71c2.jpg"
+                                            alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- 猜您喜欢 -->
+
+    
+    <!-- 底部区域 -->
+    <div id="footer_page"></div>
 </body>
 <script src="../js/jquery-1.10.1.min.js"></script>
 <script>
     (function () {
         $("#home_page").load("head_page.html");
-    })();
 
-    // console.log($("#home_page"));
+        /* 倒计时 */
+        // function countDown(y, m, d, h, mm) {
+        //     var future = new Date(y, m, d, h, mm);
+        //     // 间隔时间毫秒转成秒
+        //     var remTime = (future - new Date()) / 1000;
+        //     // 满足一天及天数加1 不满足则为余数 所以直接除一天有多少秒即可
+        //     var days = parseInt(remTime / 60 / 60 / 24);
+        //     // 先算出剩余时间有多少小时，这些小时有多少个24小时 不满24小时的及为剩余多少小时
+        //     var hours = parseInt(remTime / 60 / 60 % 24);
+        //     // 换算 多少分钟 满足60分的为小时数 不满60分的及为剩余分钟数
+        //     var minutes = parseInt(remTime / 60 % 60);
+        //     // 满足60秒的为分钟数 不满60秒的及为剩余秒数
+        //     var seconds = parseInt(remTime % 60);
+        //     //判断总的秒数是否小于=0 是则结束定时器
+        //     if (remTime <= 0) return remTime;
+        //     console.log(days, hours, minutes, seconds);
+        // } // 设置定时器
+        // var timer = setInterval(function () {
+        //     var curTime = countDown(2019, 4, 28, 17, 5);
+
+        //     if (curTime <= 0) {
+        //         clearInterval(timer);
+        //         timer = null;
+        //     }
+        // }, 1000);
+        // countDown(y, m, d, h, mm);
+
+        /* 轮播图 */
+        $.getJSON("../api/banner.json", function (res) {
+            console.log(res);
+            let str = res.map(item => {
+                return ` <li class="sk-items">
+                            <div class="sk-goods-info">
+                                <a href="/goods/43659" target="_blank" class="sk-link">
+                                    <img title="" alt="" src="${item.img}">
+                                    <p class="sk-name">${item.title}</p>
+                                </a>
+                                <span class="sk-shadow"></span>
+                            </div>
+                            <p class="sk-price">
+                                <span class="price-new">￥${item.price}.00</span>
+                                <span class="price-original">￥${item.priceA}.00</p>
+                        </li>`
+            }).join("");
+            $("#homeSeckill").html(str); /*ul 渲染 */
+
+            let iw = $(".sk-items").width(); /* 每个li 宽度 */
+            // console.log($(".sk-items").length); /* li 的总个数 */
+            let iwsize = $(".sk-items").length;
+            console.log(iwsize);
+
+            $("#homeSeckill").width(iw * (iwsize + 9)) /* 设置ul 的宽度 */
+        })
+
+        /* ----------食品酒水---- */
+
+    })();
 </script>
 
 </html>

@@ -9,6 +9,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 input {
   margin: 0;
   padding: 0;
@@ -319,6 +323,7 @@ body {
   height: 40px;
   border-bottom: 2px solid red;
   position: relative;
+  /*-------首页、直播 、跨境频道--------*/
   /* -----------下拉列表--------------- */
 }
 
@@ -370,8 +375,30 @@ body {
   top: 40px;
   width: 180px;
   height: 442px;
+  background: #6E6568;
   /* padding: 19px 0px; */
+  /* 最后一个  /  隐藏 */
+}
+
+#header #bottom .list-all .cate-menu-box span:nth-last-child(1) {
+  display: none;
+}
+
+#header #bottom .list-all .cate-menu-box:hover {
   background: #aaa;
+}
+
+#header #bottom .list-all .adv-promotions {
+  margin-top: 2px;
+}
+
+#header #bottom .cate-menu-box,
+#header #bottom .cate-menu-box a {
+  color: white;
+}
+
+#header #bottom .cate-menu-box a:hover {
+  color: red;
 }
 
 #header #bottom .cate-menu-item .cate-menu-box {
@@ -385,21 +412,22 @@ body {
 
 #header #bottom .cate-menu-item .cate-part {
   float: left;
-  width: 998px;
+  width: 982px;
   height: 442px;
   display: none;
   position: absolute;
   /* margin-left: 168px; */
   left: 180px;
   top: 0px;
+  background: #ccc;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  z-index: 2;
 }
 
 #header #bottom li:hover .cate-part {
   display: block;
-  background: #ccc;
 }
 
 #header #bottom li:hover {
@@ -440,6 +468,6 @@ body {
 #header #bottom .cate-menu-item .sub-class-right {
   width: 240px;
   height: 439px;
-  border-left: 1px solid red;
+  border-left: 1px solid #ccc;
   float: left;
 }

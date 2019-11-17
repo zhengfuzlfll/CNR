@@ -8,6 +8,10 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 input {
     margin: 0;
     padding: 0;
@@ -429,7 +433,7 @@ body {
             }
         }
 
-
+        /*-------首页、直播 、跨境频道--------*/
         .home_list {
             float: left;
             height: 40px;
@@ -453,6 +457,8 @@ body {
             }
         }
 
+
+
         /* -----------下拉列表--------------- */
         .list-all {
             position: absolute;
@@ -460,8 +466,35 @@ body {
             top: 40px;
             width: 180px;
             height: 442px;
+            background: #6E6568;
+
             /* padding: 19px 0px; */
-            background: #aaa;
+            /* 最后一个  /  隐藏 */
+            .cate-menu-box span:nth-last-child(1) {
+                display: none;
+            }
+
+            .cate-menu-box:hover {
+                background: #aaa;
+
+            }
+
+            .adv-promotions {
+                margin-top: 2px;
+            }
+
+        }
+
+
+
+        .cate-menu-box,
+        .cate-menu-box a {
+            color: white;
+        }
+
+
+        .cate-menu-box a:hover {
+            color: red;
         }
 
         .cate-menu-item .cate-menu-box {
@@ -476,22 +509,23 @@ body {
 
         .cate-menu-item .cate-part {
             float: left;
-            width: 998px;
+            width: 982px;
             height: 442px;
             display: none;
             position: absolute;
             /* margin-left: 168px; */
             left: 180px;
             top: 0px;
-
+            background: #ccc;
             border-left: 1px solid #ccc;
             border-right: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
+            z-index: 2;
         }
 
         li:hover .cate-part {
             display: block;
-            background: #ccc;
+            // background: #ccc;
 
         }
 
@@ -533,7 +567,7 @@ body {
         .cate-menu-item .sub-class-right {
             width: 240px;
             height: 439px;
-            border-left: 1px solid red;
+            border-left: 1px solid #ccc;
             float: left;
         }
 

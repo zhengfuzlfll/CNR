@@ -9,9 +9,14 @@ body {
     height: 100%;
 }
 
+body {
+    background-color: #f2f2f2;
+}
+
 #main {
     width: 100%;
     height: 100%;
+
 
     .home-focus-layout {
         width: 100%;
@@ -162,22 +167,671 @@ body {
         }
     }
 
+    /* 秒杀+轮播图 */
     .home-seckill-layout {
         width: 100%;
         height: 100%;
 
+        /* 整个秒杀区域 */
         .seckill-box {
             width: 1210px;
             height: 305px;
             margin: auto;
             background: yellow;
 
+            /* 秒杀 */
             .seckill-title {
                 width: 1160px;
                 height: 55px;
                 padding: 0px 20px 0px 30px;
-                background: orange;
+                background: red;
+
+                /*  --左边头部 */
+                .title {
+                    width: 251px;
+                    height: 46px;
+                    float: left;
+                    // background: blue;
+                    color: white;
+
+                    .icon-icon-xianmain {
+                        font-size: 46px;
+                        float: left;
+                    }
+
+                    .seckill {
+                        font-size: 20px;
+                        float: left;
+                        line-height: 46px;
+                    }
+
+                    .Spike-zone {
+                        float: left;
+                        line-height: 46px;
+                        // text-align: bottom;
+                    }
+
+                    .icon-jiantou {
+                        float: left;
+                        line-height: 46px;
+                    }
+                }
+
+                /* 秒杀-倒计时 */
+                .countdown {
+                    // width: ;
+                    width: 246px;
+                    height: 55px;
+                    float: right;
+                    // background: royalblue;
+
+                    .tip {
+                        color: white;
+                        display: block;
+                        // width: ;
+                        height: 45px;
+                        padding-top: 10px;
+                        float: left;
+
+                    }
+
+                    .timer {
+                        float: left;
+                        margin-top: 10px;
+
+                        .m,
+                        .h,
+                        .s {
+                            padding: 5px;
+                            border: 1px solid black;
+                            margin: 0px 3px;
+                            display: block;
+                            float: left;
+                            background: black;
+                            color: red;
+                            // line-height:55px ;
+                            font-size: 20px;
+                        }
+
+                        em {
+
+                            font-style: normal;
+                            // text-decoration: none;
+                            float: left;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .home-seckill-layout {
+        width: 100%;
+        height: 305px;
+        margin-top: 15px;
+        background: orange;
+    }
+
+
+
+
+    /* 轮播图 */
+    .seckill-content {
+        width: 1206px;
+        height: 225px;
+        padding: 12px 0px 13px 0px;
+        margin: 0px 2px;
+
+        .bx-wrapper {
+            width: 1206px;
+            height: 225px;
+            overflow: hidden;
+            position: relative;
+
+            // .sk-items:hover .bx-controls-direction {
+            //     display: block;
+            // }
+
+            #homeSeckill {
+
+                .sk-items {
+                    float: left;
+                    width: 170px;
+                    height: 225px;
+                    border-left: 1px solid #ccc;
+                    padding: 0px 15px;
+
+                }
+
+                .sk-items img {
+                    width: 130px;
+                    height: 130px;
+                    margin: 17px 20px;
+                    box-shadow: 0px 0px;
+                }
+
+                .sk-items .sk-name {
+                    width: 170px;
+                    height: 32px;
+                    font-size: 12px;
+                    margin: 0px;
+                    /* color: black; */
+                    color: #999;
+                    overflow: hidden;
+                }
+
+                .sk-price {
+                    width: 170px;
+                    height: 25px;
+                    padding: 3px 0px;
+                    margin: 0px;
+                }
+
+                .sk-price .price-new {
+                    color: red;
+                    font-size: 20px;
+                }
+
+                .sk-price .price-original {
+                    font-size: 12px;
+                    color: #999;
+                    text-decoration: line-through;
+                }
+
+
+
+            }
+
+
+            .bx-controls {
+                // &:hover .bx-controls-direction {
+                //     display: block;
+                // }
+
+
+                .bx-controls-direction {
+                    width: 1206px;
+                    height: 225px;
+                    display: none;
+
+                    a {
+                        display: block;
+                        width: 28px;
+                        height: 62px;
+                        background: #ccc;
+                        line-height: 62px;
+                        text-align: center;
+
+                    }
+
+                    .bx-prev {
+                        float: left;
+                        position: absolute;
+                        left: 0px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    .bx-next {
+                        float: right;
+                        position: absolute;
+                        right: 0px;
+                        top: 50%;
+                        // transform: translateY(-50%);
+                    }
+
+                }
+
+            }
+        }
+
+
+
+    }
+
+
+    /* 食品酒水 */
+    #Food-and-beverage {
+        width: 1210px;
+        height: 478px;
+        background: white;
+        margin: auto;
+        margin-top: 15px;
+
+        .food-title {
+            width: 1165px;
+            height: 26px;
+            padding: 16px 20px 16px 25px;
+            background: #edba21;
+            /* 必须 */
+
+            h3 {
+                font-size: 22px;
+                color: white;
+            }
+        }
+
+        .food-rest {
+            width: 1190px;
+            height: 400px;
+            // background: yellow;
+            padding: 10px;
+
+            /* -------左边------ */
+            .food-l {
+                width: 580px;
+                height: 400px;
+                float: left;
+
+                img {
+                    display: block;
+                }
+
+                .l-top {
+                    width: 578px;
+                    height: 260px;
+
+                    .l-left {
+                        float: left;
+                        width: 196px;
+                        height: 260px;
+                        overflow: hidden;
+
+                        img {
+                            width: 196px;
+                            height: 260px;
+                            transition: all 0.5s;
+                        }
+
+                        &:hover img {
+                            transform: translateX(-10px);
+                        }
+
+                    }
+
+                    .l-right {
+                        float: left;
+
+                        .l-ul {
+                            width: 382px;
+                            height: 260px;
+
+                            li {
+                                float: left;
+                                width: 190px;
+                                height: 130px;
+                                border-bottom: 1px solid #ccc;
+                                border-left: 1px solid #ccc;
+                                // line-height: 130px;
+                                overflow: hidden;
+
+                                div {
+                                    float: left;
+                                    width: 56px;
+                                    font-size: 12px;
+                                    padding: 20px 1px 0px 15px;
+
+                                    p:nth-child(1) {
+                                        font-size: 14px;
+                                        color: #ffd300;
+                                    }
+                                }
+
+                                img {
+                                    float: left;
+                                    width: 100px;
+                                    height: 100px;
+                                    padding: 10px 5px;
+                                    transition: all 0.5s;
+                                }
+
+                                &:hover img {
+                                    transform: translateX(-5px);
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .l-bottom {
+                    width: 578px;
+                    height: 130px;
+                    // background: #000;
+
+                    .food-ul {
+                        // width: 558px;
+                        height: 130px;
+                        clear: both;
+                        margin-top: 10px;
+                        // background: #000;
+                        // position: relative;
+
+                        li {
+                            float: left;
+                            width: 192px;
+                            height: 130px;
+                            // background: red;
+                            overflow: hidden;
+
+
+                            img {
+                                // float: left;
+                                width: 190px;
+                                height: 130px;
+                                display: block;
+                                transition: all 0.5s;
+                            }
+
+                            &:hover img {
+                                transform: translateX(-10px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .food-r {
+                float: left;
+                // width: 579px;
+                width: 594px;
+                height: 400px;
+                // padding-left: 15px;
+                border-left: 1px solid #ccc;
+                margin-left: 15px;
+
+                .r-top {
+                    // width: 563px;
+                    width: 600px;
+                    height: 260px;
+
+                    .r-left {
+                        width: 196px;
+                        height: 260px;
+                        float: left;
+                        overflow: hidden;
+
+                        img {
+                            width: 196px;
+                            height: 260px;
+                            transition: all 0.5s;
+                        }
+
+                        &:hover img {
+                            transform: translateX(-10px);
+                        }
+                    }
+
+                    .r-right {
+                        float: left;
+                        // width: 386px;
+                        width: 400px;
+                        margin-left: 2px;
+                        overflow: hidden;
+
+                        .img1 {
+                            float: left;
+                            transition: all 0.5s;
+                        }
+
+                        &:hover .img1 {
+                            transform: translateX(-10px);
+                        }
+
+                        .food_1 {
+                            float: left;
+                            // margin-left: 10px;
+
+
+                            .food_2 {
+                                // float: left;
+                                width: 180px;
+                                height: 130px;
+
+                                div {
+                                    float: left;
+                                    width: 56px;
+                                    font-size: 12px;
+                                    padding: 20px 1px 0px 2px;
+                                    // padding: 20px 1px 0px 15px;
+
+                                    p:nth-child(1) {
+                                        font-size: 14px;
+                                        color: #ffd300;
+                                    }
+                                }
+
+                                img {
+                                    float: left;
+                                    width: 100px;
+                                    height: 100px;
+                                    // margin-top: 20px;
+                                    padding: 10px 5px;
+                                    transition: all 0.5s;
+                                }
+
+                                &:hover img {
+                                    transform: translateX(-5px);
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .r-bottom {
+                    width: 578px;
+                    height: 130px;
+                    // background: #000;
+
+                    .food-ul-r {
+                        // width: 558px;
+                        height: 130px;
+                        clear: both;
+                        margin-top: 10px;
+                        // background: #000;
+                        // position: relative;
+
+                        li {
+                            float: left;
+                            width: 192px;
+                            height: 130px;
+                            // background: red;
+                            overflow: hidden;
+
+
+                            img {
+                                // float: left;
+                                width: 190px;
+                                height: 130px;
+                                display: block;
+                                transition: all 0.5s;
+                            }
+
+                            &:hover img {
+                                transform: translateX(-10px);
+                            }
+                        }
+
+                    }
+                }
             }
         }
     }
+
+    /* 三栏 */
+    #floor_2 {
+        width: 1210px;
+        height: 478px;
+        margin: auto;
+        // background: orange;
+        margin-top: 15px;
+
+        .three-coloum {
+            width: 1210px;
+            height: 478px;
+
+            .col {
+                width: 397px;
+                height: 478px;
+                margin-right: 9px;
+                // background: red;
+                float: left;
+                background: white;
+
+                .bz-hd {
+                    width: 352px;
+                    height: 26px;
+                    padding: 16px 20px 16px 25px;
+
+                    h3 {
+                        color: white;
+                        font-size: 22px;
+                    }
+                }
+
+                .bz-cover {
+                    width: 377px;
+                    height: 260px;
+
+                    .top-bz-left {
+                        width: 186px;
+                        height: 260px;
+                        padding-right: 10px;
+                        float: left;
+
+                        .top-bz-left {
+                            width: 196px;
+                            height: 260px;
+
+                            img {
+                                width: 196px;
+                                height: 260px;
+
+                            }
+
+                            transition: all 0.5s;
+
+                        }
+
+                        &:hover img {
+                            transform: translateX(-5px);
+                        }
+
+                    }
+
+                    .top-bz-right {
+                        float: left;
+
+                        ul {
+                            li {
+                                width: 180px;
+                                height: 130px;
+                                overflow: hidden;
+
+                                div {
+                                    float: left;
+                                    // width: 56px;
+                                    font-size: 12px;
+                                    padding: 20px 1px 0px 5px;
+                                    // padding: 20px 1px 0px 15px;
+
+                                    p:nth-child(1) {
+                                        font-size: 14px;
+                                        // color: #ffd300;
+                                    }
+                                }
+
+                                img {
+                                    float: left;
+                                    width: 100px;
+                                    height: 100px;
+                                    padding: 10px 5px;
+                                    transition: all 0.5s;
+                                }
+
+                                &:hover img {
+                                    transform: translateX(-5px);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bz-more {
+                    width: 372px;
+                    height: 130px;
+                    padding-top: 10px;
+
+                    ul {
+                        width: 382px;
+                        height: 130px;
+
+                        // margin-left: 10px;
+                        margin: 5px;
+
+                        li {
+                            width: 186px;
+                            height: 130px;
+                            float: left;
+                            overflow: hidden;
+
+                            img {
+                                width: 186px;
+                                height: 130px;
+                                transition: all 0.5s;
+                            }
+
+                            &:hover img {
+                                transform: translateX(-5px);
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+            .col1 {
+                .bz-hd {
+                    background: #cd375e;
+
+
+                }
+
+                .pp {
+                    color: #cd375e;
+                }
+            }
+
+            .col2 {
+                .bz-hd {
+                    background: #974676;
+
+
+                }
+
+                .pp {
+                    color: #974676;
+                }
+            }
+
+            .col3 {
+                .bz-hd {
+                    background: #78538e;
+
+
+                }
+
+                .pp {
+                    color: #78538e;
+                }
+            }
+
+        }
+
+    }
+
 }

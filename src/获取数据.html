@@ -283,6 +283,48 @@
         }
         let str = JSON.stringify(arr);
         console.log(str);
+
+
+        /* -----------列表页----- */
+        let item = document.querySelectorAll('.item'); //50 标签 数据
+        let img = item[0].querySelector("img").src; //img
+        let integer = item[0].querySelector(".integer").innerText; /* 价格整数 */
+        let decimal = item[0].querySelector(".decimal").innerText; /* 价格小数 */
+        let em = item[0].querySelector("em").innerText.split(' ')[0]; /* 详情 */
+        let detail = item[0].querySelector("em").innerText.split(' ').splice(1).join(''); /* 详情 */
+        let num = item[0].querySelector(".num").innerText; /* 成交 */
+        let strong = item[0].getElementsByTagName("strong")[1].querySelector("a").innerText; /* 评论 */
+        let name = item[0].querySelector(".name").innerText; /* 官方店铺 */
+        /* 限时折扣 */
+        let discount = document.querySelectorAll(".goods-price-offer.retail_goods_price")[1].querySelector("i") ==
+            null ? '' : document.querySelectorAll(".goods-price-offer.retail_goods_price")[1].querySelector("i")
+            .innerText
+        /* 自营 */
+        let shop = document.querySelectorAll(".p-icons")[1].querySelector("i") == null ? '' : document.querySelectorAll(
+            ".p-icons")[1].querySelector("i").innerText
+        // let goodsicons = item[0].querySelector(".goods-icons").innerText ? item[0].querySelector(".goods-icons")
+        // .innerText: '';
+        let arr = []
+        for (let i = 0; i < item.length; i++) {
+            let o = {};
+            o.img = item[i].querySelector("img").src;
+            o.integer = item[i].querySelector(".integer").innerText;
+            o.decimal = item[i].querySelector(".decimal").innerText;
+            o.em = item[i].querySelector("em").innerText.split(' ')[0];
+            o.detail = item[i].querySelector("em").innerText.split(' ').splice(1).join(''); /* 详情 */
+            o.num = item[i].querySelector(".num").innerText; /* 成交 */
+            o.strong = item[i].getElementsByTagName("strong")[1].querySelector("a").innerText; /* 评论 */
+            o.name = item[i].querySelector(".name").innerText; /* 官方店铺 */
+            o.discount = document.querySelectorAll(".goods-price-offer.retail_goods_price")[i].querySelector("i") ==
+                null ? '' : document.querySelectorAll(".goods-price-offer.retail_goods_price")[i].querySelector("i")
+                .innerText
+            o.shop = document.querySelectorAll(".p-icons")[i].querySelector("i") == null ? '' : document
+                .querySelectorAll(".p-icons")[i].querySelector("i").innerText
+
+            arr.push(o);
+        }
+        let str = JSON.stringify(arr);
+        console.log(str);
     </script>
 </body>
 

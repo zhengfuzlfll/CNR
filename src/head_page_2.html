@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>头部</title>
-    <script src="../js/jquery-1.10.1.min.js"></script>
-    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
-    <link rel="stylesheet" href="../sass/01header/header.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="sass/01header/header.css">
     <!-- <link rel="stylesheet" href="../css/header.css"> -->
 
 </head>
@@ -162,89 +162,99 @@
     </div>
 
     <script>
-        // console.log($(".list-all"));
-        $.getJSON("../api/list.json", function (res) {
+        $.getJSON("api/list.json", function (res) {
             console.log(res);
 
-            let html = res.map((item, index) => {
-                /* 左边 */
-                let str = '';
-                for (let i = 0; i < item.title.length; i++) {
-                    str += `<a target="_blank" class="cate-menu-lk" href="/search?cat=19">${item.title[i]}</a>
-                            <span class="cate-menu-line">/</span>`
-                }
-
-                /* 中间 */
-                let str2 = item.list.map((ele, index) => {
-                    // console.log(ele,"#33");/* 对象 */
-                    // console.log(ele.title);
-
-                    let str4 = '';
-                    ele.list2.map(e => {
-                        str4 += `<a target="_blank" href="/search?cat=26">${e}</a>`
-                    }).join("");
-                    return str4;
-                    // let str5 = `<a target="_blank">${ele.title}</a>`
-                    // console.log(str5 + str4);
-                    // return str5 + str4;
-                    // let str5 = '';
-                    // ele.title.map(el => {
-                    //     str5 += `<a target="_blank">${el}</a>`
-                    // }).join('')
-                    // console.log(str5 + str4);
-                    // return `
+        }
 
 
-                    // `
+        // console.log($(".list-all"));
+        // $.getJSON("api/list.json", function (res) {
+        //     console.log(res)
+        //     console.log(res[list])
+        //     let html = res.list.map(ele=>{
+        //        let html2 =  ele.list2.map(item=>{
+        //             return `<a>${item}</a>`
+        //         }).join("");
+        //         return `
+        //         <dl>
+        //             <dt>${ele}<dt>
+        //             <dd>${html2}</dd>
+        //         </dl>
+        //         `
+        //     }).join("");
+        //     console.log(html)
+        // console.log(res);
+        // fn(res)
+        // let str = res.map(ele => {
+        //     // console.log(ele.list);
+        //     // ele.list2
+        //     let str2 = ele.title.map(e => {
+        //         return ` <p1>${e}</p1>`
+
+        //     }).join("")
+        //     // console.log(str2)
+
+        //     let str3 = ele.list.map(e => {
+        //         // a.title
+        //         //  console.log(e);
+        //         let str4 = e.title.map(b => {
+        //             return `<p2>${b}</p2>`
+        //         }).join('')
+
+        //         let str6 = e.list2.map(b => {
+        //             return `<p3>${b}</p3>`
+        //         }).join('')
+
+        //         return `${str4}${str6}`;
+        //     }).join('')
+        //     ///console.log(str3,"###");
+        //     // console.log(str5);
+        //     return `${str2}${str3} `;
+        // }).join("")
+        // // console.log(str);
+        // console.log(str3);
 
 
-                }).join("")
-                console.log(str2);
-
-                /* 图片 */
-                let str3 = '';
-                for (let k = 0; k < item.img.length; k++) {
-                    str3 += `<img src="${item.img[k]}">`
-                }
 
 
-                return `
-                <li class="cate-menu-item">
-        
-                    <div class="cate-menu-box">
-                       ${str}
-                    </div>
+        })
 
-             
-                    <div class="cate-part">
-                        <div class="cate-part-col1">
-                            <div class="cate-detail">
+        //     function fn(data) {
+        //         // console.log(data);
+        //         let str = data.map(ele => {
+        //             // console.log(ele.list);
+        //             // ele.list2
+        //             let str2 = ele.title.map(e => {
+        //                 return ` <p1>${e}</p1>`
 
-                                <dl class="cate-detail-item">
-                                    <dt class="cate-detail-tit">
-                                      
-                                    </dt>
-                                    <dd class="cate-detail-con">
-                                      
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
+        //             }).join("")
+        //             // console.log(str2)
 
-                        <!-- 图片 -->
-                        <div class="sub-class-right">
-                            <div class="adv-promotions">
-                               ${str3}
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                `
-            }).join("");
+        //             let str3 = ele.list.map(e => {
+        //                 // a.title
+        //                 //  console.log(e);
+        //                 let str4 = e.title.map(b => {
+        //                     return `<p2>${b}</p2>`
+        //                 }).join('')
 
-            $(".list-all").html(html)
-        });
+        //                 let str6 = e.list2.map(b => {
+        //                     return `<p3>${b}</p3>`
+        //                 }).join('')
+
+        //                 return `${str4}${str6}`;
+        //             }).join('')
+        //             ///console.log(str3,"###");
+        //             // console.log(str5);
+        //             return `${str2}+${str3} `;
+        //         }).join("")
+        //         console.log(str, "+++")
+
+
+        // }
     </script>
+
+
 </body>
 
 </html>

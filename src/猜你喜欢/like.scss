@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bz-more-list {
+    width: 1220px;
+    height: 1300px;
+    margin-left: 10px;
+    margin: auto;
+    background: yellowgreen;
+
+    /* li */
+    .bz-more-goods {
+        width: 234px;
+        height: 315px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        float: left;
+        font-size: 12px;
+        border: 1px solid red;
+
+        .bz-more-goods-lk {
+            width: 224px;
+            height: 305px;
+            padding: 4px;
+            margin-top: 5px;
+            // border: 1px solid #ccc;
+
+            img {
+                width: 224px;
+                height: 224px;
+                // margin-top: 5px;
+                margin: auto;
+                vertical-align: middle;
+                border: medium none;
+            }
+
+            // .bz-more-info-name {
+            //     width: 204px;
+            //     height: 36px;
+            //     margin-bottom: 5px;
+            // }
+
+            .bz-more-info {
+                width: 204px;
+                height: 59px;
+                padding: 10px;
+                margin: auto;
+
+                .bz-more-info-name {
+                    margin-bottom: 5px;
+
+                }
+
+                .yuan {
+                    color: #f10214;
+                }
+            }
+        }
+    }
+}

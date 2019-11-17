@@ -27,6 +27,13 @@
       "unicode_decimal": 58977
     },
     {
+      "icon_id": "2868885",
+      "name": "闹钟",
+      "font_class": "icon-xianmain",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "4498199",
       "name": "足迹",
       "font_class": "zuji",
@@ -53,6 +60,13 @@
       "font_class": "xinaixin",
       "unicode": "e60b",
       "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "9140997",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e605",
+      "unicode_decimal": 58885
     },
     {
       "icon_id": "9336343",
