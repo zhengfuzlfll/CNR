@@ -834,4 +834,123 @@ body {
 
     }
 
+    /* -------猜你喜欢------- */
+
+    #floor_3 {
+        width: 100%;
+        margin-top: 15px;
+
+        .youlike {
+            // width: 1210px;
+            margin: auto;
+
+            /* 标题 */
+            .bz-more-tit-inner {
+                width: 1210px;
+                height: 35px;
+                // background: yellow;
+                padding-bottom: 20px;
+                text-align: center;
+                margin: auto;
+                margin-top: 50px;
+
+                h3 {
+                    // margin-top: 50px ;
+
+                    padding: 0px 50px;
+                    font-size: 26px;
+                    line-height: 35px;
+                }
+
+            }
+
+            /* 底下商品部分 */
+            .bz-more-inner {
+                width: 1210px;
+                // height: 100px;
+                margin: auto;
+
+                // background: red;
+                .bz-more-list {
+                    width: 1220px;
+                    // height: 1300px;
+                    margin-left: 10px;
+                    margin: auto;
+
+                    // background: yellowgreen;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    /* li */
+                    .bz-more-goods:hover {
+                        border: 1px solid red;
+                    }
+
+                    .bz-more-goods:hover .bz-more-info {
+                        color: red;
+                    }
+
+                    .bz-more-goods {
+                        width: 234px;
+                        height: 315px;
+                        margin-left: 8px;
+                        margin-bottom: 10px;
+                        float: left;
+                        font-size: 12px;
+                        box-sizing: border-box;
+                        // border: 1px solid red;
+                        // display: none;
+
+                        .bz-more-goods-lk {
+                            width: 224px;
+                            height: 305px;
+                            padding: 4px;
+                            margin-top: 5px;
+                            // border: 1px solid #ccc;
+
+                            img {
+                                width: 224px;
+                                height: 224px;
+                                margin-top: 5px;
+                                // margin: auto;    
+                                // vertical-align: middle;
+                                // border: medium none;
+                            }
+
+                            // .bz-more-info-name {
+                            //     width: 204px;
+                            //     height: 36px;
+                            //     margin-bottom: 5px;
+                            // }
+
+                            .bz-more-info {
+                                width: 204px;
+                                height: 59px;
+                                padding: 10px;
+                                margin: auto;
+
+                                .bz-more-info-name {
+                                    margin-bottom: 5px;
+                                    width: 204px;
+                                    height: 36px;
+                                    margin-bottom: 5px;
+                                    overflow: hidden;
+                                }
+
+                                .yuan {
+                                    color: #f10214;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
 }

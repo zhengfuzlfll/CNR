@@ -34,6 +34,13 @@
       "unicode_decimal": 58884
     },
     {
+      "icon_id": "3966959",
+      "name": "警告",
+      "font_class": "jinggao",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
       "icon_id": "4498199",
       "name": "足迹",
       "font_class": "zuji",
@@ -74,6 +81,13 @@
       "font_class": "location",
       "unicode": "e601",
       "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10971730",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
     },
     {
       "icon_id": "11180034",

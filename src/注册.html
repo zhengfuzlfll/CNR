@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nc-register-bg">
+        <div class="nc-register-box">
+            <div class="nc-register-layout">
+                <div class="left">
+                    <div id="registerModule" class="nc-register-mode">
+                        <ul class="tabs-nav">
+                            <li><a href="javascript:void(0);">手机注册<i></i></a></li>
+                        </ul>
+                        <div id="tabs_container" class="tabs-container">
+                            <div class="tabs-content">
+                                <form id="mobileFormFirst" class="nc-login-form" name="mobileForm" method="post"
+                                    novalidate="novalidate">
+                                    <dl>
+                                        <dt>手机号：</dt>
+                                        <dd>
+                                            <input name="mobile" type="text" class="text" id="mobile"
+                                                placeholder="请输入手机号码" autocomplete="off" maxlength="11">
+                                        </dd>
+                                    </dl>
+
+                                    <div class="item item-regist-slide">
+                                        <div id="regist-slide" class="slide-imgver-btn">
+                                            <i></i> <span> 点击发送验证码</span>
+                                        </div>
+
+                                        <div class="errors "><i
+                                                class="fa fa-exclamation-circle"></i><span>点击按钮进行验证</span></div>
+                                    </div>
+                                    <!-- <div class="code-div">
+                                <dl>
+                                  <dt>验证码：</dt>
+                                  <dd>
+                                    <input id="captchaMobile" class="text w100" type="text" name="captcha" maxlength="4" placeholder="输入验证码" autocomplete="off"/>
+                                  </dd>
+                                </dl>
+                                <span><img id="codeimageMobile" src="/captcha/getcaptcha" class="codeimg" alt=""/><a href="JavaScript:void(0);" nc_type="changeCaptcha" onclick="javascript:document.getElementById('codeimageMobile').src='/captcha/getcaptcha?t='+Math.random()" class="code-pic">看不清，更换一张</a></span>
+                             </div> -->
+
+                                    <dl class="clause-div">
+                                        <dd>
+                                            <input type="checkbox" checked="checked" value="1" class="checkbox"
+                                                id="mobileAgreeClause" name="agreeClause">
+                                            阅读并同意 <a title="阅读并同意" class="agreement" href="javascript:void(0);"
+                                                nc_type="btnShowClauseDialog">《服务协议》</a> </dd>
+                                    </dl>
+
+
+
+                                    <!-- <div class="submit-div">
+                                <button id="mobileSubmitFirst" class="submit" type="button">下一步</button>
+                              </div> -->
+                                </form>
+                                <form id="mobileFormSecond" class="nc-login-form" name="mobileForm" method="post"
+                                    style="display:none" novalidate="novalidate">
+                                    <dl class="clause-div m0">
+                                        <input type="hidden" name="mobile" id="mobileSecond">
+                                        <dd id="mobilemsg"></dd>
+                                    </dl>
+                                    <dl class="m-t-10">
+                                        <dt>动态码：</dt>
+                                        <dd>
+                                            <input type="text" id="authCode" class="text" name="authCode"
+                                                placeholder="输入6位短信验证码" autocomplete="off" maxlength="6">
+                                        </dd>
+                                    </dl>
+                                    <!-- <div class="code-div" ncType="sendAuthCodeAgainModule">
+                                <dl>
+                                  <dt>验证码：</dt>
+                                  <dd>
+                                    <input id="captchaMobileSecond" class="text w100" type="text" name="captcha" maxlength="4" placeholder="输入验证码" autocomplete="off" size="10"/>
+                                  </dd>
+                                </dl>
+                                <span>
+                                  <img id="codeimageMobileSecond" src="" class="codeimg"/>
+                                  <a href="javascript:void(0);" onclick="javascript:document.getElementById('codeimageMobileSecond').src='/captcha/getcaptcha?t='+Math.random()" class="code-pic">看不清，更换一张</a>
+                                </span>
+                              </div> -->
+                                    <div class="tiptext">
+                                        <span nctype="sendAuthCodeAgainModule" style="display:none"><a
+                                                href="javascript:void(0);" id="send-code-again">重新获取动态码</a></span>
+                                        <span nctype="sendAuthCodeTimesModule"
+                                            style="display: none; padding-left: 5px; text-align: center;">您可以在<strong
+                                                nctype="sendAuthCodeTimes" class="red mr5"></strong>秒后再次获取动态码</span>
+                                    </div>
+                                    <dl>
+                                        <dt>设置密码：</dt>
+                                        <dd>
+                                            <input type="password" id="mobileMemberPwd" class="text" name="memberPwd">
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>确认密码：</dt>
+                                        <dd>
+                                            <input type="password" id="mobileRepeatMemberPwd" class="text"
+                                                name="repeatMemberPwd">
+                                        </dd>
+                                    </dl>
+                                    <div class="submit-div">
+                                        <button id="mobileSubmitSecond" class="submit">立即注册</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dialogClause" style="display:none;">
+                        <!--<h1>会员注册协议</h1>-->
+                        <div id="clauseContent" style="padding: 20px;">
+                            <p>特别提醒用户认真阅读本《用户服务协议》整个网上交易平台的正常运行，尽力避免服务中断或将引起与本网站的任何争议，均应提交深圳仲裁委员会按照该会届时有效的仲裁规则进行仲裁。相关争议应单独仲裁，不得与任何其它方的争议在任
+                                &nbsp;何仲裁中合并处理，该仲裁裁决是终局，对各方均有约束力。如果所涉及的争议不适于仲裁解决，用户同意一切争议由人民法院管辖。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="reister-after">
+                        <h4>注册之后您可以</h4>
+                        <ol>
+                            <li class="ico01"><i></i>购买商品支付订单</li>
+                            <li class="ico02"><i></i>收藏商品收藏店铺</li>
+                            <li class="ico03"><i></i>安全交易诚信无忧</li>
+                            <!--<li class="ico04"><i></i>积分获取优惠购物</li>-->
+                            <li class="ico05"><i></i>会员等级享受特权</li>
+                            <li class="ico06"><i></i>交易评价站外分享</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册_1</title>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../sass/05foot/foot.css">
+    <link rel="stylesheet" href="../sass/06reg_1/reg_1.css">
+    <link rel="stylesheet" href="../lib/slider/css/slide-unlock.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="main">
+        <div class="nc-register-bg">
+            <div class="nc-register-box">
+                <div class="nc-register-layout">
+                    <!-- 左侧 -->
+                    <div class="left">
+                        <!-- 手机注册--顶部 -->
+                        <ul class="tabs-nav">
+                            <li>
+                                <a href="javascript:void(0);">手机注册
+                                    <i></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- 手机号验证 -->
+                        <div class="tabs_container">
+                            <div class="tabs-content">
+                                <!-- 手机验证 -->
+                                <!-- style="display: none;" -->
+                                <form style="display: block;" class="mobileFormFirst" action="">
+                                    <!-- 输入手机号 -->
+                                    <dl class="mobile">
+                                        <dt class="mobile-dt">手机号：</dt>
+                                        <dd class="mobile-dd">
+                                            <input name="mobile" type="text" class="text" id="mobile"
+                                                placeholder="请输入手机号码" autocomplete="off" maxlength="11">
+
+                                            <label for="mobile" class="error mobileerror" style="display: none;">
+                                                <!-- <i class="iconfont icon-jinggao"></i>&nbsp;&nbsp; -->
+                                                <!-- 手机号不能为空 -->
+                                            </label>
+                                        </dd>
+                                    </dl>
+
+                                    <!-- 验证按钮 -->
+                                    <div class="item-regist-slide">
+                                        <div class="regist-slide">
+                                            <i></i>
+                                            <span>点击发送验证码</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 服务协议 -->
+                                    <dl class="clause-div">
+                                        <dd>
+                                            <input type="checkbox" checked="checked" value="1" class="checkbox"
+                                                id="mobileAgreeClause" name="agreeClause">
+                                            阅读并同意
+                                            <a title="阅读并同意" class="agreement" href="javascript:void(0);"
+                                                nc_type="btnShowClauseDialog">《服务协议》
+                                            </a>
+                                            <label for="agreeClause" class="error" id="agreeClause"
+                                                style="display: none;">
+                                                <i class="iconfont icon-jinggao"></i>&nbsp;&nbsp;
+                                                请勾选服务协议
+                                            </label>
+                                        </dd>
+                                    </dl>
+
+                                </form>
+                                <!-- 发送验证码后切换的表单 -->
+                                <form style="display: none;" id="mobileFormSecond" class="nc-login-form"
+                                    name="mobileForm" method="post" novalidate="novalidate">
+                                    <!-- 10分钟内完成验证 -->
+                                    <dl class="clause-div m0">
+                                        <input type="hidden" name="mobile" id="mobileSecond" value="13245678901">
+                                        <dd id="mobilemsg">短信已发送至 <span class="phonemsg"></span>，请在10分钟内完成验证。</dd>
+                                    </dl>
+                                    <!-- 动态码 -->
+                                    <dl class="m-t-10">
+                                        <dt>动态码：</dt>
+                                        <dd class="pwdTip" id="code">
+                                            <input type="text" id="authCode" class="text" name="authCode"
+                                                placeholder="输入6位短信验证码" autocomplete="off" maxlength="6">
+                                            <!-- <label for="agreeClause" class="error" id="agreeClause">
+                                                <i class="iconfont icon-jinggao"></i>&nbsp;&nbsp; 请勾选服务协议
+                                            </label> -->
+                                        </dd>
+                                    </dl>
+                                    <!-- 重新获取动态码 -->
+                                    <div class="tiptext">
+                                        <!-- 倒计时结束 -->
+                                        <span nctype="sendAuthCodeAgainModule" class="send-code"
+                                            style="display: none;"><a href="javascript:void(0);"
+                                                id="send-code-again">重新获取动态码</a></span>
+                                        <!-- 60秒倒计时 -->
+                                        <span nctype="sendAuthCodeTimesModule" id="first-code"
+                                            style="padding-left: 5px; text-align: center; display: block;">您可以在
+                                            <strong nctype="sendAuthCodeTimes" id="cutdown"
+                                                class="red mr5"></strong>秒后再次获取动态码</span>
+                                    </div>
+                                    <!-- 设置密码 -->
+                                    <dl>
+                                        <dt>设置密码：</dt>
+                                        <dd class="pwdTip" id="password">
+                                            <input type="password" id="mobileMemberPwd" class="text" name="memberPwd">
+                                            <!-- <label for="agreeClause" class="error" id="agreeClause">
+                                                <i class="iconfont icon-jinggao"></i>&nbsp;&nbsp; 请勾选服务协议
+                                            </label> -->
+                                        </dd>
+
+                                    </dl>
+                                    <!-- 重复密码 -->
+                                    <dl>
+                                        <dt>确认密码：</dt>
+                                        <dd class="pwdTip" id="pwd_repeat">
+                                            <input type="password" id="mobileRepeatMemberPwd" class="text"
+                                                name="repeatMemberPwd">
+                                            <!-- <label for="agreeClause" class="error" id="agreeClause">
+                                                <i class="iconfont icon-jinggao"></i>&nbsp;&nbsp; 请勾选服务协议
+                                            </label> -->
+                                        </dd>
+                                    </dl>
+                                    <!-- 立即注册 -->
+                                    <!-- <input type="text" name="" id=""> -->
+                                    <div class="submit-div">
+                                        <input type="button" value="立即注册" id="mobileSubmitSecond"></input>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 右侧 -->
+                    <div class="right">
+                        <div class="reister-after">
+                            <h4>注册之后您可以</h4>
+                            <ol>
+                                <li class="ico01">
+                                    <i></i>
+                                    购买商品支付订单
+                                </li>
+                                <li class="ico02">
+                                    <i></i>
+                                    收藏商品收藏店铺
+                                </li>
+                                <li class="ico03">
+                                    <i></i>
+                                    安全交易诚信无忧
+                                </li>
+                                <li class="ico04">
+                                    <i></i>
+                                    会员等级享受特权
+                                </li>
+                                <li class="ico05">
+                                    <i></i>
+                                    交易评价站外分享
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 注册页拖动滑块验证 -->
+        <div id="slider" style="display:none;">
+            <div id="slider_bg"></div>
+            <span id="label">>></span>
+            <span id="labelTip">拖动滑块验证</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer"></div>
+</body>
+
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../lib/slider/js/slideunlock.js"></script>
+<script src="../js/myquery.js"></script>
+<script src="../js/reg_1.js"></script>
+
+</html>

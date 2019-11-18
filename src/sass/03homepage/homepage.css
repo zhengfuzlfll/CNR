@@ -21,6 +21,7 @@ body {
   /* 轮播图 */
   /* 食品酒水 */
   /* 三栏 */
+  /* -------猜你喜欢------- */
 }
 
 #main .home-focus-layout {
@@ -701,4 +702,97 @@ body {
 
 #main #floor_2 .three-coloum .col3 .pp {
   color: #78538e;
+}
+
+#main #floor_3 {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#main #floor_3 .youlike {
+  margin: auto;
+  /* 标题 */
+  /* 底下商品部分 */
+}
+
+#main #floor_3 .youlike .bz-more-tit-inner {
+  width: 1210px;
+  height: 35px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#main #floor_3 .youlike .bz-more-tit-inner h3 {
+  padding: 0px 50px;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+#main #floor_3 .youlike .bz-more-inner {
+  width: 1210px;
+  margin: auto;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list {
+  width: 1220px;
+  margin-left: 10px;
+  margin: auto;
+  /* li */
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list a {
+  text-decoration: none;
+  color: black;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods:hover {
+  border: 1px solid red;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods:hover .bz-more-info {
+  color: red;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods {
+  width: 234px;
+  height: 315px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  float: left;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods .bz-more-goods-lk {
+  width: 224px;
+  height: 305px;
+  padding: 4px;
+  margin-top: 5px;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods .bz-more-goods-lk img {
+  width: 224px;
+  height: 224px;
+  margin-top: 5px;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods .bz-more-goods-lk .bz-more-info {
+  width: 204px;
+  height: 59px;
+  padding: 10px;
+  margin: auto;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods .bz-more-goods-lk .bz-more-info .bz-more-info-name {
+  margin-bottom: 5px;
+  width: 204px;
+  height: 36px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+#main #floor_3 .youlike .bz-more-inner .bz-more-list .bz-more-goods .bz-more-goods-lk .bz-more-info .yuan {
+  color: #f10214;
 }

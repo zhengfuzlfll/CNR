@@ -15,20 +15,35 @@ a {
 
 .bz-more-list {
     width: 1220px;
-    height: 1300px;
+    // height: 1300px;
     margin-left: 10px;
     margin: auto;
-    background: yellowgreen;
+
+    // background: yellowgreen;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
     /* li */
+    .bz-more-goods:hover {
+        border: 1px solid red;
+    }
+
+    .bz-more-goods:hover .bz-more-info {
+        color: red;
+    }
+
     .bz-more-goods {
         width: 234px;
         height: 315px;
-        margin-left: 10px;
+        margin-left: 8px;
         margin-bottom: 10px;
         float: left;
         font-size: 12px;
-        border: 1px solid red;
+        box-sizing: border-box;
+        // border: 1px solid red;
+        // display: none;
 
         .bz-more-goods-lk {
             width: 224px;
@@ -40,10 +55,10 @@ a {
             img {
                 width: 224px;
                 height: 224px;
-                // margin-top: 5px;
-                margin: auto;
-                vertical-align: middle;
-                border: medium none;
+                margin-top: 5px;
+                // margin: auto;    
+                // vertical-align: middle;
+                // border: medium none;
             }
 
             // .bz-more-info-name {
@@ -60,7 +75,9 @@ a {
 
                 .bz-more-info-name {
                     margin-bottom: 5px;
-
+                    width: 204px;
+                    height: 36px;
+                    margin-bottom: 5px;
                 }
 
                 .yuan {

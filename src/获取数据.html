@@ -325,6 +325,19 @@
         }
         let str = JSON.stringify(arr);
         console.log(str);
+
+
+        /* -------猜你喜欢------- */
+        /* 图片 */
+        let img = document.querySelectorAll(".bz-more-photo");
+        let arr = [];
+        for (let i = 0; i < img.length; i++) {
+            let o = {};
+            o.img = img[i].src;
+            arr.push(o);
+        }
+        let str = JSON.stringify(arr);
+        console.log(str);
     </script>
 </body>
 
