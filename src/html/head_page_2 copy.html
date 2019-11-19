@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>头部</title>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../sass/01header/header.css">
+    <!-- <link rel="stylesheet" href="../css/header.css"> -->
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="top">
+            <div id="dingwei">
+                <span class="iconfont icon-location"></span>广东省<span class="iconfont icon-arrow_downward"></span>
+                <div class="box">
+
+                    <dl>
+                        <!-- <dt>666</dt> -->
+                        <dd>北京市</dd>
+                        <dd>内蒙古自治区</dd>
+                        <dd>上海市</dd>
+                        <dd>福建省</dd>
+                        <dd>湖北省</dd>
+                        <dd>海南省</dd>
+                        <dd>云南省</dd>
+                        <dd>青海省</dd>
+                        <dd>香港特别行政区</dd>
+                    </dl>
+                    <dl>
+                        <dd>天津市</dd>
+                        <dd>辽宁省</dd>
+                        <dd>江苏省</dd>
+                        <dd>江西省</dd>
+                        <dd>湖南省</dd>
+                        <dd>重庆市</dd>
+                        <dd>西藏自治区</dd>
+                        <dd>宁夏回族自治区</dd>
+                        <dd>澳门特别行政区</dd>
+                    </dl>
+                    <dl>
+
+                        <dd>河北省</dd>
+                        <dd>吉林省</dd>
+                        <dd>浙江省</dd>
+                        <dd>山东省</dd>
+                        <dd>广东省</dd>
+                        <dd>四川省</dd>
+                        <dd>陕西省</dd>
+                        <dd>新疆维吾尔自治区</dd>
+                        <dd>海外</dd>
+                        <!-- <dd>10</dd> -->
+                    </dl>
+                    <dl>
+                        <!-- <dt>666</dt> -->
+                        <dd>山西省</dd>
+                        <dd>黑龙江省</dd>
+                        <dd>安徽省</dd>
+                        <dd>河南省</dd>
+                        <dd>广西壮族自治区</dd>
+                        <dd>贵州省</dd>
+                        <dd>甘肃省</dd>
+                        <dd>台湾省</dd>
+                        <!-- <dd>9</dd>
+                         <dd>10</dd> -->
+
+                    </dl>
+                </div>
+            </div>
+            <ul class="list">
+                <li> <span>你好，请登录</span>&nbsp;<span>免费注册</span></li>
+                <li class="list2_1">我的订单<span class="iconfont icon-arrow_downward"></span>
+                    <ul class="list2">
+                        <li>待支付</li>
+                        <li>待确认</li>
+                        <li>待评价</li>
+                    </ul>
+                </li>
+                <li class="list3_1">我的商城<span class="iconfont icon-arrow_downward"></span>
+                    <ul>
+                        <li>站内消息</li>
+                        <li>咨询回复</li>
+                        <li>我的收藏</li>
+                        <li>我的足迹</li>
+                        <li>我的积分</li>
+                        <li>我的优惠券</li>
+                    </ul>
+                </li>
+                <li class="list4_1">客户服务<span class="iconfont icon-arrow_downward"></span>
+                    <ul>
+                        <li>购物指南</li>
+                        <li>售后服务</li>
+                        <li>商家服务</li>
+                    </ul>
+                </li>
+                <li class="list5_1"><span class="iconfont icon-shouji"></span>手机商城<span
+                        class="iconfont icon-arrow_downward"></span>
+                    <div class="tp">
+                        <!-- <div> -->
+                        <img src="../img/01header/url.gif" alt="">
+                        <p>扫描二维码</p>
+                        <p>更多优惠下载小品APP</p>
+                        <!-- </div> -->
+
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="middle">
+            <div class="left">
+                <img src="../img/01header/CNR.png" alt="">
+            </div>
+            <div class="center">
+                <!-- <form action=""> -->
+                <input class="inputA" type="text" placeholder="品牌尖货清仓">
+                <!-- <input class="inputB" type="submit" value="搜索"> -->
+                <button class="inputB">搜索</button>
+                <ul>
+                    <li>热门关键字：</li>
+                    <li>李宁</li>
+                    <li>藏香猪</li>
+                    <li>御品膏方</li>
+                    <li>秋田小町</li>
+                    <li>加拿大PN</li>
+                </ul>
+                <!-- </form> -->
+            </div>
+            <div class="right">
+                <div class="shopcar">
+                    我的购物车
+                    <span class="iconfont icon-qicheqianlian-"></span>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div>
+                <div class="bottom_1">
+                    <div class="sort">
+                        所有分类
+                        <ul class="list-all">
+
+                        </ul>
+                    </div>
+                    <span class="iconfont icon-arrow_downward"></span>
+                </div>
+                <!-- 首页、直播、跨境频道 -->
+                <ul class="home_list">
+                    <li>首页</li>
+                    <li>TV直播</li>
+                    <li>跨境频道</li>
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // console.log($(".list-all"));
+        $.getJSON("../api/list.json", function (res) {
+            console.log(res);
+
+            let html = res.map((item, index) => {
+                /* 左边 */
+                let str = '';
+                for (let i = 0; i < item.title.length; i++) {
+                    str += `<a target="_blank" class="cate-menu-lk" href="/search?cat=19">${item.title[i]}</a>
+                            <span class="cate-menu-line">/</span>`
+                }
+
+                /* 中间 */
+                let str2 = item.list.map((ele, index) => {
+                    // console.log(ele,"#33");/* 对象 */
+                    // console.log(ele.title);
+
+                    let str4 = '';
+                    ele.list2.map(e => {
+                        str4 += `<a target="_blank" href="/search?cat=26">${e}</a>`
+                    }).join("");
+                    return str4;
+                    // let str5 = `<a target="_blank">${ele.title}</a>`
+                    // console.log(str5 + str4);
+                    // return str5 + str4;
+                    // let str5 = '';
+                    // ele.title.map(el => {
+                    //     str5 += `<a target="_blank">${el}</a>`
+                    // }).join('')
+                    // console.log(str5 + str4);
+                    // return `
+
+
+                    // `
+
+
+                }).join("")
+                console.log(str2);
+
+                /* 图片 */
+                let str3 = '';
+                for (let k = 0; k < item.img.length; k++) {
+                    str3 += `<img src="${item.img[k]}">`
+                }
+
+
+                return `
+                <li class="cate-menu-item">
+        
+                    <div class="cate-menu-box">
+                       ${str}
+                    </div>
+
+             
+                    <div class="cate-part">
+                        <div class="cate-part-col1">
+                            <div class="cate-detail">
+
+                                <dl class="cate-detail-item">
+                                    <dt class="cate-detail-tit">
+                                      
+                                    </dt>
+                                    <dd class="cate-detail-con">
+                                      
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <!-- 图片 -->
+                        <div class="sub-class-right">
+                            <div class="adv-promotions">
+                               ${str3}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                `
+            }).join("");
+
+            $(".list-all").html(html)
+        });
+    </script>
+</body>
+
+</html>

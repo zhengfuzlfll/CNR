@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 1210px;
+    // height: 800px;
+    margin: auto;
+    background: yellow;
+
+    .other {
+        width: 1210px;
+        height: 300px;
+    }
+}

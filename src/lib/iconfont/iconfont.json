@@ -20,6 +20,13 @@
       "unicode_decimal": 59303
     },
     {
+      "icon_id": "1660011",
+      "name": "提示",
+      "font_class": "tishi",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
       "icon_id": "1663783",
       "name": "箭头",
       "font_class": "arrow_downward",
@@ -32,6 +39,20 @@
       "font_class": "icon-xianmain",
       "unicode": "e604",
       "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "3094280",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "3185035",
+      "name": "手机验证码",
+      "font_class": "shoujiyanzhengma",
+      "unicode": "e645",
+      "unicode_decimal": 58949
     },
     {
       "icon_id": "3966959",
@@ -48,6 +69,13 @@
       "unicode_decimal": 58888
     },
     {
+      "icon_id": "4527408",
+      "name": "验证成功",
+      "font_class": "yanzhengchenggong",
+      "unicode": "e86f",
+      "unicode_decimal": 59503
+    },
+    {
       "icon_id": "4676229",
       "name": "我 的",
       "font_class": "wode",
@@ -60,6 +88,13 @@
       "font_class": "wodexiaoxi",
       "unicode": "e648",
       "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "6717520",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e71b",
+      "unicode_decimal": 59163
     },
     {
       "icon_id": "8623960",
@@ -81,6 +116,20 @@
       "font_class": "location",
       "unicode": "e601",
       "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10497711",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "10582655",
+      "name": "个人中心 - 中",
+      "font_class": "gerenzhongxin-zhong",
+      "unicode": "e606",
+      "unicode_decimal": 58886
     },
     {
       "icon_id": "10971730",

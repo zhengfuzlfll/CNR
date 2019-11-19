@@ -5,11 +5,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>登录页</title>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../sass/07login/login.css">
 </head>
 
 <body>
-    <h1>登录页</h1>
+    <!-- <h1>登录页</h1> -->
+
+    <!-- 头部 -->
+    <div class="header-wrap">
+        <header class="public-head-layout wrapper">
+            <h1 class="site-logo">
+                <a>
+                    <img src="../img/05login/logo.png" alt="">
+                </a>
+                <span>欢迎登录</span>
+            </h1>
+        </header>
+    </div>
+    <!-- 提示 -->
+    <div class="tips-wrapper">
+        <div class="tips-inner">
+            <div class="cont-wrapper">
+                <i class="iconfont icon-tishi"></i>
+                <p>为确保您账户的安全及正常使用，依《网络安全法》相关要求，会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中间 -->
+    <div class="nc-login-layout">
+        <!-- 背景图 -->
+        <div class="login-banner">
+            <div class="banner-bg">
+                <img src="../img/05login/login_img.jpg" alt="">
+            </div>
+
+
+        </div>
+        <!-- 表单 -->
+        <div class="wrapper">
+            <div class="nc-login">
+
+                <div class="loginModule">
+                    <!-- 切换 -->
+                    <ul class="login-tabs-nav">
+                        <li class="userLogin active">用户登录</li>
+                        <li class="mobilePhoneLogin">手机动态码登录</li>
+                    </ul>
+
+                    <!-- 验证栏 -->
+                    <div class="tabs_container">
+
+                        <!--用户登录  -->
+                        <!-- style="display:block;" -->
+                        <div class="commonModule">
+                            <form class="loginForm">
+                                <!-- 用户名 -->
+                                <div class="item item-fore1">
+                                    <div class="item item-fore1" id="phoneVipEmail">
+                                        <label for="loginName" id="login-label"
+                                            class="iconfont icon-gerenzhongxin-zhong" title="登录账号"></label>
+                                        <input type="text" class="itxt" id="loginName" name="loginName"
+                                            autocomplete="off" placeholder="手机号/会员名/邮箱">
+                                        <label for="loginName" class="error userLoginError" id="userLoginError"
+                                            style="display: none;">
+                                            <i class="iconfont icon-jinggao"> </i>
+                                            <!-- 用户名不能为空 -->
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 密码 -->
+                                <div class="item item-fore2 item-error">
+                                    <label for="memberPwd" id="login-label" class="iconfont icon-mima"
+                                        title="登录密码"></label>
+                                    <input type="password" class="itxt" id="memberPwd" name="memberPwd"
+                                        placeholder="输入账户密码" autocomplete="off">
+                                    <label for="memberPwd" class="error" id="pweError" style="display: none;">
+                                        <i class="iconfont icon-jinggao "> </i>
+                                        密码不能为空
+                                    </label>
+                                </div>
+                                <!-- 七天免登录 -->
+                                <div class="item item-fore4">
+                                    <div class="safe">
+                                        <span class="auto">
+                                            <input type="checkbox" value="0" class="checkbox" id="autoLogin"
+                                                name="autoLogin">
+                                            七天自动登录
+                                            <em id="sevenDay" style="display: none;">请勿在公用电脑上使用</em>
+                                        </span>
+
+                                        <span class="forget-pw-safe">
+                                            <a href="/findpwd" class="">
+                                                忘记密码
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 登录按钮  -->
+                                <div class="item item-fore5">
+                                    <div id="pwd-login" class="slide-imgver-btn slide-imgver-btn1">
+                                        <i>
+                                            <!-- <img src="../img/05login/slider-click.png" alt=""> -->
+                                        </i>
+                                        <span> 登录</span>
+                                    </div>
+                                    <!-- <div  class="errors "><i class="fa fa-exclamation-circle"></i><span>点击按钮进行验证</span></div> -->
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <!-- 手机动态码登录 -->
+                        <div id="mobileModule" style="display: none;">
+                            <form action="" id="mobileForm">
+                                <!-- 接收短信验证码的手机号 -->
+                                <div class="item item-fore1">
+                                    <div class="item item-fore1">
+                                        <label for="loginName" id="login-label" class="iconfont icon-shouji"
+                                            title="登录账号"></label>
+                                        <input type="text" class="itxt loginName2" id="loginName" name="loginName"
+                                            autocomplete="off" placeholder="可填写已注册的手机号接收短信">
+                                        <label for="loginName" class="error loginNameError2" style="display: none;">
+                                            <i class="iconfont icon-jinggao"> </i>
+                                            手机号不能为空
+                                        </label>
+                                        <p id="sent" style="display: none;font-size: 12px;">验证码已发送，请将“6位短信动态码”输入到下方</p>
+                                    </div>
+                                </div>
+
+                                <!-- 点击发送验证码 -->
+                                <div class="item item-fore2">
+                                    <!-- 点击发送验证码 -->
+                                    <div id="pwd-login" class="slide-imgver-btn slide-imgver-btn2">
+                                        <i></i>
+                                        <span> 点击发送验证码</span>
+                                    </div>
+                                    <!-- 验证成功 -->
+                                    <div id="successPass" style="display: none;" class="slide-imgver-btn-success">
+                                        <i class=" iconfont icon-yanzhengchenggong"></i>
+                                        <span> 验证成功</span>
+                                    </div>
+
+                                    <p id="cutDown" style="display: none; font-size: 12px;">
+                                        <span>您可以在</span>
+                                        <span class="cutDown" style="color: red;"></span>
+                                        <span>秒后再次获取验证码</span>
+                                    </p>
+                                </div>
+
+                                <!-- 输入短信验证码 -->
+                                <div class=" item item-fore3">
+                                    <div class="item item-fore1 item-error">
+                                        <label for="loginName" id="login-label" class="iconfont icon-shoujiyanzhengma
+                                        " title="登录账号"></label>
+                                        <input type="text" class="itxt loginName3" id="loginName3" name="loginName"
+                                            autocomplete="off" placeholder="输入6位短信动态码">
+
+
+                                        <!--出现错误  的 提示信息 -->
+                                        <label for="loginName" class="error" id="loginNameError3"
+                                            style="display: none;">
+                                            <i class="iconfont icon-jinggao"> </i>
+                                            短信验证码不能为空
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- 登录按钮 -->
+                                <!-- <input type="text" name="" id=""> -->
+                                <div class="item item-fore-logoin">
+                                    <div class="login-btn lock-click">
+                                        <input type="button" id="mobileSubmit" class="btn-img" value="登录"></input>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- 表单底部 -->
+                <div class="coagent" id="demo-form-site">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);" title="微信账号登录" class="pdl" id="weixinLogin">
+                                <b class="iconfont icon-weixin"></b>
+                                <span>微信</span>
+                            </a>
+                            <span class="line">|</span>
+                        </li>
+                        <li class="extra-r">
+                            <div class="regist-link">
+                                <a title="" href="./reg_1.html" target="_blank">
+                                    <b class="iconfont icon-jiantou"></b>
+                                    立即注册
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 加载底部 -->
+    <div id="footer"></div>
 </body>
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/myquery.js"></script>
+<script src="../js/login.js"></script>
 
 </html>
