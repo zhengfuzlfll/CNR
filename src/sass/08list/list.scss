@@ -12,5 +12,24 @@
     .other {
         width: 1210px;
         height: 300px;
+        background: orange;
+
+        .top {
+            width: 1210px;
+            height: 100px;
+            background: palevioletred;
+        }
+
+        .middle {
+            width: 1210px;
+            height: 100px;
+            background: aqua;
+        }
+
+        .bottom {
+            width: 1210px;
+            height: 100px;
+            background: cornflowerblue;
+        }
     }
 }

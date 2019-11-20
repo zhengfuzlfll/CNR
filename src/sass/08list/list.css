@@ -12,4 +12,23 @@
 #main .other {
   width: 1210px;
   height: 300px;
+  background: orange;
+}
+
+#main .other .top {
+  width: 1210px;
+  height: 100px;
+  background: palevioletred;
+}
+
+#main .other .middle {
+  width: 1210px;
+  height: 100px;
+  background: aqua;
+}
+
+#main .other .bottom {
+  width: 1210px;
+  height: 100px;
+  background: cornflowerblue;
 }

@@ -144,12 +144,15 @@
             <div>
                 <div class="bottom_1">
                     <div class="sort">
-                        所有分类
+                        <div class="title">
+                            <h3><a target="_blank" href="/category">所有商品分类</a></h3>
+                            <i class="iconfont icon-arrow_downward"></i>
+                        </div>
                         <ul class="list-all">
 
                         </ul>
                     </div>
-                    <span class="iconfont icon-arrow_downward"></span>
+                    <!-- <span class="iconfont icon-arrow_downward"></span>箭头 -->
                 </div>
                 <!-- 首页、直播、跨境频道 -->
                 <ul class="home_list">
@@ -181,25 +184,15 @@
                 let str2 = item.list.map((ele, index) => {
                     // console.log(ele,"#33");/* 对象 */
                     // console.log(ele.title);
-
+                    let str3 = '';
+                    ele.title.map(e => {
+                        str3 += `<dt class="cate-detail-tit"><a href="">${e}></a></dt>`;
+                    })
                     let str4 = '';
                     ele.list2.map(e => {
                         str4 += `<a target="_blank" href="/search?cat=26">${e}</a>`
                     }).join("");
-                    return str4;
-                    // let str5 = `<a target="_blank">${ele.title}</a>`
-                    // console.log(str5 + str4);
-                    // return str5 + str4;
-                    // let str5 = '';
-                    // ele.title.map(el => {
-                    //     str5 += `<a target="_blank">${el}</a>`
-                    // }).join('')
-                    // console.log(str5 + str4);
-                    // return `
-
-
-                    // `
-
+                    return `<dl class="cate-detail-item">${str3}<dd class="cate-detail-con">${str4}</dd></dl>`;
 
                 }).join("")
                 console.log(str2);
@@ -213,7 +206,6 @@
 
                 return `
                 <li class="cate-menu-item">
-        
                     <div class="cate-menu-box">
                        ${str}
                     </div>
@@ -223,14 +215,10 @@
                         <div class="cate-part-col1">
                             <div class="cate-detail">
 
-                                <dl class="cate-detail-item">
-                                    <dt class="cate-detail-tit">
-                                      
-                                    </dt>
-                                    <dd class="cate-detail-con">
-                                      
-                                    </dd>
-                                </dl>
+                               
+                                   ${str2}
+                                   
+                              
                             </div>
                         </div>
 
