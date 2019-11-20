@@ -406,9 +406,9 @@
         let p1 = new Promise(reslove => {
             reslove($("#home_page").load("head_page.html"))
         })
-p1.then(reslove=>{
-    
-})
+        p1.then(reslove => {
+
+        })
 
         /* 倒计时 */
         // function countDown(y, m, d, h, mm) {
@@ -437,7 +437,7 @@ p1.then(reslove=>{
         // }, 1000);
         // countDown(y, m, d, h, mm);
 
-        /* 轮播图 */
+        /* 轮播图 渲染*/
         $.getJSON("../api/banner.json", function (res) {
             console.log(res);
             let str = res.map(item => {
@@ -485,6 +485,7 @@ p1.then(reslove=>{
             }).join("");
             $(".bz-more-list").html(str);
         })
+
 
         /* ------底部------- */
         $("#footer_page").load("footer_page.html");

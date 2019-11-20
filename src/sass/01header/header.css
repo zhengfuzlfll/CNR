@@ -228,6 +228,7 @@ body {
   width: 140px;
   text-align: center;
   display: none;
+  z-index: 2;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -375,6 +376,7 @@ body {
   height: 442px;
   background: #6E6568;
   margin-top: 2px;
+  z-index: 3;
   /* li */
 }
 
@@ -476,13 +478,11 @@ body {
 
 #header #bottom .bottom_1 .sort .list-all .cate-menu-item .cate-part .cate-part-col1 .cate-detail .cate-detail-item .cate-detail-con {
   float: left;
-  padding: 6px 0px;
   width: 660px;
   border-bottom: 1px solid #ccc;
 }
 
 #header #bottom .bottom_1 .sort .list-all .cate-menu-item .cate-part .cate-part-col1 .cate-detail .cate-detail-item .cate-detail-con a {
-  padding: 0px 10px;
   font-size: 14px;
   padding: 0px 6px;
   border-left: 1px solid #e0e0e0;

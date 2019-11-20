@@ -263,6 +263,7 @@ body {
                     // height: 182px;
                     text-align: center;
                     display: none;
+                    z-index: 2;
 
                     // div {
                     border-right: 1px solid #ccc;
@@ -447,6 +448,7 @@ body {
                     background: #6E6568;
                     margin-top: 2px;
                     // padding-left: 12px;
+                    z-index: 3;
 
                     /* li */
                     .cate-menu-item {
@@ -548,14 +550,14 @@ body {
                                         /* dd */
                                         .cate-detail-con {
                                             float: left;
-                                            padding: 6px 0px;
+                                            // padding: 6px 0px;
                                             width: 660px;
                                             border-bottom: 1px solid #ccc;
                                             // height: 24px;
                                             // line-height: 24px;
 
                                             a {
-                                                padding: 0px 10px;
+                                                // padding: 0px 10px;
                                                 // margin: 4px 0px;
                                                 font-size: 14px;
                                                 padding: 0px 6px;

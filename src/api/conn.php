@@ -6,6 +6,9 @@
     $dbname="cnr";
 
     $conn = new mysqli($severname,$username,$password,$dbname);
+    mysqli_query($conn, "set names 'utf8'");
+
+    
     //获取对象的属性：js中arr.length;php用->获取属性和方法 $con->属性名；$conn->方法名();
     if($conn->connect_error) {
         //连接失败

@@ -6,11 +6,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>列表页</title>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css"><!-- 字体图标库 -->
+    <link rel="stylesheet" href="../sass/01header/header.css">
     <link rel="stylesheet" href="../sass/08list/list.css">
 </head>
 
 <body>
+    <!-- 加载头部 -->
+    <div id="head">
+        <!-- <iframe id="head" src="head_page.html" frameborder="0"></iframe> -->
+    </div>
+
+    <!-- 主体内容 -->
+    <div id="main">
+        <div class="other">
+            <div class="top">
+                <ul class="fruit-top-list">
+                    <!-- 生鲜水果 -->
+                    <li class="list1 list1_1">
+                        <div>
+                            <span>生鲜水果</span>
+                            <span class="iconfont icon-arrow_downward"></span>
+                        </div>
+
+                        <ul class="list2">
+                            <li><a>名酒茗茶</a></li>
+                            <li><a>食品饮料</a></li>
+                            <li><a>滋补养生</a></li>
+                            <li><a>生鲜水果</a></li>
+                            <li><a>跨境直邮</a></li>
+                            <li><a>美妆身体</a></li>
+                            <li><a>珠宝配饰</a></li>
+                            <li><a>服饰箱包</a></li>
+                            <li><a>家居家纺</a></li>
+                            <li><a>家电数码</a></li>
+                            <li><a>厨房厨电</a></li>
+                            <li><a>养生保健</a></li>
+                            <li><a>个护清洁</a></li>
+                            <li><a>香水彩妆</a></li>
+                            <li><a>母婴玩具</a></li>
+                            <li><a>纸品湿巾</a></li>
+                            <li><a>宠物生活</a></li>
+                            <li><a>汽车户外</a></li>
+                            <li><a>礼包</a></li>
+                            <li><a>生活服务</a></li>
+                            <li><a>跨境保税</a></li>
+                            <li><a>央广精选</a></li>
+                        </ul>
+                    </li>
+                    <!-- 箭头 -->
+                    <li class="iconfont icon-jiantou list1 list1_2"></li>
+                    <!-- 水果 -->
+                    <li class="list1 list1_3">
+                        <div>
+                            <span>水果</span>
+                            <span class="iconfont icon-arrow_downward"></span>
+                        </div>
+                        <ul class="list2">
+                            <li><a>水产</a></li>
+                            <li><a>水果</a></li>
+                            <li><a>禽蛋肉</a></li>
+                            <li><a>蔬菜</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <div class="middle-title">
+                    <h3><em>分类 -<strong class="c-danger f14">“水果”</strong></em>筛选结果</h3>
+                </div>
+                <div class="middle-content">
+                    <dl goods-attr-item="">
+                        <dt>包含分类：</dt>
+                        <dd class="list attr-item">
+                            <ul>
+                                <li><a href="/search?cat=110">国产水果</a></li>
+                                <li><a href="/search?cat=113">进口水果</a></li>
+                                <li><a href="/search?cat=115">其他水果</a></li>
+                            </ul>
+                        </dd>
+                        <dd class="all" style="display: none" data-ext-more=""> <a href="javascript:;"><span>更多</span><i
+                                    class="drop-arrow"></i></a> </dd>
+                    </dl>
+                    <!--s 品牌区域-->
+                    <!--e 品牌区域-->
+                    <!-- S 属性区域-->
+                </div>
+            </div>
+
+            <!-- 排序 -->
+            <div class="bottom">
+                <div id="main-nav">
+                    <div class="sort-bar-wrap">
+                        <!-- 排序 -->
+                        <div class="item nch-sortbar-array">
+                            <ul class="screen">
+                                <li class="selected"><a>默认排序 </a></li>
+                                <li> <a>成交量</a></li>
+                                <li>
+                                    <a>
+                                        <span>价格</span>
+                                        <i class="iconfont icon-long-arrow-down"></i>
+                                    </a>
+
+                                </li>
+                                <li> <a>评论</a></li>
+                            </ul>
+                        </div>
+                        <!-- 价格区间 -->
+                        <div class="item nch-sortbar-price" id="nchSortbarPrice">
+                            <div class="">
+                                <input type="text" class="input-text" placeholder="￥" id="priceStart" value="">
+                                <span class="line">-</span>
+                                <input type="text" class="input-text" placeholder="￥" id="priceEnd" value="">
+                                <a href="javascript:;" class="btn" id="nchSortbarPriceBtn">确定</a>
+                            </div>
+                        </div>
+                        <!-- 起购量 -->
+                        <div class="item nch-sortbar-since">
+                            <div class="block">
+                                <div class="fl m-r-5">起购量</div>
+                                <input type="text" class="input-text" id="minBuyNum" maxlength="8" value="">
+                                <div class="fl m-l-5">以下</div>
+                                <a href="javascript:;" class="btn" id="minBuyNumBtn">确定</a>
+                            </div>
+                        </div>
+                        <!-- 经营类型 -->
+                        <div class="item nch-sortbar-filter">
+                            <p>
+                                <span>经营类型</span>
+                                <span class="iconfont icon-arrow_downward"></span>
+                            </p>
+                            <ul>
+                                <li> <a>经营类型</a></li>
+                                <li> <a>三方店铺</a></li>
+                            </ul>
+                        </div>
+                        <!-- 促销活动 -->
+                        <div class="item nch-sortbar-filter">
+                            <p>
+                                <span>促销活动</span>
+                                <span class="iconfont icon-arrow_downward"></span>
+                            </p>
+                            <ul>
+                                <li><a>促销活动</a></li>
+                                <li><a>限时折扣</a></li>
+                                <li><a>全款预售</a></li>
+                                <li><a>定金预售</a></li>
+                                <li><a>秒杀活动</a></li>
+                            </ul>
+                        </div>
+                        <!-- 销售模式 -->
+                        <div class="item nch-sortbar-filter">
+                            <p>
+                                <span>销售模式</span>
+                                <span class="iconfont icon-arrow_downward"></span>
+                            </p>
+                            <ul>
+                                <li><a>零售型</a></li>
+                                <li><a>批量型</a></li>
+                                <li><a>虚拟型</a></li>
+                                <li><a>海外型</a></li>
+                                <!-- <li><a></a></li> -->
+                            </ul>
+                        </div>
+                        <!-- 赠品 -->
+                        <div class="select-gift">
+                            <input type="checkbox">
+                            <span>赠品</span>
+                        </div>
+                        <!-- 包邮 -->
+                        <div class="select-gift">
+                            <input type="checkbox">
+                            <span>包邮</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rest">
+            <!-- 列表数据 -->
+            <ul class="list_pic">
+
+            </ul>
+
+            <!-- 底部分页功能 -->
+            <div class="pagination m-t-10 m-b-10 tr">
+                <ul>
+                    <li><a class="demo"><span>首页</span></a>
+                    </li>
+                    <li><a class="demo"><span>上一页</span></a>
+                    </li>
+                    <li class="active"><a class="demo"><span>1</span></a></li>
+                    <li><a class="demo"> <span>2</span></a></li>
+                    <li><a class="demo"><span>3</span></a></li>
+                    <li><a class="demo"><span>下一页</span></a>
+                    </li>
+                    <li><a class="demo"><span>尾页</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 加载底部 -->
+    <div id="footer"></div>
 
 </body>
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/list.js"></script>
 
 </html>
