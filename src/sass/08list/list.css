@@ -517,6 +517,7 @@ input {
 #main .rest .list_pic {
   width: 1210px;
   margin: auto;
+  height: 1940px;
   /* li */
 }
 
@@ -751,11 +752,8 @@ input {
 
 #main .rest .pagination {
   width: 1210px;
-  height: 38px;
   padding: 15px 0px;
-  margin: 10px 0px;
-  margin: auto;
-  background: yellow;
+  margin: 10px auto;
 }
 
 #main .rest .pagination ul {
@@ -763,14 +761,20 @@ input {
   float: right;
 }
 
-#main .rest .pagination ul li {
+#main .rest .pagination ul #page li {
+  float: left;
+}
+
+#main .rest .pagination ul li,
+#main .rest .pagination ul div {
   float: left;
   line-height: 38px;
   margin-left: 2px;
   margin-right: 10px;
 }
 
-#main .rest .pagination ul li a span {
+#main .rest .pagination ul li a span,
+#main .rest .pagination ul div a span {
   display: block;
   height: 36px;
   padding: 0px 14px;
@@ -787,4 +791,9 @@ input {
 
 #main .rest .pagination ul .active span {
   border-color: red;
+}
+
+/* 底部 */
+#foot {
+  margin-top: 50px;
 }

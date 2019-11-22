@@ -606,6 +606,7 @@ input {
         .list_pic {
             width: 1210px;
             margin: auto;
+            height: 1940px;
 
             /* li */
             li {
@@ -870,20 +871,27 @@ input {
         /* 底部分页功能 */
         .pagination {
             width: 1210px;
-            height: 38px;
+            // height: 38px;
             padding: 15px 0px;
-            margin: 10px 0px;
-            margin: auto;
-            background: yellow;
+            // margin: 10px 0px;
+            // margin: auto;
+            // background: yellow;
             // float: right;
+            margin: 10px auto;
+            // margin-top: 20px;
 
             ul {
                 // width: 1210px;
                 height: 38px;
                 float: right;
-                // text-align: right;
 
-                li {
+                // text-align: right;
+                #page li {
+                    float: left;
+                }
+
+                li,
+                div {
                     float: left;
                     line-height: 38px;
                     margin-left: 2px;
@@ -902,8 +910,6 @@ input {
 
                 .active {
                     background: red;
-
-
                 }
 
                 .active a {
@@ -919,4 +925,9 @@ input {
 
 
 
+}
+
+/* 底部 */
+#foot {
+    margin-top: 50px;
 }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ncsGoodsPicture">
+        <!-- 大图 -->
+        <a id="Zoomer">
+            <img src="../img/01.jpg" alt="">
+            <div class="MagicZoomBigImageCont">
+
+            </div>
+        </a>
+        <!-- 小图 -->
+        <div class="controller">
+            <div class="goods-pic-box">
+                <ul class="ncsGoodsPicList">
+                    <li><a href=""><img src="../img/01.jpg" alt=""></a></li>
+                    <li><a href=""><img src="../img/01.jpg" alt=""></a></li>
+                    <li><a href=""><img src="../img/01.jpg" alt=""></a></li>
+                    <li><a href=""><img src="../img/01.jpg" alt=""></a></li>
+                    <li><a href=""><img src="../img/01.jpg" alt=""></a></li>
+                    <!-- <li><a href=""><img src="../img/01.jpg" alt=""></a></li> -->
+
+                </ul>
+            </div>
+        </div>
+        <!-- 分享 -->
+        <div id="content" class="ncs-handle">
+            <ul>
+                <li class="item">
+                    <span class="iconfont icon-shoucang"></span>
+                    <span>收藏商品</span>
+                    <span>0</span>
+                </li>
+                <li class="item item2">
+                    <span class="iconfont icon-fenxiang3"></span>
+                    <span>分享</span>
+                    <span class="iconfont icon-xiajiantoushixinxiao
+                            "></span>
+                    <ul>
+                        <li class="list2">新浪</li>
+                        <li class="list2">微信</li>
+                    </ul>
+                </li>
+                <li class="item item3">
+                    <span class="iconfot icon-erweima"></span>
+                    <span>移动端购买</span>
+                    <img src="../img/06goods/68861.gif" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ncs-goods-summary">
+        <!-- 标题 -->
+        <div class="ncs-goods-name">
+            <h1>边走边淘 广西红心木瓜 5斤 2-4个 包邮</h1>
+        </div>
+        <!-- 价格 -->
+        <div class="ncs-meta">
+            <dl id="goodsPriceHtml">
+                <dt>价格</dt>
+                <dd>
+                    <span class="goods-price-real">
+                        <strong id="rmPrice" class="number number-thin">
+                            <span class="yuan">￥</span>
+                            <span class="integer">27</span>
+                            <span class="pointer">.</span>
+                            <span class="decimal">80</span>
+                        </strong>
+                    </span>
+                </dd>
+            </dl>
+        </div>
+
+        <!-- 物流 -->
+        <div class="ncs-logistics">
+            <dl id="ncs-freight" class="ncs-freight">
+                <dt>物流</dt>
+                <dd class="ncs-freight_box">
+                    <div class="fl m-r-5">配送至</div>
+                    <div id="ncsFreightSelector" class="ncs-freight-select">
+                        <div class="text">
+                            <div id="areaInfoText">广东省广州市荔湾区</div>
+                            <b>∨</b>
+                        </div>
+                        <div class="content" style="display: none;">
+                            <div id="ncs-stock" class="ncs-stock" data-widget="tabs">
+                                <div class="mt">
+                                    <ul class="tab" id="ncsTopTabs">
+                                        <li data-index="0" data-widget="tab-item" class=""> <a href="#none"
+                                                class="hover"><em>广东省</em><i> ∨</i></a> </li>
+                                        <li data-index="1" data-widget="tab-item" class=""><a href="javascript:;"
+                                                class="hover"><em>广州市</em><i> ∨</i></a>
+                                        </li>
+                                        <li data-index="2" data-widget="tab-item" class=""><a href="javascript:;"
+                                                class="hover"><em>荔湾区</em><i> ∨</i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--<a 
+
+href="javascript:;" class="close" id="areaPanelClose">关闭
+
+</a>-->
+                    </div>
+                    <div id="ncs-freight-prompt"><strong>有货</strong><span>免运费</span></div>
+                </dd>
+            </dl>
+        </div>
+
+        <!-- 服务 -->
+        <div class="ncs-service">
+            <dl>
+                <dt>服务</dt>
+                <dd>
+                    非自营&nbsp;由&nbsp;&nbsp;
+                    <a target="_blank">
+                        <span class="service-name">边走边淘食品旗舰店&nbsp;&nbsp;</span>
+                    </a>
+                    发货，并提供售后服务。
+                </dd>
+            </dl>
+        </div>
+
+        <!-- 加入购物车 -->
+        <div class="ncs-key" id="nc-spec-panel">
+            <div id="modalNullPanel">
+                <div class="ncs-retail-modal">
+
+                    <dl>
+                        <dt class="ncs-number">
+
+                            数量</dt>
+                        <dd>
+                            <div id="rmNumValuePanel" class="amount" style="display: block; ">
+                                <span id="mnBuyNumCutBtn" class="minus crisis" title="减少">-
+
+                                </span>
+                                <input type="text" name="" id="mnBuyNumInput" value="1">
+                                <span id="mnBuyNumAddBtn" class="plus" title="增加"> + </span>
+                            </div>
+                            <!-- S 库存提示-->
+                            <div class="m-l-10 fl" id="storageHint">（库存<span nctype="goods_stock">4512</span>
+                                <!--by[szq] 修
+
+改商品单位显示 -->
+                                <!--by[szq] 修
+
+改商品单位显示 -->）</div>
+                            <!-- E 库存提示-->
+                        </dd>
+                    </dl>
+                </div>
+                <div class="ncs-buy">
+                    <!-- S 购买按钮组-->
+                    <div class="ncs-btn">
+                        <!-- 立即购买-->
+                        <a href="javascript:void(0);" id="buyNowSubmitBtn" class="buynow" title="立即购买">立
+
+                            即购买</a>
+                        <!-- 加入购物车-->
+                        <a href="javascript:void(0);" id="addCartBtn" class="addcart" title="加入购物车">
+                            <i class="iconfont icon-jiarugouwuche"></i>加入购物车 </a>
+                    </div>
+                    <!-- S 购买按钮组-->
+                </div>
+            </div>
+        </div>
+        <!-- 温馨提示 -->
+        <div class="ncs-cti m-t-10">
+            <dl>
+                <dt>温馨提示</dt>
+                <dd>
+                    <p style="color:#999">国家
+
+                        药监局提示您：如您购买化妆品类商品，请正确认识化妆品功效，
+
+                        化妆品不能替代药品，不能治疗皮肤病等疾病</p>
+                </dd>
+            </dl>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

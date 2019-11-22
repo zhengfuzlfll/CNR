@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>列表页</title>
     <link rel="stylesheet" href="../lib/iconfont/iconfont.css"><!-- 字体图标库 -->
-    <link rel="stylesheet" href="../sass/01header/header.css">
-    <link rel="stylesheet" href="../sass/08list/list.css">
+    <link rel="stylesheet" href="../sass/01header/header.css"><!-- 头部 -->
+    <link rel="stylesheet" href="../sass/02footer/footer.css"><!-- 底部 -->
+    <link rel="stylesheet" href="../sass/08list/list.css"><!-- 列表页 -->
 </head>
 
 <body>
@@ -103,33 +104,33 @@
                         <div class="item nch-sortbar-array">
                             <ul class="screen">
                                 <li class="selected"><a>默认排序 </a></li>
-                                <li> <a>成交量</a></li>
-                                <li>
+                                <li class="turnover"> <a>成交量</a></li>
+                                <li class="priceDown">
                                     <a>
                                         <span>价格</span>
                                         <i class="iconfont icon-long-arrow-down"></i>
                                     </a>
 
                                 </li>
-                                <li> <a>评论</a></li>
+                                <li class="comment"> <a>评论</a></li>
                             </ul>
                         </div>
                         <!-- 价格区间 -->
-                        <div class="item nch-sortbar-price" id="nchSortbarPrice">
+                        <div class="item nch-sortbar-price item3" id="nchSortbarPrice">
                             <div class="">
                                 <input type="text" class="input-text" placeholder="￥" id="priceStart" value="">
                                 <span class="line">-</span>
                                 <input type="text" class="input-text" placeholder="￥" id="priceEnd" value="">
-                                <a href="javascript:;" class="btn" id="nchSortbarPriceBtn">确定</a>
+                                <a href="javascript:;" class="btn" id="nchSortbarPriceBtn" style="display:none;">确定</a>
                             </div>
                         </div>
                         <!-- 起购量 -->
-                        <div class="item nch-sortbar-since">
-                            <div class="block">
+                        <div class="item nch-sortbar-since item3">
+                            <div class="">
                                 <div class="fl m-r-5">起购量</div>
                                 <input type="text" class="input-text" id="minBuyNum" maxlength="8" value="">
                                 <div class="fl m-l-5">以下</div>
-                                <a href="javascript:;" class="btn" id="minBuyNumBtn">确定</a>
+                                <a href="javascript:;" class="btn" id="minBuyNumBtn" style="display: none;">确定</a>
                             </div>
                         </div>
                         <!-- 经营类型 -->
@@ -186,7 +187,7 @@
             </div>
         </div>
 
-
+        <!-- 列表数据+底部分页功能 -->
         <div class="rest">
             <!-- 列表数据 -->
             <ul class="list_pic">
@@ -194,18 +195,22 @@
             </ul>
 
             <!-- 底部分页功能 -->
-            <div class="pagination m-t-10 m-b-10 tr">
+            <div class="pagination m-t-10 m-b-10 tr" id="paging">
                 <ul>
-                    <li><a class="demo"><span>首页</span></a>
+                    <li><a class="demo" id="homepage"><span>首页</span></a>
                     </li>
-                    <li><a class="demo"><span>上一页</span></a>
+                    <li id="prev"><a class="demo prev"><span>上一页</span></a>
                     </li>
-                    <li class="active"><a class="demo"><span>1</span></a></li>
-                    <li><a class="demo"> <span>2</span></a></li>
-                    <li><a class="demo"><span>3</span></a></li>
-                    <li><a class="demo"><span>下一页</span></a>
+                    <!-- 页码 -->
+                    <!-- <div id="page"> -->
+                    <!-- <li class="active"><a class="demo page1"><span>1</span></a></li> -->
+                    <!-- <li><a class="demo"> <span>2</span></a></li>
+                        <li><a class="demo"><span>3</span></a></li> -->
+                    <!-- </div> -->
+
+                    <li id="next"><a class="demo"><span>下一页</span></a>
                     </li>
-                    <li><a class="demo"><span>尾页</span></a>
+                    <li><a class="demo" id="lastpage"><span>尾页</span></a>
                     </li>
                 </ul>
             </div>
@@ -214,10 +219,11 @@
     </div>
 
     <!-- 加载底部 -->
-    <div id="footer"></div>
+    <div id="foot"></div>
 
 </body>
 <script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/myquery.js"></script>
 <script src="../js/list.js"></script>
 
 </html>

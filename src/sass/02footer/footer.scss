@@ -21,7 +21,9 @@ li {
 }
 
 #footerpage {
-    width: 1210px;
+    // width: 1210px;
+
+    width: 100%;
     height: 485px;
     // background: yellow;
     margin: auto;
@@ -31,6 +33,7 @@ li {
         border-bottom: 1px solid #ccc;
         width: 1210px;
         height: 86px;
+        margin: auto;
         // background: red;
 
         img {
@@ -53,6 +56,7 @@ li {
         height: 184px;
         // background: blue;
         overflow: hidden;
+        margin: auto;
         // font-size: 12px;
 
         .notice {
@@ -89,7 +93,7 @@ li {
             padding: 20px 0px;
             margin-left: 50px;
             margin-top: 25px;
-            background: aqua;
+            // background: aqua;
 
             li {
                 float: left;
@@ -117,7 +121,8 @@ li {
     }
 
     #fbottom {
-        width: 1210px;
+        // width: 1210px;
+        width: 100%;
         height: 214px;
         background: black;
         color: white;

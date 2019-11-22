@@ -6,10 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>详情页</title>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../sass/01header/header.css">
+    <link rel="stylesheet" href="../sass/09goods/goods.css">
+
 </head>
 
 <body>
-    <h1>详情页</h1>
+    <!-- <h1>详情页</h1> -->
+    <!-- 加载头部 -->
+    <div id="head"></div>
+
+    <!-- 主要内容 -->
+    <div id="main">
+        <!-- 位置信息 -->
+        <div class="nch-breadcrumb-layout">
+            <div class="nch-breadcrumb">
+                <i class="iconfont icon-fangzi"></i>
+                <span><a>生鲜水果</a></span>
+                <span class="arrow">></span>
+                <span><a>水果</a></span>
+                <span class="arrow">></span>
+                <span><a>国产水果</a></span>
+                <span class="arrow">></span>
+                <span class="detail">边走边淘 南非西柚 6个 单果250-320g 包邮</span>
+            </div>
+        </div>
+        <!-- 放大镜 -->
+        <div class="ncs-detail">
+            <div class="ncs-detail2">
+
+
+                <!-- 推荐 -->
+                <div id="showCasePanel">
+                    <img src="../img/06goods/pic_right.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="rest">
+            <div class="pic">
+                <div class="left">
+                    <img src="../img/06goods/picleft.jpg" alt="">
+                </div>
+                <div class="right">
+
+                    <ul>
+                        <li>
+                            商品详情
+                            <img src="../img/06goods/pic01.jpg" alt="">
+                        </li>
+                        <li>
+                            售后保障
+                            <img src="../img/06goods/pic02.jpg" alt="">
+                        </li>
+                        <li>
+                            商品评价
+                            <img src="../img/06goods/pic03.jpg" alt="">
+                        </li>
+                        <li>
+                            购买咨询
+                            <img src="../img/06goods/pic04.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 加载底部 -->
+    <div id="foot"></div>
 </body>
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/myquery.js"></script>
+<script src="../js/goods.js"></script>
 
 </html>

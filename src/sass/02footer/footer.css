@@ -10,7 +10,7 @@ li {
 }
 
 #footerpage {
-  width: 1210px;
+  width: 100%;
   height: 485px;
   margin: auto;
 }
@@ -20,6 +20,7 @@ li {
   border-bottom: 1px solid #ccc;
   width: 1210px;
   height: 86px;
+  margin: auto;
 }
 
 #footerpage #ftop img {
@@ -31,6 +32,7 @@ li {
   width: 1210px;
   height: 184px;
   overflow: hidden;
+  margin: auto;
 }
 
 #footerpage #fmiddle .notice {
@@ -63,7 +65,6 @@ li {
   padding: 20px 0px;
   margin-left: 50px;
   margin-top: 25px;
-  background: aqua;
 }
 
 #footerpage #fmiddle .link li {
@@ -89,7 +90,7 @@ li {
 }
 
 #footerpage #fbottom {
-  width: 1210px;
+  width: 100%;
   height: 214px;
   background: black;
   color: white;

@@ -1,10 +1,10 @@
 <?php
-    // header("Content-type:text/html;charset=utf-8");//防止中文乱码
+    header("Content-type:text/html;charset=utf-8");//防止中文乱码
     include 'conn.php';
     // var_dump($conn);/* 连接成功 */
     // $loginName = isset($_REQUEST['loginName']) ? $_REQUEST['loginName'] : '';//用户名
-    $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';//第几页
-    $num = isset($_REQUEST['num']) ? $_REQUEST['num'] : '';//每页几条数据
+    // $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';//第几页
+    // $num = isset($_REQUEST['num']) ? $_REQUEST['num'] : '';//每页几条数据
 
     /*
         SELECT * FROM goodslist LIMIT 0,5
@@ -20,10 +20,10 @@
 
 
     //书写查询语句
-    $index = ($page - 1) * $num;
+    // $index = ($page - 1) * $num;
 
 
-    $sql="SELECT * FROM listpage LIMIT $index,$num";/* 查注册表中是否存在数据 */
+    $sql="SELECT * FROM listpage ORDER BY numa DESC";/* 查注册表中是否存在数据 */
 
   
 
@@ -32,7 +32,7 @@
 
     // $row = $res->fetch_all(MYSQLI_ASSOC);/* 获取结果集 */
 
-    $arr = $res->fetch_all(MYSQLI_ASSOC);//得到数组  [{},{},{}]
+    // $arr = $res->fetch_all(MYSQLI_ASSOC);//得到数组  [{},{},{}]
     
     // var_dump($row);
     // echo json_encode($row);
@@ -52,21 +52,15 @@
     $conn->set_charset('utf8');
 
     //查询总条数
-    $sql2 = 'SELECT * FROM listpage';
-    $res2 = $conn->query($sql2);
-
-    /* 成交量排序 */
-    $sql3="SELECT * FROM listpage ORDER BY numa DESC";
-    $res3 = $conn->query($sql3);
+    // $sql2 = 'SELECT * FROM listpage';
+    // $res2 = $conn->query($sql2);
 
     //关联数组，可以一次性返回多个数据
     $list = array(
         'data' => $arr,
         'total' => $res2->num_rows,
-        'deal'=>$res3,
         'page' => $page,
         'num' => $num
-
     );
     // echo $res2->num_rows;
 
