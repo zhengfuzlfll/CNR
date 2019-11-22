@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "287169",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
       "icon_id": "739107",
       "name": "二维码",
       "font_class": "erweima",
@@ -109,6 +116,13 @@
       "font_class": "wodexiaoxi",
       "unicode": "e648",
       "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "5327484",
+      "name": "二维码",
+      "font_class": "erweima1",
+      "unicode": "e700",
+      "unicode_decimal": 59136
     },
     {
       "icon_id": "5545245",

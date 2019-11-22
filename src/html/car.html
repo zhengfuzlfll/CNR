@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../sass/10car/car.css">
+</head>
+
+<body>
+    <div id="car">
+        <!-- 头部 -->
+        <div class="top_extra">
+            <div id="top">
+                <div id="top">
+                    <div id="dingwei">
+                        <span class="iconfont icon-location"></span>广东省<span
+                            class="iconfont icon-arrow_downward"></span>
+                        <div class="box">
+
+                            <dl>
+                                <!-- <dt>666</dt> -->
+                                <dd>北京市</dd>
+                                <dd>内蒙古自治区</dd>
+                                <dd>上海市</dd>
+                                <dd>福建省</dd>
+                                <dd>湖北省</dd>
+                                <dd>海南省</dd>
+                                <dd>云南省</dd>
+                                <dd>青海省</dd>
+                                <dd>香港特别行政区</dd>
+                            </dl>
+                            <dl>
+                                <dd>天津市</dd>
+                                <dd>辽宁省</dd>
+                                <dd>江苏省</dd>
+                                <dd>江西省</dd>
+                                <dd>湖南省</dd>
+                                <dd>重庆市</dd>
+                                <dd>西藏自治区</dd>
+                                <dd>宁夏回族自治区</dd>
+                                <dd>澳门特别行政区</dd>
+                            </dl>
+                            <dl>
+
+                                <dd>河北省</dd>
+                                <dd>吉林省</dd>
+                                <dd>浙江省</dd>
+                                <dd>山东省</dd>
+                                <dd style="background: red;color: white;">广东省</dd>
+                                <dd>四川省</dd>
+                                <dd>陕西省</dd>
+                                <dd>新疆维吾尔自治区</dd>
+                                <dd>海外</dd>
+                                <!-- <dd>10</dd> -->
+                            </dl>
+                            <dl>
+                                <!-- <dt>666</dt> -->
+                                <dd>山西省</dd>
+                                <dd>黑龙江省</dd>
+                                <dd>安徽省</dd>
+                                <dd>河南省</dd>
+                                <dd>广西壮族自治区</dd>
+                                <dd>贵州省</dd>
+                                <dd>甘肃省</dd>
+                                <dd>台湾省</dd>
+                                <!-- <dd>9</dd>
+                                 <dd>10</dd> -->
+
+                            </dl>
+                        </div>
+                    </div>
+                    <ul class="list">
+                        <li> <span>你好，请登录</span>&nbsp;<span>免费注册</span></li>
+                        <li class="list2_1">我的订单<span class="iconfont icon-arrow_downward"></span>
+                            <ul class="list2">
+                                <li>待支付</li>
+                                <li>待确认</li>
+                                <li>待评价</li>
+                            </ul>
+                        </li>
+                        <li class="list3_1">我的商城<span class="iconfont icon-arrow_downward"></span>
+                            <ul>
+                                <li>站内消息</li>
+                                <li>咨询回复</li>
+                                <li>我的收藏</li>
+                                <li>我的足迹</li>
+                                <li>我的积分</li>
+                                <li>我的优惠券</li>
+                            </ul>
+                        </li>
+                        <li class="list4_1">客户服务<span class="iconfont icon-arrow_downward"></span>
+                            <ul>
+                                <li>购物指南</li>
+                                <li>售后服务</li>
+                                <li>商家服务</li>
+                            </ul>
+                        </li>
+                        <li class="list5_1"><span class="iconfont icon-shouji"></span>手机商城<span
+                                class="iconfont icon-arrow_downward"></span>
+                            <div class="tp">
+                                <!-- <div> -->
+                                <img src="../img/01header/url.gif" alt="">
+                                <p>扫描二维码</p>
+                                <p>更多优惠下载小品APP</p>
+                                <!-- </div> -->
+
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- logo -->
+        <div class="ncc-head-wrap">
+            <header class="ncc-head-layout">
+                <div class="site-logo">
+                    <a href="./homepage.html">
+                        <img src="https://pic2.cnrmall.com/image/2c/6c/2c6ce4ec89967ee42ef77fb0b524fc0c.png" alt="">
+                    </a>
+                </div>
+
+                <ul class="ncc-flow">
+                    <li class="current">
+                        <i class="step1"></i>
+                        <p>我的购物车</p>
+                        <sub></sub>
+                        <div class="hr"></div>
+                    </li>
+                    <li>
+                        <i class="step2"></i>
+                        <p>确认订单/结算</p>
+                        <sub></sub>
+                        <div class="hr"></div>
+                    </li>
+                    <li>
+                        <i class="step3"></i>
+                        <p>生成订单/支付</p>
+                        <sub></sub>
+                        <div class="hr"></div>
+                    </li>
+                    <li>
+                        <i class="step4"></i>
+                        <p>完成支付</p>
+                        <sub></sub>
+                        <div class="hr"></div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <!-- 购物车状态 -->
+        <div class="ncc-main">
+
+            <div class="ncc-title ncc-wrapper">
+                <h3>我的购物车</h3>
+                <h5>查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</h5>
+            </div>
+
+            <!-- 进度条 -->
+            <div class="ncc-cart-status">
+                购物车状态：
+                <span class="bar">
+                    <span class="sub" id="buyMaxTopPanel" data-max="50" style="width: 0px;"> </span>
+                </span>
+                <span class="sum" id="buyTopSumPanel">0/50（线上：0，门店：0）</span>
+            </div>
+
+            <!-- 表单 -->
+            <form action="" class="form_buy">
+                <div class="ncc-wrapper">
+                    <div id="normalGoodsList">
+                        <!-- 顶部 -->
+                        <div id="ncc-mod-thead">
+                            <div class="ncc-mod-thead">
+                                <ul class="columns">
+                                    <li class="col-opt">
+                                        <span class="checkbox-layout">
+                                            <label>
+                                                <input type="checkbox" class="checkbox" id="checkedAllBtn"
+                                                    autocomplete="off">
+                                                全选
+                                            </label>
+                                        </span></li>
+                                    <li class="col-goods">商品</li>
+                                    <li class="col-quantity">数量</li>
+                                    <li class="col-unitprice">单价</li>
+                                    <li class="col-rebate">优惠</li>
+                                    <li class="col-amount">金额</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 商品 -->
+                        <!-- <div class="goods-zone" id="goodsZone_68861" data-goods-modal="1" data-batch-num0="1"
+                            data-batch-num1="0" data-batch-num2="0" data-store-id="91">
+
+                            <div class="fl m-r-5">
+                                <span class="checkbox-layout">
+                                    <input type="checkbox">
+                                    <label></label>
+                                </span>
+                            </div>
+                            <div class="goods-img">
+                                <div class="img-vertical">
+                                    <a><img src="https://pic4.cnrmall.com/image/f7/92/f79263b2ff8098870f58dd51ee02d206.jpg@160w_160h"
+                                            alt="" style="max-width:100%; max-height:100%">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goods-main">
+                                <div class="spu-name"><span class="tag tag1"></span><a href="/goods/68861"
+                                        target="_blank">边走边淘 广西红心木瓜 5斤 2-4个 包邮</a>
+                                    <div class="attributes"> </div>
+                                </div>
+
+
+                                <tbody>
+                                    <tr>
+
+                                        <td class="sku-unitprice">
+                                            <span class="number number-thin">
+                                                <span class="yuan">￥</span>
+                                                <span class="integer">27</span>
+                                                <span class="pointer">.</span>
+                                                <span class="decimal">80</span>
+                                            </span>
+                                        </td>
+                                        <td class="sku-rebate"> </td>
+                                        <td class="sku-amount">
+                                            <div class="sku-amount-block"><em id="skuAmount_39699"
+                                                    class="number number-14"><span class="yuan">￥</span><span
+                                                        class="integer">27</span><span class="pointer">.</span><span
+                                                        class="decimal">80</span></em></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                </table>
+                            </div>
+                        </div> -->
+                        <div class="goods-zone">
+                            <input type="checkbox">
+                            <img src="../img/01.jpg" alt="">
+                            <p class="p1">查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</p>
+                            <p class="p2">
+                                <span>-</span>
+                                <input type="text" value="1">
+                                <span>+</span></p>
+                            <p class="p3">￥27.5</p>
+                            <p class="p4">￥25.5</p>
+                            <ul>
+                                <li class="iconfont icon-shoucang"></li>
+                                <li class="iconfont icon-shanchu"></li>
+                            </ul>
+                        </div>
+
+
+                        <!-- 结算栏   吸底效果-->
+                        <div id="modTfootPanelShow">
+                            <div class="ncc-mod-tfoot" id="modTfootPanel">
+                                <div id="disableBuyTips" class="group-wrapper group-popup hidden"
+                                    style="display: none;">
+                                    <div id="J_SelectedItemsList" class="group-content">
+                                        <div class="group-top-title">
+                                            <p>请分开结算以下商品</p>
+                                            <span id="J_group_close_btn" class="group-close-btn"></span>
+                                        </div>
+                                        <div class="groups-list" id="disableBuyTipsGoodsList"></div>
+                                    </div><span class="arrow"></span>
+                                </div>
+                                <div class="actions"><span class="checkbox-layout">
+
+                                        <label for="checkedAllBottomBtn"><input type="checkbox" class="checkbox"
+                                                id="checkedAllBottomBtn" autocomplete="off">全选</label>
+                                    </span> <a href="javascript:;" class="delete-checked" id="mDelSkuBtn">删除</a> </div>
+                                <div class="summary">
+                                    <dl>
+                                        <dt>选购商品种类：</dt>
+                                        <dd class="kinds-total"><span class="value" id="kindsTotal">0</span>种</dd>
+                                        <dt>选购数量总计：</dt>
+                                        <dd class="quantity-total"><span class="value" id="quantityTotal">0</span>件</dd>
+                                        <dt>商品金额总计：</dt>
+                                        <dd class="amount-total"><strong class="value" id="amountTotal"><span
+                                                    class="yuan">￥</span><span class="integer">0</span><span
+                                                    class="pointer">.</span><span class="decimal">00</span></strong>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="form">
+                                    <button id="cartSubmit" class="checkout">结算</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

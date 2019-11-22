@@ -16,13 +16,16 @@
         $(".right li").eq(0).css("color", "red");
         console.log($(".right li").eq(0));
 
-        $(".right").on("click", "li", function () {
+        $(".right ul").on("click", "li", function () {
             $(this).children().css("display", "block").siblings().css("display", "none");
-            $(this).children().css("z-index", "2").siblings().css("z-index", "0");
-            $(this).addClass("act").siblings().removeClass("act");
+
+            /* -- 注意点------*/
+            $(this).children().css("z-index", "2").parent().siblings().children().css("z-index", "0");
+            // console.log();
+
+            // $(this).addClass("act").siblings().removeClass("act");
             $(this).css("color", "red").siblings().css("color", "black");
             console.log($(this), $(this).children());
-
             // data("id")
         })
 
@@ -373,7 +376,7 @@
                                 </ul>
                             </li>
                             <li class="item item3">
-                                <span class="iconfot icon-erweima"></span>
+                                <span class="iconfot icon-erweima1"></span>
                                 <span>移动端购买</span>
                                 <img src="../img/06goods/68861.gif" alt="">
                             </li>
@@ -497,7 +500,7 @@
             $(".ncsGoodsPicList").on("mouseenter", "li", function () {
                 console.log($(this));
 
-                $(this).find("a").css("border-color", "red").siblings().css("border-color", "white");
+                $(this).find("a").css("border-color", "red").parent().siblings().find("a").css("border-color", "white");
                 // console.log($(this).children()); /* a标签 */
                 // console.log($(this).find("a"));
 
@@ -566,7 +569,8 @@
 
 
 
-
+        /* ------加载底部---- */
+        $("#foot").load("./footer_page.html")
     })
 
 })()

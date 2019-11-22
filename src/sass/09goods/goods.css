@@ -242,6 +242,7 @@ input {
   width: 120px;
   height: 120px;
   border: 1px solid #ccc;
+  z-index: 5;
 }
 
 #main .ncs-detail .ncs-detail2 .ncs-goods-summary {
