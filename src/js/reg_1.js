@@ -88,77 +88,17 @@ $(".regist-slide").click(() => {
         $(".mobileerror").css("display", "block").html('<i class="iconfont icon-jinggao"></i>&nbsp;&nbsp;' +
             "手机号不能为空");
     }
-    /* 60秒倒计时 */
-    // var flag = 1;
-    // var i = 60;
-
-    // function countDown() {
-    //     i = i - 1;
-    //     $("#cutdown").html(i);
-    //     if (i == 0) {
-    //         $("#cutdown").html(i);
-    //         flag = 1;
-    //         i = 60;
-    //         return;
-    //     }
-    //     setTimeout(`countDown()`, 1000);
-    // } 
-
-
-
-    // var date = new Date()
-    // var s = checkTime(date.getSeconds()); /* 当前秒数 */
-    // let second = s + 60;
-
-    // setInterval(function () {
-    //     if (second < 1) {
-    //         second = 0;
-    //     }
-    //     second--;
-    //     console.log(second);
-
-    // }, 1000)
-    // /* 两位数字 */
-    // function checkTime(i) {
-    //     if (i < 10) i = "0" + i
-    //     return i
-    // }
-
-    // let countdown = 60;
-
-    // function settime(val) {
-    //     if (countdown == 0) {
-    //         // val.removeAttribute("disabled");
-    //         // val.value = "免费获取验证码";
-    //         countdown = 60;
-    //         $("#first-code").html(countdown);
-
-    //     } else {
-    //         // val.setAttribute("disabled", true);
-    //         // val.value = "重新发送(" + countdown + ")";
-    //         countdown--;
-    //         $("#first-code").html(countdown);
-    //     }
-
-    //     setTimeout(function (countdown) {
-    //         settime(countdown);
-    //         // console.log();
-    //         console.log(countdown);
-
-    //     }, 1000)
-    // }
-
-    /* -----注册按钮 ------*/
 
 
 
 })
-
+/* -----注册按钮 ------*/
 /* 注册 */
 $(".submit-div").click(() => {
     // console.log(666666);
     // $(".pwdTip").append()
     // console.log(666);
+    let phone = $("#mobile").val().trim();
 
     let code = $("#authCode").val().trim(); /* 动态码 */
     let mobileMemberPwd = $("#mobileMemberPwd").val().trim(); /* 设置密码 */
@@ -166,7 +106,6 @@ $(".submit-div").click(() => {
     console.log(code + "=动态码");
     console.log(mobileMemberPwd + "=设置密码");
     console.log(mobileRepeatMemberPwd + "=重复密码");
-
 
 
     let codeReg = /\d{6}/; /* 动态码 */
@@ -222,10 +161,26 @@ $(".submit-div").click(() => {
         <i class="iconfont icon-jinggao"></i>&nbsp;&nbsp;请再次输入密码
         </label>`)
     }
+
+    /* 注册成功跳转 */
     if ($("#code").parent().hasClass("act") && $("#password").parent().hasClass("act") && $("#pwd_repeat").parent().hasClass("act")) {
         //    alert
+        // let phone
 
-        window.location.href = "./homepage.html"
+        $.ajax({
+            type: "post",
+            url: "../api/01reg_2.php",
+            data: {
+                phone: phone,
+                password: mobileMemberPwd
+            },
+            dataType: "dataType",
+            success: function (response) {
+
+            }
+        });
+
+        window.location.href = "./login.html"
 
     } else {
         alert("请检查信息填写是否有误");

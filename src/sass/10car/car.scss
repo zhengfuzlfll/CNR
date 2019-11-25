@@ -13,6 +13,11 @@ input {
     border: none;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #car {
     width: 100%;
 
@@ -611,8 +616,9 @@ input {
                     }
 
                     .p1 {
-                        width: 500px;
+                        width: 450px;
                         height: 80px;
+                        margin-right: 20px;
                         // height: 110px;
                         font-size: 12px;
                         padding-top: 10px;
@@ -626,6 +632,10 @@ input {
                     .p3,
                     .p4 {
                         padding-top: 25px;
+                    }
+
+                    .p4 {
+                        color: rgb(228, 57, 60);
                     }
 
                     .p3,
@@ -686,7 +696,95 @@ input {
                 }
 
                 /* 结算栏  吸底 */
+                #modTfootPanelShow {
+                    width: 1190px;
+                    height: 57px;
+                    margin-top: 10px;
 
+                    #modTfootPanel {
+                        width: 1190px;
+                        height: 56px;
+                        background-color: #EEE;
+                        height: 56px;
+                        border-bottom: solid 1px #E1E1E1;
+                        line-height: 56px;
+
+                        // }
+                        .actions {
+                            float: left;
+                            padding-left: 20px;
+                            width: 190px;
+                            font-size: 14px;
+
+                            #mDelSkuBtn {
+                                // float: left;
+                                display: inline-block;
+                                width: 50px;
+                                text-align: center;
+                            }
+                        }
+
+                        .summary {
+                            float: left;
+                            width: 820px;
+
+                            dl {
+                                float: right;
+                                font-size: 12px;
+
+                                dt {
+                                    float: left;
+                                    width: 84px;
+                                    height: 56px;
+                                }
+
+                                dd {
+                                    float: left;
+                                    margin-right: 30px;
+                                }
+
+                                .value {
+                                    display: inline-block;
+                                    margin-right: 5px;
+                                    font-size: 16px;
+                                    color: #000;
+                                }
+
+                                #amountTotal {
+                                    display: inline-block;
+                                    margin-right: 5px;
+                                    font-size: 20px;
+                                    color: #E4393C;
+
+                                    span {
+                                        // width: ;
+                                        height: 80px;
+                                        display: inline-block;
+                                        // padding: 0px 10px;
+
+                                    }
+                                }
+                            }
+
+                        }
+
+                        /* 结算 */
+                        .form {
+                            float: left;
+                            width: 156px;
+
+                            #cartSubmit {
+                                width: 138px;
+                                height: 54px;
+                                padding: 1px 6px;
+                                background-color: #E4393C;
+                                color: #FFF;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
             }
         }
     }

@@ -15,7 +15,6 @@
         $(".right li").eq(0).children().css("display", "block");
         $(".right li").eq(0).css("color", "red");
         console.log($(".right li").eq(0));
-
         $(".right ul").on("click", "li", function () {
             $(this).children().css("display", "block").siblings().css("display", "none");
 
@@ -259,8 +258,9 @@
 
             let bigimg = $("#bigimg"); /* 遮罩+左边原图的外层标签 */
             let mask = $(".mask") /* 遮罩 */
-            let bigpicMove = $(".maximg");
-            let biger = $(".biger")
+
+            let bigpicMove = $(".maximg"); /* 大图 */
+            let biger = $(".biger") /* 大图 外层*/
 
             bigimg.mouseenter(function () {
                 mask.css("display", "block");
@@ -307,14 +307,15 @@
                     top = bigimg.height() - mask.height();
                 }
 
-                mask.css("left", left + "px");
-                mask.css("top", top + "px")
+                mask.css("left", left);
+                mask.css("top", top)
 
 
 
                 /* 比例系数 */
-                var scalX = left / (bigimg.width() - mask.width());
-                var scalY = top / (bigimg.height() - mask.height());
+                // var scalX = left / (bigimg.width() - mask.width());
+                // var scalY = top / (bigimg.height() - mask.height());
+                // var scalX=
 
                 // 大图运动计算公式
                 var iLeft = (biger.width() - bigpicMove.width()) * scalX;
@@ -352,7 +353,7 @@
                     <div class="controller">
                         <div class="goods-pic-box">
                             <ul class="ncsGoodsPicList">
-                                <li><a><img src="${item.imga}" alt=""></a></li>
+                                <li><a><img class="img1" src="${item.imga}" alt=""></a></li>
                                 <li><a><img src="${item.img2}" alt=""></a></li>
                             </ul>
                         </div>
@@ -491,6 +492,10 @@
             /* ---插入到标签下作为第一个子节点-- */
             $(".ncs-detail2").prepend(goods);
 
+            // let price = ($(".integer").html() + $(".pointer").html() + $(".decimal").html()) * 1;
+            // let price = $(".integer" + )
+            // console.log(price);
+
 
             /* 小图高亮 */
             /* 默认第一个显示 */
@@ -515,7 +520,7 @@
             let mask = $(".mask") /* 遮罩 */
             let bigpicMove = $(".maximg"); /* 右边大图的图标签 */
             let biger = $(".biger"); /* 右边大图的外层标签 */
-            /*  */
+            /* 移入原图显示遮罩和大图，移出隐藏 */
             bigimg.mouseenter(function () {
                 mask.css("display", "block");
                 biger.css("display", "block");
@@ -524,7 +529,7 @@
                 mask.css("display", "none");
                 biger.css("display", "none");
             })
-
+            /*遮罩+大图 运动 */
             bigimg.mousemove(function (ev) {
                 // console.log(66);
                 let left = ev.pageX - $("#Zoomer").offset().left - mask.width() / 2;
@@ -547,8 +552,8 @@
                     top = bigimg.height() - mask.height();
                 }
 
-                mask.css("left", left + "px");
-                mask.css("top", top + "px")
+                mask.css("left", left);
+                mask.css("top", top)
 
 
                 /* 比例系数 */
@@ -559,9 +564,124 @@
                 var iLeft = (biger.width() - bigpicMove.width()) * scalX;
                 var iTop = (biger.height() - bigpicMove.height()) * scalY;
 
-                bigpicMove.css("left", iLeft + "px");
-                bigpicMove.css("top", iTop + "px");
+                bigpicMove.css("left", iLeft);
+                bigpicMove.css("top", iTop);
             });
+
+            /*订单数量值  */
+            // let num = $("#mnBuyNumInput").val();
+            /* 添加购物车 */
+            $("#addCartBtn").on("click", function () {
+                let num = $("#mnBuyNumInput").val();
+                // console.log(666);
+                if (num && num != 0) {
+                    num == $("#mnBuyNumInput").val() * 1;
+                    let gid = getCookie("gid") * 1; /* 商品id */
+                    let uid = getCookie("uid") * 1; /* 用户id */
+                    let img = $(".img1")[0].src; /* 图片路径 */
+                    // console.log($(".img1")[0].src);
+                    // let price = $(".integer" + $(".pointer").$(".decimal"))
+                    // let totalprice=
+                    let price = (($(".integer").html() + $(".pointer").html() + $(".decimal").html()) * 1).toFixed(2); /* 单价  保留两位小数 */
+                    // console.log(price);
+                    let totalprice = price * num; /* 总价 */
+                    let title = $(".ncs-goods-name h1").html(); /* 标题 */
+
+                    let loginName = getCookie("loginName");
+                    console.log(loginName);
+
+                    if (loginName == undefined) {
+                        if (confirm("请先登录")) {
+                            window.location.href = "./login.html";
+                        }
+
+                    } else if (confirm(`您已添加${num}件商品,去结算？`)) {
+
+                        // console.log(confirm() == true);
+
+                        $.ajax({
+                            type: "post",
+                            url: "../api/04goods_2.php",
+                            data: {
+                                /*商品id  */
+                                gid: gid,
+                                /* 用户id */
+                                uid: uid,
+                                /* 商品数量 */
+                                num: num,
+                                /* 图片 */
+                                img: img,
+                                /* 标题 */
+                                title: title,
+                                /* 单价 */
+                                price: price,
+                                /* 总价 */
+                                totalprice: totalprice
+                            },
+                            dataType: "json",
+                            success: function (response) {
+                                console.log(response);
+                                window.location.href = "./car.html";
+
+                            }
+                        });
+                        // window.location.href = "./car.html";
+                    }
+                    // if (confirm("请先登录")) {
+                    //     window.location.href = "./login.html";
+                    // } else {
+
+                    // }
+                    // alert("请先登录！");
+                    // if (confirm("请先登录")) {
+                    //     window.location.href = "./login.html";
+                    // }
+                    // if (confirm(`您已添加${num}件商品,去结算？`)) {
+                    //     console.log(uid);
+
+                    // } else {
+
+                    // }
+                } else {
+                    alert("商品不能为空!")
+                    $("#mnBuyNumInput").val("1")
+                }
+                // console.log(num);
+                //    
+
+            })
+            // console.log(num);
+
+            /* 减少数量 */
+            $("#mnBuyNumCutBtn").on("click", function () {
+                let num = $("#mnBuyNumInput").val();
+                // console.log(666);
+                if (num <= 1) {
+                    $("#mnBuyNumInput").val("1");
+                } else {
+                    num--;
+                    $("#mnBuyNumInput").val(num);
+                    console.log(num);
+
+
+                }
+
+            })
+
+            /*增加数量 */
+            $("#mnBuyNumAddBtn").on("click", function () {
+                let num = $("#mnBuyNumInput").val();
+                // console.log(666);
+                // if (num <= 1) {
+                //     $("#mnBuyNumInput").val("1");
+                // } else {
+                num++;
+                $("#mnBuyNumInput").val(num);
+                console.log(num);
+
+                // }
+
+            })
 
 
 

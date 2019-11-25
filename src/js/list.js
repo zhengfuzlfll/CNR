@@ -373,6 +373,10 @@
                 setCookie("gid", id);
 
             })
+
+
+
+            
         }
 
 

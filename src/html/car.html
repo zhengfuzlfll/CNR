@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车</title>
-    <link rel="stylesheet" href="../lib/iconfont/iconfont.css">
-    <link rel="stylesheet" href="../sass/10car/car.css">
+    <link rel="stylesheet" href="../lib/iconfont/iconfont.css"><!-- 字体图标库 -->
+    <link rel="stylesheet" href="../sass/10car/car.css"><!-- 购物车 -->
+    <link rel="stylesheet" href="../sass/05foot/foot.css"><!-- 底部 -->
+    <!-- 购物车插件 -->
+    <!-- <link rel="stylesheet" href="../lib/jQueryGwc/css/reset.css">
+    <link rel="stylesheet" href="../lib/jQueryGwc/css/carts.css"> -->
 </head>
 
 <body>
@@ -74,7 +78,7 @@
                         </div>
                     </div>
                     <ul class="list">
-                        <li> <span>你好，请登录</span>&nbsp;<span>免费注册</span></li>
+                        <li class="loginName"> <span>你好，请登录</span>&nbsp;<span>免费注册</span></li>
                         <li class="list2_1">我的订单<span class="iconfont icon-arrow_downward"></span>
                             <ul class="list2">
                                 <li>待支付</li>
@@ -182,7 +186,7 @@
                                     <li class="col-opt">
                                         <span class="checkbox-layout">
                                             <label>
-                                                <input type="checkbox" class="checkbox" id="checkedAllBtn"
+                                                <input type="checkbox" class="checkbox1" id="checkedAllBtn"
                                                     autocomplete="off">
                                                 全选
                                             </label>
@@ -197,55 +201,8 @@
                         </div>
 
                         <!-- 商品 -->
-                        <!-- <div class="goods-zone" id="goodsZone_68861" data-goods-modal="1" data-batch-num0="1"
-                            data-batch-num1="0" data-batch-num2="0" data-store-id="91">
-
-                            <div class="fl m-r-5">
-                                <span class="checkbox-layout">
-                                    <input type="checkbox">
-                                    <label></label>
-                                </span>
-                            </div>
-                            <div class="goods-img">
-                                <div class="img-vertical">
-                                    <a><img src="https://pic4.cnrmall.com/image/f7/92/f79263b2ff8098870f58dd51ee02d206.jpg@160w_160h"
-                                            alt="" style="max-width:100%; max-height:100%">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="goods-main">
-                                <div class="spu-name"><span class="tag tag1"></span><a href="/goods/68861"
-                                        target="_blank">边走边淘 广西红心木瓜 5斤 2-4个 包邮</a>
-                                    <div class="attributes"> </div>
-                                </div>
-
-
-                                <tbody>
-                                    <tr>
-
-                                        <td class="sku-unitprice">
-                                            <span class="number number-thin">
-                                                <span class="yuan">￥</span>
-                                                <span class="integer">27</span>
-                                                <span class="pointer">.</span>
-                                                <span class="decimal">80</span>
-                                            </span>
-                                        </td>
-                                        <td class="sku-rebate"> </td>
-                                        <td class="sku-amount">
-                                            <div class="sku-amount-block"><em id="skuAmount_39699"
-                                                    class="number number-14"><span class="yuan">￥</span><span
-                                                        class="integer">27</span><span class="pointer">.</span><span
-                                                        class="decimal">80</span></em></div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-
-                                </table>
-                            </div>
-                        </div> -->
-                        <div class="goods-zone">
-                            <input type="checkbox">
+                        <!-- <div class="goods-zone">
+                            <input type="checkbox" class="goodCheckbox">
                             <img src="../img/01.jpg" alt="">
                             <p class="p1">查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</p>
                             <p class="p2">
@@ -258,8 +215,22 @@
                                 <li class="iconfont icon-shoucang"></li>
                                 <li class="iconfont icon-shanchu"></li>
                             </ul>
-                        </div>
-
+                        </div> -->
+                        <!-- <div class="goods-zone">
+                            <input type="checkbox" class="goodCheckbox">
+                            <img src="../img/01.jpg" alt="">
+                            <p class="p1">查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</p>
+                            <p class="p2">
+                                <span>-</span>
+                                <input type="text" value="1">
+                                <span>+</span></p>
+                            <p class="p3">￥27.5</p>
+                            <p class="p4">￥25.5</p>
+                            <ul>
+                                <li class="iconfont icon-shoucang"></li>
+                                <li class="iconfont icon-shanchu"></li>
+                            </ul>
+                        </div> -->
 
                         <!-- 结算栏   吸底效果-->
                         <div id="modTfootPanelShow">
@@ -276,7 +247,7 @@
                                 </div>
                                 <div class="actions"><span class="checkbox-layout">
 
-                                        <label for="checkedAllBottomBtn"><input type="checkbox" class="checkbox"
+                                        <label for="checkedAllBottomBtn"><input type="checkbox" class="checkbox2"
                                                 id="checkedAllBottomBtn" autocomplete="off">全选</label>
                                     </span> <a href="javascript:;" class="delete-checked" id="mDelSkuBtn">删除</a> </div>
                                 <div class="summary">
@@ -285,15 +256,21 @@
                                         <dd class="kinds-total"><span class="value" id="kindsTotal">0</span>种</dd>
                                         <dt>选购数量总计：</dt>
                                         <dd class="quantity-total"><span class="value" id="quantityTotal">0</span>件</dd>
-                                        <dt>商品金额总计：</dt>
-                                        <dd class="amount-total"><strong class="value" id="amountTotal"><span
-                                                    class="yuan">￥</span><span class="integer">0</span><span
-                                                    class="pointer">.</span><span class="decimal">00</span></strong>
+                                        <dt style="display: none;">商品金额总计：</dt>
+                                        <dd class="amount-total" style="display: none;">
+                                            <strong class="value" id="amountTotal">
+                                                <!-- <span class="yuan">￥</span>
+                                                <span class="integer">0</span>
+                                                <span class="pointer">.</span>
+                                                <span class="decimal">00</span> -->
+                                                <span>￥0.00</span>
+                                            </strong>
                                         </dd>
                                     </dl>
                                 </div>
                                 <div class="form">
-                                    <button id="cartSubmit" class="checkout">结算</button>
+                                    <!-- <input  value="666"> -->
+                                    <input id="cartSubmit" type="button" class="checkout" value="结算">
                                 </div>
                             </div>
                         </div>
@@ -301,15 +278,17 @@
                 </div>
             </form>
 
-
-
-
-
-
-
         </div>
-
+        <!-- 加载底部 -->
+        <div id="foot"></div>
     </div>
+
+
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/myquery.js"></script>
+    <script src="../js/car.js"></script>
+
+    <!-- <script src="../lib/jQueryGwc/js/carts.js"></script> -->
 </body>
 
 </html>

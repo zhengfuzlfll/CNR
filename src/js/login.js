@@ -101,15 +101,39 @@ $(".slide-imgver-btn1").click(function () {
             success: function (response) {
                 console.log(response);
                 if (response == 0) {
+                    /* ---登录成功 ---*/
                     if ($("#autoLogin").prop("checked")) {
                         /* 七天免登录 */
                         setCookie('loginName', loginName, 7);
+                    } else {
+                        /* 存cookie */
+                        setCookie('loginName', loginName);
                     }
 
-                    /* 存cookie */
-                    setCookie('loginName', loginName);
+                    /* ---存用户id ----*/
+                    // setCookie("uid", uid);
+                    $.ajax({
+                        type: "post",
+                        url: "../api/02login_3.php",
+                        data: {
+                            loginName: loginName
+                        },
+                        dataType: "json",
+                        success: function (response) {
+                            console.log(response[0].uid);
+                            // console.log();
+                            setCookie("uid", response[0].uid);
+                            window.location.href = "./homepage.html";
+                        }
+                    });
+
+
+
+
+
                     // alert("即将跳转至首页")
-                    window.location.href = "./homepage.html";
+                    // window.location.href = "./homepage.html";
+
                 } else {
                     alert("登录失败，请重新登陆");
                 }

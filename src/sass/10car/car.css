@@ -14,6 +14,11 @@ input {
   border: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #car {
   width: 100%;
   /* 头部 */
@@ -524,8 +529,9 @@ input {
 }
 
 #car .ncc-main .form_buy .ncc-wrapper .goods-zone .p1 {
-  width: 500px;
+  width: 450px;
   height: 80px;
+  margin-right: 20px;
   font-size: 12px;
   padding-top: 10px;
 }
@@ -538,6 +544,10 @@ input {
 #car .ncc-main .form_buy .ncc-wrapper .goods-zone .p3,
 #car .ncc-main .form_buy .ncc-wrapper .goods-zone .p4 {
   padding-top: 25px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper .goods-zone .p4 {
+  color: #e4393c;
 }
 
 #car .ncc-main .form_buy .ncc-wrapper .goods-zone .p3,
@@ -590,4 +600,87 @@ input {
 #car .ncc-main .form_buy .ncc-wrapper .goods-zone ul li {
   float: left;
   width: 30px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow {
+  width: 1190px;
+  height: 57px;
+  margin-top: 10px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel {
+  width: 1190px;
+  height: 56px;
+  background-color: #EEE;
+  height: 56px;
+  border-bottom: solid 1px #E1E1E1;
+  line-height: 56px;
+  /* 结算 */
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .actions {
+  float: left;
+  padding-left: 20px;
+  width: 190px;
+  font-size: 14px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .actions #mDelSkuBtn {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary {
+  float: left;
+  width: 820px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary dl {
+  float: right;
+  font-size: 12px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary dl dt {
+  float: left;
+  width: 84px;
+  height: 56px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary dl dd {
+  float: left;
+  margin-right: 30px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary dl .value {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 16px;
+  color: #000;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary dl #amountTotal {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 20px;
+  color: #E4393C;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .summary dl #amountTotal span {
+  height: 80px;
+  display: inline-block;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .form {
+  float: left;
+  width: 156px;
+}
+
+#car .ncc-main .form_buy .ncc-wrapper #modTfootPanelShow #modTfootPanel .form #cartSubmit {
+  width: 138px;
+  height: 54px;
+  padding: 1px 6px;
+  background-color: #E4393C;
+  color: #FFF;
+  cursor: pointer;
 }

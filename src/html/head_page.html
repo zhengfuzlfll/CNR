@@ -70,7 +70,7 @@
             </div>
         </div>
         <ul class="list">
-            <li> <span>你好，请登录</span>&nbsp;<span>免费注册</span></li>
+            <li class="loginName"> <span>你好，请登录</span>&nbsp;<span>免费注册</span></li>
             <li class="list2_1">我的订单<span class="iconfont icon-arrow_downward"></span>
                 <ul class="list2">
                     <li>待支付</li>
@@ -222,6 +222,35 @@
             }).join("");
 
             $(".list-all").html(html)
+
+            
+            if (getCookie("loginName") == undefined) {
+                $(".loginName").click(function () {
+                    window.location.href = "./login.html"
+                })
+            } else {
+                $(".loginName").html(getCookie("loginName"))
+                $(".loginName").hover(function () {
+                    // over
+                    if (getCookie("loginName") != undefined) {
+                        $(".loginName").html("退出");
+                        $(".loginName").click(function () {
+                            if (confirm("确定退出？")) {
+                                removeCookie("loginName");
+                                $(".loginName").html(
+                                    `<span>你好，请登录</span>&nbsp;<span>免费注册</span>`)
+                            } else {
+                                $(".loginName").html(getCookie("loginName"))
+                            }
+                        })
+                    }
+
+
+                }, function () {
+                    // out
+                    $(".loginName").html(getCookie("loginName"))
+                });
+            }
         });
     </script>
 </div>

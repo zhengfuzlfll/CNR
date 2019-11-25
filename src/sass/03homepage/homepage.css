@@ -150,7 +150,6 @@ body {
   width: 1210px;
   height: 305px;
   margin: auto;
-  background: yellow;
   /* 秒杀 */
 }
 
@@ -232,7 +231,6 @@ body {
   width: 100%;
   height: 305px;
   margin-top: 15px;
-  background: orange;
 }
 
 #main .seckill-content {

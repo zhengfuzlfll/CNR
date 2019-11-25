@@ -46,7 +46,7 @@
 
                     </div> -->
                     <div class="middle">
-                        <img src="../img/03homepage/banner.jpg" alt="">
+                        <img class="linkTolist" src="../img/03homepage/banner.jpg" alt="">
                     </div>
                     <div class="right">
                         <h2>今日最大牌</h2>
@@ -295,7 +295,7 @@
                         <div class="bz-bd-col">
                             <div class="bz-cover">
                                 <div class="top-bz-left">
-                                    <img src="https://pic.cnrmall.com/image/cf/29/cf298b12cb1ef1a52c5b8a16a8b7bfb3.jpg"
+                                    <img src="https://pic.cnrmall.com/image/76/92/76923f420fbf0a4a292ea8011a0b455c.jpg"
                                         alt="">
                                 </div>
                                 <div class="top-bz-right">
@@ -401,41 +401,57 @@
     <div id="footer_page"></div>
 </body>
 <script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/myquery.js"></script>
 <script>
     (function () {
-        let p1 = new Promise(reslove => {
-            reslove($("#home_page").load("head_page.html"))
-        })
-        p1.then(reslove => {
+
+        $("#home_page").load("head_page.html", function () {
+
 
         })
 
-        /* 倒计时 */
-        // function countDown(y, m, d, h, mm) {
-        //     var future = new Date(y, m, d, h, mm);
-        //     // 间隔时间毫秒转成秒
-        //     var remTime = (future - new Date()) / 1000;
-        //     // 满足一天及天数加1 不满足则为余数 所以直接除一天有多少秒即可
-        //     var days = parseInt(remTime / 60 / 60 / 24);
-        //     // 先算出剩余时间有多少小时，这些小时有多少个24小时 不满24小时的及为剩余多少小时
-        //     var hours = parseInt(remTime / 60 / 60 % 24);
-        //     // 换算 多少分钟 满足60分的为小时数 不满60分的及为剩余分钟数
-        //     var minutes = parseInt(remTime / 60 % 60);
-        //     // 满足60秒的为分钟数 不满60秒的及为剩余秒数
-        //     var seconds = parseInt(remTime % 60);
-        //     //判断总的秒数是否小于=0 是则结束定时器
-        //     if (remTime <= 0) return remTime;
-        //     console.log(days, hours, minutes, seconds);
-        // } // 设置定时器
-        // var timer = setInterval(function () {
-        //     var curTime = countDown(2019, 4, 28, 17, 5);
 
-        //     if (curTime <= 0) {
-        //         clearInterval(timer);
-        //         timer = null;
-        //     }
-        // }, 1000);
-        // countDown(y, m, d, h, mm);
+        /* 点击跳转列表页 */
+        $(".linkTolist").click(function () {
+            window.location.href = "./list.html"
+        })
+
+        /*  倒计时 */
+
+        function TimeDown(m, h, s, endDateStr) {
+            //结束时间
+            var endDate = new Date(endDateStr);
+            //当前时间
+            var nowDate = new Date();
+            //相差的总秒数
+            var totalSeconds = parseInt((endDate - nowDate) / 1000);
+            //天数
+            var days = Math.floor(totalSeconds / (60 * 60 * 24));
+            //取模（余数）
+            var modulo = totalSeconds % (60 * 60 * 24);
+            //小时数
+            var hours = Math.floor(modulo / (60 * 60));
+            modulo = modulo % (60 * 60);
+            //分钟
+            var minutes = Math.floor(modulo / 60);
+            //秒
+            var seconds = modulo % 60;
+            //输出到页面
+            // document.getElementById(id).innerHTML = "还剩:" + days + "天" + hours + "小时" + minutes + "分钟" + seconds +
+            //     "秒";
+            $(m).html(m);
+            $(h).html(h);
+            $(s).html(s);
+
+
+            //延迟一秒执行自己
+            setTimeout(function () {
+                TimeDown(m, h, s, endDateStr);
+            }, 1000)
+        }
+
+        TimeDown("m", "h", "s", "2019-11-25 8:00:00");
+
 
         /* 轮播图 渲染*/
         $.getJSON("../api/banner.json", function (res) {
@@ -444,7 +460,7 @@
                 return ` <li class="sk-items">
                             <div class="sk-goods-info">
                                 <a href="/goods/43659" target="_blank" class="sk-link">
-                                    <img title="" alt="" src="${item.img}">
+                                    <img title="" alt="" src="//img12.360buyimg.com/mobilecms/s250x250_jfs/t1/46875/4/16192/160010/5dd4b5ecE93596324/3c6004b925352d08.jpg">
                                     <p class="sk-name">${item.title}</p>
                                 </a>
                                 <span class="sk-shadow"></span>
@@ -474,7 +490,7 @@
                 return `<li class="bz-more-goods" data-id=${item.id}>
                             <div class="bz-more-goods-lk">
                                 <img class="bz-more-photo J-lazy"
-                                    src="https://pic.cnrmall.com/image/88/71/8871f54a38798a9ab834d99aef9ede8e.jpg@240w_240h">
+                                    src="//img12.360buyimg.com/mobilecms/s250x250_jfs/t1/46875/4/16192/160010/5dd4b5ecE93596324/3c6004b925352d08.jpg">
                                 <div class="bz-more-info">
                                     <p class="bz-more-info-name">${item.detail}</p>
                                     <span class="yuan">${item.price}</span>
@@ -484,6 +500,10 @@
                         </li>`
             }).join("");
             $(".bz-more-list").html(str);
+
+
+
+
         })
 
 
