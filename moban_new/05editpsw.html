@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>修改管理员密码</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="css/uniform.css" />
+	<link rel="stylesheet" href="css/select2.css" />
+	<link rel="stylesheet" href="css/matrix-style2.css" />
+	<link rel="stylesheet" href="css/matrix-media.css" />
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	<style>
+		.act {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="content">
+		<div id="content-header">
+			<h1>用户信息管理</h1>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="widget-box">
+						<div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+							<h5>修改密码</h5>
+						</div>
+						<div class="widget-content nopadding">
+							<form class="form-horizontal" method="post" action="#" name="password_validate"
+								id="password_validate" novalidate="novalidate">
+								<div class="control-group">
+									<label class="control-label">密码</label>
+									<div class="controls">
+										<input type="password" name="pwd" id="pwd">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">确认密码</label>
+									<div class="controls">
+										<input type="password" name="pwd2" id="pwd2">
+									</div>
+								</div>
+								<div class="form-actions">
+									<input type="button" value="保存" class="btn btn-success">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/myquery.js"></script>
+	<script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>
+	<!-- <script src="js/jquery.min.js"></script> -->
+	<script src="js/jquery.ui.custom.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.uniform.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/matrix.js"></script>
+	<script src="js/matrix.tables.js"></script>
+
+
+	<script>
+		let pwd = document.querySelector("#pwd");
+		let pwd2 = document.querySelector("#pwd2");
+		let btnsuccess = document.querySelector(".btn-success")
+		// console.log(pwd, pwd2);
+		// console.log(btnsuccess);
+
+		let pwdReg = /^[a-zA-Z0-9]{6,16}$/; //密码正则
+		pwd.onblur = function () {
+			let val_1 = pwd.value.trim();
+			if (val_1) {
+				if (pwdReg.test(val_1)) {
+					// 验证成功
+					pwd.className = "act";
+					pwd2.focus();
+				} else {
+					alert("密码为6-16位，数字、字母（注意区分大小写）")
+				}
+			} else {
+				alert("请输入密码");
+			}
+		}
+		pwd2.onblur = function () {
+			let val_1 = pwd.value.trim();
+			let val_2 = pwd2.value.trim();
+			if (val_2) {
+				if (val_1 == val_2) {
+					// 两次密码一致
+					pwd2.className = "act";
+					alert("密码修改成功，请点击保存进行新密码保存");
+				} else {
+					alert("两次输入的密码不一致");
+				}
+			} else {
+				alert("请再次输入密码进行确认");
+			}
+		}
+		// console.log(getCookie('username'));
+
+		btnsuccess.onclick = function () {
+			// console.log(666666);
+			let val_1 = pwd.value.trim();
+			let val_2 = pwd2.value.trim();
+			let username = getCookie('username'); //将存在cookie的用户名取出来，用作修改密码的依据
+			// console.log(val_1, val_2);
+			if (val_1 && val_2) {
+				if (pwd.className == "act" && pwd2.className == "act") {
+					// console.log(6666);
+
+					console.log(val_1, val_2);
+					ajax({
+						type: 'post',
+						url: 'api/05modifypwd.php',
+						data: {
+							password: val_1,
+							username: username
+
+						},
+						success: str => {
+							// let arr = JSON.parse(str)
+							console.log(str);
+							if (str) {
+								alert("修改成功");
+								// required.value = '';
+								// email.value = '';
+								// date.value = '';
+							} else {
+								alert("修改失败")
+							}
+
+						}
+					})
+				} else {
+
+				}
+			} else {
+				alert("请输入密码！")
+			}
+
+		}
+	</script>
+
+
+</body>
+
+</html>

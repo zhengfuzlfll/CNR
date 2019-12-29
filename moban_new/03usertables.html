@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>用户管理页2_分页</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="css/uniform.css" />
+	<link rel="stylesheet" href="css/select2.css" />
+	<link rel="stylesheet" href="css/matrix-style2.css" />
+	<link rel="stylesheet" href="css/matrix-media.css" />
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	<style>
+		#content {
+			position: relative;
+		}
+
+		#DataTables_Table_0_paginate {
+			position: absolute;
+			right: 10px;
+			bottom: 50px;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="content">
+		<div id="content-header">
+			<h1>用户信息管理</h1>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+
+					<div class="widget-box">
+						<div class="widget-title"> <span class="icon">
+								<input type="checkbox" id="title-checkbox" name="title-checkbox" />
+							</span>
+							<h5>用户信息表</h5>
+						</div>
+						<div class="widget-content nopadding">
+							<table class="table table-bordered table-striped with-check">
+								<thead>
+									<tr>
+										<th><i class="icon-resize-vertical"></i></th>
+										<th>id</th>
+										<th>用户名</th>
+										<th>密码</th>
+										<th>邮箱</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- <tr>
+										<td><input type="checkbox" /></td>
+										<td>1</td>
+										<td contenteditable="true">张学友</td>
+										<td>456123</td>
+										<td class="center">34242777@qq.com</td>
+										<td>
+											<button type="submit" class="btn btn-success">修改并保存</button>
+											<button type="submit" class="btn btn-danger">删除</button>
+											<button type="submit" class="btn btn-info">Edit</button>
+										</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers"
+						id="DataTables_Table_0_paginate">
+						<a tabindex="0"
+							class="first ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default ui-state-disabled"
+							id="DataTables_Table_0_first">First</a>
+						<a tabindex="0" class="previous fg-button ui-button ui-state-default ui-state-disabled"
+							id="DataTables_Table_0_previous">Previous
+						</a>
+						<span id="btnpages">
+							<!-- <a tabindex="0" class="fg-button ui-button ui-state-default ui-state-disabled">1</a>
+							<a tabindex="0" class="fg-button ui-button ui-state-default">2</a>
+							<a tabindex="0" class="fg-button ui-button ui-state-default">3</a>
+							<a tabindex="0" class="fg-button ui-button ui-state-default">4</a>
+							<a tabindex="0" class="fg-button ui-button ui-state-default">5</a> -->
+						</span>
+						<a abindex="0" class="next fg-button ui-button ui-state-default"
+							id="DataTables_Table_0_next">Next</a>
+						<a tabindex="0" class="last ui-corner-tr ui-corner-br fg-button ui-button ui-state-default"
+							id="DataTables_Table_0_last">Last</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script> -->
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="jquery-3.4.1.js"></script> -->
+	<script src="js/jquery.ui.custom.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.uniform.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/matrix.js"></script>
+	<script src="js/matrix.tables.js"></script>
+	<script src="js/myquery.js"></script>
+</body>
+
+
+<script type="text/javascript">
+	let tbody = document.getElementsByTagName("tbody")[0];
+	let ipage = 1; //默认显示第一页
+	let num = 8; //每页显示8个数据
+	// console.log(tbody);
+
+
+	function init() {
+		ajax({
+			type: 'get',
+			url: 'api/01managepages.php',
+			data: {
+				page: ipage,
+				num: num
+			},
+			success: str => {
+				// console.log(str);
+				let arr = JSON.parse(str);
+				console.log(arr);
+				create(arr);
+			}
+		})
+	}
+
+	// 调用
+	init();
+
+	// 渲染数据
+	function create(arr) {
+		let str1 = arr.data.map(item => {
+			return `<tr data-id='${item.id}'>
+					<td><input type="checkbox" /></td>
+					<td>${item.id}</td>
+					<td contenteditable="true" class="top">${item.username}</td>
+					<td contenteditable="true" class="middle">${item.password}</td>
+					<td contenteditable="true" class="bottom">${item.email?item.email:''}</td>
+					<td>
+						<button type="submit" class="btn_success">修改并保存</button>
+						<button type="submit" class="btn_danger">删除</button>
+					</td>
+				</tr> `
+		}).join('');
+		tbody.innerHTML = str1;
+
+
+
+
+
+
+		// 编辑修改+删除
+		let btn_success = document.querySelectorAll(".btn_success"); //编辑按钮
+		let btn_danger = document.querySelectorAll(".btn_danger"); //删除按钮
+		// console.log(btn_success, btn_danger);//成功获取数据
+
+
+
+		/* 编辑+删除------事件委托 */
+		tbody.onclick = function (e) {
+			// console.log(666);
+			e = e || window.event;
+			let target = e.target || target ? e.target : e.srcElement;
+			// console.log(target);//当前标签
+			let id = target.parentNode.parentNode.dataset.id; //当前标签的父节点的id
+
+
+			// 编辑
+			if (target.className == "btn_success") {
+				// console.log('+++++++');
+				// console.log(target.parentNode.parentNode.dataset.id);
+
+				let top = document.querySelectorAll(".top")[id - 1]; //下标
+				let middle = document.querySelectorAll(".middle")[id - 1];
+				let bottom = document.querySelectorAll(".bottom")[id - 1];
+				console.log(top, middle, bottom);
+
+				ajax({
+					type: 'get',
+					url: 'api/03edit.php',
+					data: {
+						id: id - 1,
+						username: top,
+						password: middle,
+						email: bottom
+					},
+					success: str => {
+						console.log(str);
+						// let arr = JSON.parse(str);
+						// console.log(arr);
+						// create(arr);
+						// if (str == 1) {
+
+						// 	tbody.removeChild(target.parentNode.parentNode);
+						// console.log(confirm("确定删除数据？"));
+
+						// }
+					}
+				})
+
+
+
+			}
+
+
+
+			// 删除
+			if (target.className == "btn_danger") {
+				// console.log('------');
+				// console.log(target.parentNode.parentNode.dataset.id);
+
+
+				if (confirm("确定删除数据？") == true) {
+					ajax({
+						type: 'get',
+						url: 'api/03delete.php',
+						data: {
+							id: id
+						},
+						success: str => {
+							console.log(str);
+							// let arr = JSON.parse(str);
+							// console.log(arr);
+							// create(arr);
+							if (str == 1) {
+
+								tbody.removeChild(target.parentNode.parentNode);
+								// console.log(confirm("确定删除数据？"));
+
+							}
+						}
+					})
+				}
+			}
+		}
+
+
+
+		/* -----------页码-------- */
+
+		// 页码生成
+		// 计算页码----向上取整
+		let total = Math.ceil(arr.total / arr.num);
+
+		let btnpages = document.querySelector("#btnpages"); //页数的外层标签
+		// console.log(total);
+		let btnstr = '';
+		for (let i = 1; i <= total; i++) {
+			btnstr += `<a data-id = ${i} tabindex="0" class="fg-button ui-button ui-state-default">${i}</a>`
+		}
+		btnpages.innerHTML = btnstr; //页码生成（插入到页面中）
+
+		// 第一个选项默认被选中，并加上其他类名，防止被覆盖导致样式无法出现
+		btnpages.children[0].className = "fg-button ui-button ui-state-default ui-state-disabled";
+		// console.log();
+		// for (let k = 0; k < total; k++) {
+		// 	btnpages.onclick = function (eve) {
+		// 		// console.log(666);
+
+		// 		eve = eve || window.event;
+		// 		let target = eve.target || target ? eve.target : eve.srcElement;
+		// 		// console.log(target);
+
+		// 		if (target.tagName.toLowerCase() == "a") {
+		// 			Array.from(this.children).forEach(ele => {
+		// 				ele.className = "fg-button ui-button";
+
+		// 			})
+		// 			target.className = "fg-button ui-button ui-state-default ui-state-disabled";
+		// 		}
+		// 	}
+		// }
+
+		for (let item of btnpages.children) { //排他
+			item.className = 'fg-button ui-button';
+		}
+		btnpages.children[arr.page - 1].className = 'fg-button ui-button ui-state-default ui-state-disabled';
+
+		let index = '';
+
+		btnpages.onclick = function (eve) {
+			// console.log(666);
+			eve = eve || window.event;
+			let target = eve.target || target ? eve.target : eve.srcElement;
+			if (target.tagName.toLowerCase() == "a") {
+
+				ipage = target.innerHTML;
+				// index = ipage;
+				init();
+				// target为当前的a标签
+				// return index;
+				// return target.dataset.id;
+			}
+		}
+
+		// 下一页
+		let DataTables_Table_0_next = document.querySelector("#DataTables_Table_0_next")
+		// console.log(DataTables_Table_0_next);
+		DataTables_Table_0_next.onclick = function () {
+			// console.log(66);
+			// ipage = idnow++;
+			// console.log(idnow);
+			if (ipage >= total) {
+				// ipage = 0;
+				// DataTables_Table_0_next.style = "display:none";
+				alert("将返回第一页！");
+				ipage = 0;
+			}
+			ipage++;
+			init();
+		}
+
+		// 上一页
+		let DataTables_Table_0_previous = document.querySelector("#DataTables_Table_0_previous");
+		DataTables_Table_0_previous.onclick = function () {
+			// console.log(66);	
+			// ipage = idnow++;
+			// console.log(idnow);
+
+
+			if (ipage <= 1) {
+				// ipage = 0;
+				// DataTables_Table_0_next.style = "display:none";
+				alert("将到达最后一页！");
+				ipage = total + 1;
+			}
+			ipage--;
+			init();
+		}
+
+		// 跳转第一页
+		let DataTables_Table_0_first = document.querySelector("#DataTables_Table_0_first");
+
+		DataTables_Table_0_first.onclick = function () {
+			// console.log(66);
+			if (ipage == 1) {
+				alert("当前页已为第一页！")
+			} else {
+				ipage = 1;
+				init();
+			}
+		}
+		let DataTables_Table_0_last = document.querySelector("#DataTables_Table_0_last");
+		DataTables_Table_0_last.onclick = function () {
+			// console.log(666);
+			if (ipage == total) {
+				alert("当前页已为最后一页！")
+			} else {
+				ipage = total;
+				init();
+			}
+
+		}
+	}
+
+
+
+
+	// let DataTables_Table_0_paginate = document.querySelector("#DataTables_Table_0_paginate");
+	// console.log(DataTables_Table_0_paginate);
+	// DataTables_Table_0_paginate.onclick = function (eve) {
+	// 	eve = eve || window.event;
+	// 	let target = eve.target || target ? eve.target : eve.srcElement;
+	// 	if (target.tagName.toLowerCase() == "a") {
+	// 		console.log(666666);
+	// 		// ipage = target.innerHTML;
+	// 		// index = ipage;
+	// 		// init();
+	// 		// target为当前的a标签
+	// 		// return index;
+	// 		// return target.dataset.id;
+	// 	}
+
+	// }
+
+	// }
+
+
+
+
+
+	// let tbody = document.getElementsByTagName("tbody")[0];
+	// // console.log(tbody);
+	// let ipage = 1;
+	// let num = 8;
+	// ajax({
+	// 	type: 'get',
+	// 	url: 'api/01manage_pages.php',
+	// 	data: {
+	// 		page: ipage,
+	// 		num: num
+	// 	},
+	// 	success: str => {
+	// 		// console.log(str);
+	// 		let arr = JSON.parse(str);
+	// 		console.log(arr);
+	// 		// create(arr);
+
+	// 	}
+	// })
+
+
+	// function create(arr) {
+	// 	//渲染数据
+	// 	tbody.innerHTML = arr.map(item => {
+	// 		return `<tr data-id='${item.id}'>
+	// 					<td><input type="checkbox" /></td>
+	// 					<td>${item.id}</td>
+	// 					<td contenteditable="true">${item.username}</td>
+	// 					<td>${item.password}</td>
+	// 					<td class="center">${item.email?item.email:''}</td>
+	// 					<td>
+	// 						<button type="submit" class="btn_success">修改并保存</button>
+	// 						<button type="submit" class="btn_danger">删除</button>
+
+	// 					</td>
+	// 				</tr> `
+	// 	}).join('');
+
+
+
+
+
+
+
+
+
+	// 	let btn_success = document.querySelectorAll(".btn_succss"); //编辑按钮
+	// 	let btn_danger = document.querySelectorAll(".btn_danger"); //删除按钮
+	// 	console.log(btn_success, btn_danger);
+	// 	tbody.onclick = function (e) {
+	// 		// console.log(666);
+	// 		e = e || window.event;
+	// 		let target = e.target || target ? e.target : e.srcElement;
+	// 		// console.log(target);
+
+	// 		if (target.className == "btn_success") {
+	// 			// console.log('+++++++');
+
+	// 		}
+	// 		if (target.className == "btn_danger") {
+	// 			// console.log('------');
+	// 			// console.log(target.parentNode.parentNode.dataset.id);
+
+	// 			let id = target.parentNode.parentNode.dataset.id;
+	// 			ajax({
+	// 				type: 'get',
+	// 				url: 'api/03delete.php',
+	// 				data: {
+	// 					id: id
+	// 				},
+	// 				success: str => {
+	// 					console.log(str);
+	// 					// let arr = JSON.parse(str);
+	// 					// console.log(arr);
+	// 					// create(arr);
+	// 					if (str == 1) {
+	// 						if (confirm("确定删除数据？")) {
+	// 							tbody.removeChild(target.parentNode.parentNode);
+	// 						}
+
+	// 					}
+
+	// 				}
+	// 			})
+	// 		}
+	// 	}
+
+	// }
+
+	// let DataTables_Table_0_paginate = document.querySelector("#DataTables_Table_0_paginate")
+	// console.log(DataTables_Table_0_paginate);
+</script>
+
+</html>
